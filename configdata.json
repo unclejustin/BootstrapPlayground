@@ -1,0 +1,5196 @@
+{
+	"data": [
+		{
+			"path": "configuration",
+			"guid": "54526cca47225",
+			"depth": 1,
+			"data": [
+				{
+					"path": "configSections",
+					"guid": "54526cca47244",
+					"depth": 2,
+					"data": [
+						{
+							"path": "section",
+							"guid": "54526cca47274",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "log4net",
+									"norm": "[configuration(1)][configSections(1)][section(1)]name",
+									"guid": "54526cca47282"
+								},
+								{
+									"name": "type",
+									"value": "log4net.Config.Log4NetConfigurationSectionHandler, log4net",
+									"norm": "[configuration(1)][configSections(1)][section(1)]type",
+									"guid": "54526cca472ca"
+								},
+								{
+									"name": "requirePermission",
+									"value": "false",
+									"norm": "[configuration(1)][configSections(1)][section(1)]requirePermission",
+									"guid": "54526cca47309"
+								}
+							]
+						},
+						{
+							"path": "section",
+							"guid": "54526cca4734a",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "orionProxy",
+									"norm": "[configuration(1)][configSections(1)][section(2)]name",
+									"guid": "54526cca47355"
+								},
+								{
+									"name": "type",
+									"value": "System.Configuration.DictionarySectionHandler",
+									"norm": "[configuration(1)][configSections(1)][section(2)]type",
+									"guid": "54526cca47393"
+								}
+							]
+						},
+						{
+							"path": "section",
+							"guid": "54526cca473d1",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "legacyProxy",
+									"norm": "[configuration(1)][configSections(1)][section(3)]name",
+									"guid": "54526cca473de"
+								},
+								{
+									"name": "type",
+									"value": "System.Configuration.DictionarySectionHandler",
+									"norm": "[configuration(1)][configSections(1)][section(3)]type",
+									"guid": "54526cca4741d"
+								}
+							]
+						},
+						{
+							"path": "section",
+							"guid": "54526cca4745b",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "sw.web.compression",
+									"norm": "[configuration(1)][configSections(1)][section(4)]name",
+									"guid": "54526cca47487"
+								},
+								{
+									"name": "type",
+									"value": "SolarWinds.Orion.Core.Common.Configuration.WebCompressionSection, SolarWinds.Orion.Core.Common",
+									"norm": "[configuration(1)][configSections(1)][section(4)]type",
+									"guid": "54526cca474e4"
+								},
+								{
+									"name": "requirePermission",
+									"value": "false",
+									"norm": "[configuration(1)][configSections(1)][section(4)]requirePermission",
+									"guid": "54526cca47521"
+								}
+							]
+						},
+						{
+							"path": "sectionGroup",
+							"guid": "54526cca47567",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "system.web.extensions",
+									"norm": "[configuration(1)][configSections(1)][sectionGroup(1)]name",
+									"guid": "54526cca47572"
+								},
+								{
+									"name": "type",
+									"value": "System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+									"norm": "[configuration(1)][configSections(1)][sectionGroup(1)]type",
+									"guid": "54526cca475b3"
+								}
+							],
+							"data": [
+								{
+									"path": "sectionGroup",
+									"guid": "54526cca47600",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "scripting",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)]name",
+											"guid": "54526cca4760b"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)]type",
+											"guid": "54526cca4765d"
+										}
+									],
+									"data": [
+										{
+											"path": "section",
+											"guid": "54526cca476c7",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "scriptResourceHandler",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][section(1)]name",
+													"guid": "54526cca476e6"
+												},
+												{
+													"name": "type",
+													"value": "System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][section(1)]type",
+													"guid": "54526cca4775f"
+												},
+												{
+													"name": "requirePermission",
+													"value": "false",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][section(1)]requirePermission",
+													"guid": "54526cca477ba"
+												},
+												{
+													"name": "allowDefinition",
+													"value": "MachineToApplication",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][section(1)]allowDefinition",
+													"guid": "54526cca47819"
+												}
+											]
+										},
+										{
+											"path": "sectionGroup",
+											"guid": "54526cca47873",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "webServices",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)]name",
+													"guid": "54526cca4787e"
+												},
+												{
+													"name": "type",
+													"value": "System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+													"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)]type",
+													"guid": "54526cca478da"
+												}
+											],
+											"data": [
+												{
+													"path": "section",
+													"guid": "54526cca47945",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "jsonSerialization",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(1)]name",
+															"guid": "54526cca479a2"
+														},
+														{
+															"name": "type",
+															"value": "System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(1)]type",
+															"guid": "54526cca47a2b"
+														},
+														{
+															"name": "requirePermission",
+															"value": "false",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(1)]requirePermission",
+															"guid": "54526cca47a98"
+														},
+														{
+															"name": "allowDefinition",
+															"value": "Everywhere",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(1)]allowDefinition",
+															"guid": "54526cca47b0b"
+														}
+													]
+												},
+												{
+													"path": "section",
+													"guid": "54526cca47b65",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "profileService",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(2)]name",
+															"guid": "54526cca47b73"
+														},
+														{
+															"name": "type",
+															"value": "System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(2)]type",
+															"guid": "54526cca47bd8"
+														},
+														{
+															"name": "requirePermission",
+															"value": "false",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(2)]requirePermission",
+															"guid": "54526cca47c35"
+														},
+														{
+															"name": "allowDefinition",
+															"value": "MachineToApplication",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(2)]allowDefinition",
+															"guid": "54526cca47c95"
+														}
+													]
+												},
+												{
+													"path": "section",
+													"guid": "54526cca47cef",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "authenticationService",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(3)]name",
+															"guid": "54526cca47d17"
+														},
+														{
+															"name": "type",
+															"value": "System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(3)]type",
+															"guid": "54526cca47d96"
+														},
+														{
+															"name": "requirePermission",
+															"value": "false",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(3)]requirePermission",
+															"guid": "54526cca47df4"
+														},
+														{
+															"name": "allowDefinition",
+															"value": "MachineToApplication",
+															"norm": "[configuration(1)][configSections(1)][sectionGroup(1)][sectionGroup(1)][sectionGroup(1)][section(3)]allowDefinition",
+															"guid": "54526cca47e53"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "sectionGroup",
+							"guid": "54526cca47e8b",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "fiftyOne",
+									"norm": "[configuration(1)][configSections(1)][sectionGroup(2)]name",
+									"guid": "54526cca47e97"
+								}
+							],
+							"data": [
+								{
+									"path": "section",
+									"guid": "54526cca47ede",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "wurfl",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]name",
+											"guid": "54526cca47eeb"
+										},
+										{
+											"name": "type",
+											"value": "FiftyOne.Foundation.Mobile.Detection.Wurfl.Configuration.WurflSection, FiftyOne.Foundation",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]type",
+											"guid": "54526cca47f32"
+										},
+										{
+											"name": "requirePermission",
+											"value": "false",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]requirePermission",
+											"guid": "54526cca47f98"
+										},
+										{
+											"name": "allowDefinition",
+											"value": "Everywhere",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]allowDefinition",
+											"guid": "54526cca47ff8"
+										},
+										{
+											"name": "restartOnExternalChanges",
+											"value": "false",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]restartOnExternalChanges",
+											"guid": "54526cca4803b"
+										},
+										{
+											"name": "allowExeDefinition",
+											"value": "MachineToApplication",
+											"norm": "[configuration(1)][configSections(1)][sectionGroup(2)][section(1)]allowExeDefinition",
+											"guid": "54526cca48094"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "fiftyOne",
+					"guid": "54526cca480f2",
+					"depth": 2,
+					"data": [
+						{
+							"path": "wurfl",
+							"guid": "54526cca48105",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "wurflFilePath",
+									"value": "~\/bin\/wurfl.xml.gz",
+									"norm": "[configuration(1)][fiftyOne(1)][wurfl(1)]wurflFilePath",
+									"guid": "54526cca48115"
+								},
+								{
+									"name": "useActualDeviceRoot",
+									"value": "false",
+									"norm": "[configuration(1)][fiftyOne(1)][wurfl(1)]useActualDeviceRoot",
+									"guid": "54526cca48171"
+								}
+							],
+							"data": [
+								{
+									"path": "wurflPatches",
+									"guid": "54526cca481c7",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca481db",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "browser_definitions",
+													"norm": "[configuration(1)][fiftyOne(1)][wurfl(1)][wurflPatches(1)][add(1)]name",
+													"guid": "54526cca481ea"
+												},
+												{
+													"name": "filePath",
+													"value": "~\/bin\/web_browsers_patch.xml",
+													"norm": "[configuration(1)][fiftyOne(1)][wurfl(1)][wurflPatches(1)][add(1)]filePath",
+													"guid": "54526cca4826d"
+												},
+												{
+													"name": "enabled",
+													"value": "true",
+													"norm": "[configuration(1)][fiftyOne(1)][wurfl(1)][wurflPatches(1)][add(1)]enabled",
+													"guid": "54526cca482d6"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "runtime",
+					"guid": "54526cca48318",
+					"depth": 2,
+					"data": [
+						{
+							"path": "enforceFIPSPolicy",
+							"guid": "54526cca48327",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "enabled",
+									"value": "false",
+									"norm": "[configuration(1)][runtime(1)][enforceFIPSPolicy(1)]enabled",
+									"guid": "54526cca48333"
+								}
+							]
+						},
+						{
+							"path": "generatePublisherEvidence",
+							"guid": "54526cca48372",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "enabled",
+									"value": "false",
+									"norm": "[configuration(1)][runtime(1)][generatePublisherEvidence(1)]enabled",
+									"guid": "54526cca48380"
+								}
+							]
+						},
+						{
+							"path": "assemblyBinding",
+							"guid": "54526cca483b9",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "xmlns",
+									"value": "urn:schemas-microsoft-com:asm.v1",
+									"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)]xmlns",
+									"guid": "54526cca483c7"
+								}
+							],
+							"data": [
+								{
+									"path": "dependentAssembly",
+									"guid": "54526cca48420",
+									"depth": 4,
+									"data": [
+										{
+											"path": "assemblyIdentity",
+											"guid": "54526cca48430",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "System.Web.Extensions",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(1)][assemblyIdentity(1)]name",
+													"guid": "54526cca48440"
+												},
+												{
+													"name": "publicKeyToken",
+													"value": "31bf3856ad364e35",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(1)][assemblyIdentity(1)]publicKeyToken",
+													"guid": "54526cca48496"
+												}
+											]
+										},
+										{
+											"path": "bindingRedirect",
+											"guid": "54526cca484ed",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "oldVersion",
+													"value": "1.0.0.0-1.1.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(1)][bindingRedirect(1)]oldVersion",
+													"guid": "54526cca484fa"
+												},
+												{
+													"name": "newVersion",
+													"value": "4.0.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(1)][bindingRedirect(1)]newVersion",
+													"guid": "54526cca48569"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "dependentAssembly",
+									"guid": "54526cca485f3",
+									"depth": 4,
+									"data": [
+										{
+											"path": "assemblyIdentity",
+											"guid": "54526cca48633",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "System.Web.Extensions.Design",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(2)][assemblyIdentity(1)]name",
+													"guid": "54526cca4864b"
+												},
+												{
+													"name": "publicKeyToken",
+													"value": "31bf3856ad364e35",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(2)][assemblyIdentity(1)]publicKeyToken",
+													"guid": "54526cca486d2"
+												}
+											]
+										},
+										{
+											"path": "bindingRedirect",
+											"guid": "54526cca48755",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "oldVersion",
+													"value": "1.0.0.0-1.1.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(2)][bindingRedirect(1)]oldVersion",
+													"guid": "54526cca48785"
+												},
+												{
+													"name": "newVersion",
+													"value": "4.0.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(2)][bindingRedirect(1)]newVersion",
+													"guid": "54526cca487f8"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "dependentAssembly",
+									"guid": "54526cca48875",
+									"depth": 4,
+									"data": [
+										{
+											"path": "assemblyIdentity",
+											"guid": "54526cca48886",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "SolarWinds.Licensing.Framework",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(3)][assemblyIdentity(1)]name",
+													"guid": "54526cca48890"
+												},
+												{
+													"name": "publicKeyToken",
+													"value": "0bdb206719860e1f",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(3)][assemblyIdentity(1)]publicKeyToken",
+													"guid": "54526cca488fc"
+												}
+											]
+										},
+										{
+											"path": "bindingRedirect",
+											"guid": "54526cca4897a",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "oldVersion",
+													"value": "1.0.0.0-3.0.0.470",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(3)][bindingRedirect(1)]oldVersion",
+													"guid": "54526cca48996"
+												},
+												{
+													"name": "newVersion",
+													"value": "3.0.0.470",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(3)][bindingRedirect(1)]newVersion",
+													"guid": "54526cca48a28"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "dependentAssembly",
+									"guid": "54526cca48a88",
+									"depth": 4,
+									"data": [
+										{
+											"path": "assemblyIdentity",
+											"guid": "54526cca48a98",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AjaxControlToolkit",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(4)][assemblyIdentity(1)]name",
+													"guid": "54526cca48aa6"
+												},
+												{
+													"name": "publicKeyToken",
+													"value": "28f01b0e84b6d53e",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(4)][assemblyIdentity(1)]publicKeyToken",
+													"guid": "54526cca48b04"
+												}
+											]
+										},
+										{
+											"path": "bindingRedirect",
+											"guid": "54526cca48b56",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "oldVersion",
+													"value": "1.0.11119.20010",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(4)][bindingRedirect(1)]oldVersion",
+													"guid": "54526cca48b64"
+												},
+												{
+													"name": "newVersion",
+													"value": "4.1.50927.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(4)][bindingRedirect(1)]newVersion",
+													"guid": "54526cca48bc4"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "dependentAssembly",
+									"guid": "54526cca48c2b",
+									"depth": 4,
+									"data": [
+										{
+											"path": "assemblyIdentity",
+											"guid": "54526cca48c41",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Microsoft.Owin.Host.SystemWeb",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(5)][assemblyIdentity(1)]name",
+													"guid": "54526cca48c5d"
+												},
+												{
+													"name": "publicKeyToken",
+													"value": "31bf3856ad364e35",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(5)][assemblyIdentity(1)]publicKeyToken",
+													"guid": "54526cca48d31"
+												},
+												{
+													"name": "culture",
+													"value": "neutral",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(5)][assemblyIdentity(1)]culture",
+													"guid": "54526cca48de9"
+												}
+											]
+										},
+										{
+											"path": "bindingRedirect",
+											"guid": "54526cca48e70",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "oldVersion",
+													"value": "0.0.0.0-1.0.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(5)][bindingRedirect(1)]oldVersion",
+													"guid": "54526cca48ea2"
+												},
+												{
+													"name": "newVersion",
+													"value": "1.0.0.0",
+													"norm": "[configuration(1)][runtime(1)][assemblyBinding(1)][dependentAssembly(5)][bindingRedirect(1)]newVersion",
+													"guid": "54526cca48f09"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "appSettings",
+					"guid": "54526cca48f3f",
+					"depth": 2,
+					"data": [
+						{
+							"path": "add",
+							"guid": "54526cca48f4c",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "SWOISv3.RemoteEndpoint",
+									"norm": "[configuration(1)][appSettings(1)][add(1)]key",
+									"guid": "54526cca48f5a"
+								},
+								{
+									"name": "value",
+									"value": "net.tcp:\/\/{0}:17777\/SolarWinds\/InformationService\/v3\/Orion\/ssl",
+									"norm": "[configuration(1)][appSettings(1)][add(1)]value",
+									"guid": "54526cca48f96"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca48fcd",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "SWOISv2.RemoteEndpoint",
+									"norm": "[configuration(1)][appSettings(1)][add(2)]key",
+									"guid": "54526cca48fda"
+								},
+								{
+									"name": "value",
+									"value": "net.tcp:\/\/{0}:17777\/SolarWinds\/InformationService\/Orion\/ssl",
+									"norm": "[configuration(1)][appSettings(1)][add(2)]value",
+									"guid": "54526cca49017"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4904c",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "SWOIS.LocalEndpoint",
+									"norm": "[configuration(1)][appSettings(1)][add(3)]key",
+									"guid": "54526cca49057"
+								},
+								{
+									"name": "value",
+									"value": "net.pipe:\/\/localhost\/SW\/InformationService\/Orion",
+									"norm": "[configuration(1)][appSettings(1)][add(3)]value",
+									"guid": "54526cca490dc"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49118",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "SWOIS.RemoteEndpoint",
+									"norm": "[configuration(1)][appSettings(1)][add(4)]key",
+									"guid": "54526cca49122"
+								},
+								{
+									"name": "value",
+									"value": "net.tcp:\/\/{0}:17777\/SW\/InformationService\/Orion\/ssl",
+									"norm": "[configuration(1)][appSettings(1)][add(4)]value",
+									"guid": "54526cca4915a"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca491de",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "DisableBreadcrumbs",
+									"norm": "[configuration(1)][appSettings(1)][add(5)]key",
+									"guid": "54526cca4921c"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(5)]value",
+									"guid": "54526cca4929c"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca492f8",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "TabsMouseOverTimeout",
+									"norm": "[configuration(1)][appSettings(1)][add(6)]key",
+									"guid": "54526cca4931e"
+								},
+								{
+									"name": "value",
+									"value": "50",
+									"norm": "[configuration(1)][appSettings(1)][add(6)]value",
+									"guid": "54526cca49372"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca493d0",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "CPMaxNumberToAssign",
+									"norm": "[configuration(1)][appSettings(1)][add(7)]key",
+									"guid": "54526cca493df"
+								},
+								{
+									"name": "value",
+									"value": "10",
+									"norm": "[configuration(1)][appSettings(1)][add(7)]value",
+									"guid": "54526cca4943a"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49481",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "TabsMouseOutTimeout",
+									"norm": "[configuration(1)][appSettings(1)][add(8)]key",
+									"guid": "54526cca4948b"
+								},
+								{
+									"name": "value",
+									"value": "700",
+									"norm": "[configuration(1)][appSettings(1)][add(8)]value",
+									"guid": "54526cca494cc"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4950a",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "TabsSensitivity",
+									"norm": "[configuration(1)][appSettings(1)][add(9)]key",
+									"guid": "54526cca49533"
+								},
+								{
+									"name": "value",
+									"value": "3",
+									"norm": "[configuration(1)][appSettings(1)][add(9)]value",
+									"guid": "54526cca4958e"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca495d1",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ContainerPreviewMaxCount",
+									"norm": "[configuration(1)][appSettings(1)][add(10)]key",
+									"guid": "54526cca495dc"
+								},
+								{
+									"name": "value",
+									"value": "50",
+									"norm": "[configuration(1)][appSettings(1)][add(10)]value",
+									"guid": "54526cca4961c"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49658",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ManageGroupsPageSize",
+									"norm": "[configuration(1)][appSettings(1)][add(11)]key",
+									"guid": "54526cca49665"
+								},
+								{
+									"name": "value",
+									"value": "15",
+									"norm": "[configuration(1)][appSettings(1)][add(11)]value",
+									"guid": "54526cca496a4"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca496e2",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ManageGroupsMaxChildrenCount",
+									"norm": "[configuration(1)][appSettings(1)][add(12)]key",
+									"guid": "54526cca496ee"
+								},
+								{
+									"name": "value",
+									"value": "20",
+									"norm": "[configuration(1)][appSettings(1)][add(12)]value",
+									"guid": "54526cca49734"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca497bf",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ManageGroupsMaxObjectTreeItems",
+									"norm": "[configuration(1)][appSettings(1)][add(13)]key",
+									"guid": "54526cca497db"
+								},
+								{
+									"name": "value",
+									"value": "300",
+									"norm": "[configuration(1)][appSettings(1)][add(13)]value",
+									"guid": "54526cca49827"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49865",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ExportToPDF.HttpsServerName",
+									"norm": "[configuration(1)][appSettings(1)][add(14)]key",
+									"guid": "54526cca49870"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca498ca",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "EnableAutodetectMobileDevices",
+									"norm": "[configuration(1)][appSettings(1)][add(15)]key",
+									"guid": "54526cca498d5"
+								},
+								{
+									"name": "value",
+									"value": "true",
+									"norm": "[configuration(1)][appSettings(1)][add(15)]value",
+									"guid": "54526cca49911"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4994e",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "UseDebugJavascriptFiles",
+									"norm": "[configuration(1)][appSettings(1)][add(16)]key",
+									"guid": "54526cca4995b"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(16)]value",
+									"guid": "54526cca49998"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca499df",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "HubbleActive",
+									"norm": "[configuration(1)][appSettings(1)][add(17)]key",
+									"guid": "54526cca49a09"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(17)]value",
+									"guid": "54526cca49a3f"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49a74",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "HubbleProfilerActive",
+									"norm": "[configuration(1)][appSettings(1)][add(18)]key",
+									"guid": "54526cca49a8a"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(18)]value",
+									"guid": "54526cca49b44"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49b8e",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "HubbleForResourcesActive",
+									"norm": "[configuration(1)][appSettings(1)][add(19)]key",
+									"guid": "54526cca49ba3"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(19)]value",
+									"guid": "54526cca49c1e"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49ca0",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "Hubble.Profiler.MaxUnviewedTraces",
+									"norm": "[configuration(1)][appSettings(1)][add(20)]key",
+									"guid": "54526cca49cad"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49d09",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "Hubble.IgnoredRootPaths",
+									"norm": "[configuration(1)][appSettings(1)][add(21)]key",
+									"guid": "54526cca49d17"
+								},
+								{
+									"name": "value",
+									"value": "\/Orion\/i18n.ashx,\/WebResource.axd,\/ScriptResource.axd,\/Orion\/Hubble.ashx,\/Orion\/Services\/TabsManager.asmx,\/Orion\/NetPerfMon\/TemplateSiblingIconUrl,\/Orion\/DetachResourceAsImage.aspx",
+									"norm": "[configuration(1)][appSettings(1)][add(21)]value",
+									"guid": "54526cca49d57"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49d94",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ExportToPDF.EnableNATFix",
+									"norm": "[configuration(1)][appSettings(1)][add(22)]key",
+									"guid": "54526cca49da1"
+								},
+								{
+									"name": "value",
+									"value": "true",
+									"norm": "[configuration(1)][appSettings(1)][add(22)]value",
+									"guid": "54526cca49ddd"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49e19",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "RenderAsInternerExplorerVersion",
+									"norm": "[configuration(1)][appSettings(1)][add(23)]key",
+									"guid": "54526cca49e24"
+								},
+								{
+									"name": "value",
+									"value": "9",
+									"norm": "[configuration(1)][appSettings(1)][add(23)]value",
+									"guid": "54526cca49e65"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49eb0",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "aspnet:MaxHttpCollectionKeys",
+									"norm": "[configuration(1)][appSettings(1)][add(24)]key",
+									"guid": "54526cca49ebf"
+								},
+								{
+									"name": "value",
+									"value": "10000",
+									"norm": "[configuration(1)][appSettings(1)][add(24)]value",
+									"guid": "54526cca49f42"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca49fc2",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "DateTimeConvertTesting",
+									"norm": "[configuration(1)][appSettings(1)][add(25)]key",
+									"guid": "54526cca49fd5"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4a048",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "DisableJavascriptCaching",
+									"norm": "[configuration(1)][appSettings(1)][add(26)]key",
+									"guid": "54526cca4a061"
+								},
+								{
+									"name": "value",
+									"value": "false",
+									"norm": "[configuration(1)][appSettings(1)][add(26)]value",
+									"guid": "54526cca4a0b1"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4a113",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "EnableReportingCompatibleResourcePickerFilter",
+									"norm": "[configuration(1)][appSettings(1)][add(27)]key",
+									"guid": "54526cca4a13c"
+								},
+								{
+									"name": "value",
+									"value": "true",
+									"norm": "[configuration(1)][appSettings(1)][add(27)]value",
+									"guid": "54526cca4a1a9"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4a1f6",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ReportingTablePreviewMaxRowCount",
+									"norm": "[configuration(1)][appSettings(1)][add(28)]key",
+									"guid": "54526cca4a203"
+								},
+								{
+									"name": "value",
+									"value": "15",
+									"norm": "[configuration(1)][appSettings(1)][add(28)]value",
+									"guid": "54526cca4a252"
+								}
+							]
+						},
+						{
+							"path": "add",
+							"guid": "54526cca4a29b",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "key",
+									"value": "ReportingSkipWaitThreshold",
+									"norm": "[configuration(1)][appSettings(1)][add(29)]key",
+									"guid": "54526cca4a2a8"
+								},
+								{
+									"name": "value",
+									"value": "5",
+									"norm": "[configuration(1)][appSettings(1)][add(29)]value",
+									"guid": "54526cca4a30a"
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "log4net",
+					"guid": "54526cca4a365",
+					"depth": 2,
+					"data": [
+						{
+							"path": "appender",
+							"guid": "54526cca4a3cd",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "RollingLogFileAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(1)]name",
+									"guid": "54526cca4a3ec"
+								},
+								{
+									"name": "type",
+									"value": "log4net.Appender.RollingFileAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(1)]type",
+									"guid": "54526cca4a447"
+								}
+							],
+							"data": [
+								{
+									"path": "file",
+									"guid": "54526cca4a49c",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "${ALLUSERSPROFILE}\\Application Data\\SolarWinds\\Logs\\Orion\\OrionWeb.log",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][file(1)]value",
+											"guid": "54526cca4a4ac"
+										}
+									]
+								},
+								{
+									"path": "encoding",
+									"guid": "54526cca4a4fd",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "utf-8",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][encoding(1)]value",
+											"guid": "54526cca4a508"
+										}
+									]
+								},
+								{
+									"path": "appendToFile",
+									"guid": "54526cca4a55b",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "true",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][appendToFile(1)]value",
+											"guid": "54526cca4a567"
+										}
+									]
+								},
+								{
+									"path": "rollingStyle",
+									"guid": "54526cca4a5c0",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "Size",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][rollingStyle(1)]value",
+											"guid": "54526cca4a5cf"
+										}
+									]
+								},
+								{
+									"path": "maxSizeRollBackups",
+									"guid": "54526cca4a620",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "5",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][maxSizeRollBackups(1)]value",
+											"guid": "54526cca4a64b"
+										}
+									]
+								},
+								{
+									"path": "maximumFileSize",
+									"guid": "54526cca4a6ba",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "10MB",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][maximumFileSize(1)]value",
+											"guid": "54526cca4a6c6"
+										}
+									]
+								},
+								{
+									"path": "layout",
+									"guid": "54526cca4a713",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "type",
+											"value": "log4net.Layout.PatternLayout",
+											"norm": "[configuration(1)][log4net(1)][appender(1)][layout(1)]type",
+											"guid": "54526cca4a722"
+										}
+									],
+									"data": [
+										{
+											"path": "header",
+											"guid": "54526cca4a77f",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "type",
+													"value": "log4net.Util.PatternString",
+													"norm": "[configuration(1)][log4net(1)][appender(1)][layout(1)][header(1)]type",
+													"guid": "54526cca4a78a"
+												},
+												{
+													"name": "value",
+													"value": "%date *** Starting SolarWinds Orion Web Site, .Net Runtime %property{Runtime.Version} ***%newline",
+													"norm": "[configuration(1)][log4net(1)][appender(1)][layout(1)][header(1)]value",
+													"guid": "54526cca4a7e8"
+												}
+											]
+										},
+										{
+											"path": "conversionPattern",
+											"guid": "54526cca4a88d",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "value",
+													"value": "%date [%thread] %-5level %logger - %message%newline",
+													"norm": "[configuration(1)][log4net(1)][appender(1)][layout(1)][conversionPattern(1)]value",
+													"guid": "54526cca4a8a2"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "appender",
+							"guid": "54526cca4a90b",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "HubbleFileAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(2)]name",
+									"guid": "54526cca4a915"
+								},
+								{
+									"name": "type",
+									"value": "log4net.Appender.RollingFileAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(2)]type",
+									"guid": "54526cca4a957"
+								}
+							],
+							"data": [
+								{
+									"path": "file",
+									"guid": "54526cca4a9a4",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "${ALLUSERSPROFILE}\\Application Data\\SolarWinds\\Logs\\Orion\\Hubble.log",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][file(1)]value",
+											"guid": "54526cca4a9b0"
+										}
+									]
+								},
+								{
+									"path": "encoding",
+									"guid": "54526cca4a9fa",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "utf-8",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][encoding(1)]value",
+											"guid": "54526cca4aa05"
+										}
+									]
+								},
+								{
+									"path": "appendToFile",
+									"guid": "54526cca4aa4f",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "true",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][appendToFile(1)]value",
+											"guid": "54526cca4aa5b"
+										}
+									]
+								},
+								{
+									"path": "rollingStyle",
+									"guid": "54526cca4aaa6",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "Size",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][rollingStyle(1)]value",
+											"guid": "54526cca4aad2"
+										}
+									]
+								},
+								{
+									"path": "maxSizeRollBackups",
+									"guid": "54526cca4ab3a",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "2",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][maxSizeRollBackups(1)]value",
+											"guid": "54526cca4ab46"
+										}
+									]
+								},
+								{
+									"path": "maximumFileSize",
+									"guid": "54526cca4ab91",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "10MB",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][maximumFileSize(1)]value",
+											"guid": "54526cca4ab9d"
+										}
+									]
+								},
+								{
+									"path": "layout",
+									"guid": "54526cca4abe2",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "type",
+											"value": "log4net.Layout.PatternLayout",
+											"norm": "[configuration(1)][log4net(1)][appender(2)][layout(1)]type",
+											"guid": "54526cca4abf0"
+										}
+									],
+									"data": [
+										{
+											"path": "header",
+											"guid": "54526cca4ac49",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "type",
+													"value": "log4net.Util.PatternString",
+													"norm": "[configuration(1)][log4net(1)][appender(2)][layout(1)][header(1)]type",
+													"guid": "54526cca4ac5a"
+												},
+												{
+													"name": "value",
+													"value": "*** View this data at http:\/\/localhost\/Orion\/Admin\/Hubble.aspx ***%newline",
+													"norm": "[configuration(1)][log4net(1)][appender(2)][layout(1)][header(1)]value",
+													"guid": "54526cca4acc5"
+												}
+											]
+										},
+										{
+											"path": "conversionPattern",
+											"guid": "54526cca4ad1b",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "value",
+													"value": "%date [%thread] %-5level %logger - %message%newline",
+													"norm": "[configuration(1)][log4net(1)][appender(2)][layout(1)][conversionPattern(1)]value",
+													"guid": "54526cca4ad29"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "appender",
+							"guid": "54526cca4ad68",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "OutputDebugStringAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(3)]name",
+									"guid": "54526cca4ad72"
+								},
+								{
+									"name": "type",
+									"value": "log4net.Appender.OutputDebugStringAppender",
+									"norm": "[configuration(1)][log4net(1)][appender(3)]type",
+									"guid": "54526cca4adaf"
+								}
+							],
+							"data": [
+								{
+									"path": "layout",
+									"guid": "54526cca4adf6",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "type",
+											"value": "log4net.Layout.PatternLayout",
+											"norm": "[configuration(1)][log4net(1)][appender(3)][layout(1)]type",
+											"guid": "54526cca4ae01"
+										}
+									],
+									"data": [
+										{
+											"path": "conversionPattern",
+											"guid": "54526cca4ae9b",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "value",
+													"value": "%date [%thread] %-5level %logger - %message%newline",
+													"norm": "[configuration(1)][log4net(1)][appender(3)][layout(1)][conversionPattern(1)]value",
+													"guid": "54526cca4aeba"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "logger",
+							"guid": "54526cca4af18",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "name",
+									"value": "HubbleLogger",
+									"norm": "[configuration(1)][log4net(1)][logger(1)]name",
+									"guid": "54526cca4af23"
+								}
+							],
+							"data": [
+								{
+									"path": "level",
+									"guid": "54526cca4af71",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "ERROR",
+											"norm": "[configuration(1)][log4net(1)][logger(1)][level(1)]value",
+											"guid": "54526cca4af7c"
+										}
+									]
+								},
+								{
+									"path": "additivity",
+									"guid": "54526cca4afcb",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "false",
+											"norm": "[configuration(1)][log4net(1)][logger(1)][additivity(1)]value",
+											"guid": "54526cca4aff2"
+										}
+									]
+								},
+								{
+									"path": "appender-ref",
+									"guid": "54526cca4b041",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "ref",
+											"value": "HubbleFileAppender",
+											"norm": "[configuration(1)][log4net(1)][logger(1)][appender-ref(1)]ref",
+											"guid": "54526cca4b04d"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "root",
+							"guid": "54526cca4b090",
+							"depth": 3,
+							"data": [
+								{
+									"path": "level",
+									"guid": "54526cca4b0a3",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "value",
+											"value": "WARN",
+											"norm": "[configuration(1)][log4net(1)][root(1)][level(1)]value",
+											"guid": "54526cca4b0ae"
+										}
+									]
+								},
+								{
+									"path": "appender-ref",
+									"guid": "54526cca4b0fd",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "ref",
+											"value": "RollingLogFileAppender",
+											"norm": "[configuration(1)][log4net(1)][root(1)][appender-ref(1)]ref",
+											"guid": "54526cca4b127"
+										}
+									]
+								},
+								{
+									"path": "appender-ref",
+									"guid": "54526cca4b190",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "ref",
+											"value": "OutputDebugStringAppender",
+											"norm": "[configuration(1)][log4net(1)][root(1)][appender-ref(2)]ref",
+											"guid": "54526cca4b19b"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "orionProxy",
+					"guid": "54526cca4b1cf",
+					"depth": 2,
+					"keydata": [
+						{
+							"name": "configSource",
+							"value": "Orion\\proxy.config",
+							"norm": "[configuration(1)][orionProxy(1)]configSource",
+							"guid": "54526cca4b1da"
+						}
+					]
+				},
+				{
+					"path": "legacyProxy",
+					"guid": "54526cca4b20a",
+					"depth": 2,
+					"keydata": [
+						{
+							"name": "configSource",
+							"value": "Orion\\legacyProxy.config",
+							"norm": "[configuration(1)][legacyProxy(1)]configSource",
+							"guid": "54526cca4b215"
+						}
+					]
+				},
+				{
+					"path": "system.web",
+					"guid": "54526cca4b254",
+					"depth": 2,
+					"data": [
+						{
+							"path": "httpRuntime",
+							"guid": "54526cca4b265",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "requestValidationMode",
+									"value": "2.0",
+									"norm": "[configuration(1)][system.web(1)][httpRuntime(1)]requestValidationMode",
+									"guid": "54526cca4b270"
+								},
+								{
+									"name": "maxRequestLength",
+									"value": "16096",
+									"norm": "[configuration(1)][system.web(1)][httpRuntime(1)]maxRequestLength",
+									"guid": "54526cca4b2b3"
+								}
+							]
+						},
+						{
+							"path": "machineKey",
+							"guid": "54526cca4b2fc",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "validationKey",
+									"value": "AutoGenerate,IsolateApps",
+									"norm": "[configuration(1)][system.web(1)][machineKey(1)]validationKey",
+									"guid": "54526cca4b307"
+								},
+								{
+									"name": "decryptionKey",
+									"value": "AutoGenerate,IsolateApps",
+									"norm": "[configuration(1)][system.web(1)][machineKey(1)]decryptionKey",
+									"guid": "54526cca4b34c"
+								},
+								{
+									"name": "validation",
+									"value": "3DES",
+									"norm": "[configuration(1)][system.web(1)][machineKey(1)]validation",
+									"guid": "54526cca4b3a8"
+								},
+								{
+									"name": "decryption",
+									"value": "3DES",
+									"norm": "[configuration(1)][system.web(1)][machineKey(1)]decryption",
+									"guid": "54526cca4b403"
+								}
+							]
+						},
+						{
+							"path": "customErrors",
+							"guid": "54526cca4b441",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "mode",
+									"value": "Off",
+									"norm": "[configuration(1)][system.web(1)][customErrors(1)]mode",
+									"guid": "54526cca4b44c"
+								}
+							]
+						},
+						{
+							"path": "globalization",
+							"guid": "54526cca4b48c",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "culture",
+									"value": "auto",
+									"norm": "[configuration(1)][system.web(1)][globalization(1)]culture",
+									"guid": "54526cca4b49a"
+								},
+								{
+									"name": "uiCulture",
+									"value": "auto",
+									"norm": "[configuration(1)][system.web(1)][globalization(1)]uiCulture",
+									"guid": "54526cca4b4d6"
+								}
+							]
+						},
+						{
+							"path": "compilation",
+							"guid": "54526cca4b515",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "debug",
+									"value": "false",
+									"norm": "[configuration(1)][system.web(1)][compilation(1)]debug",
+									"guid": "54526cca4b522"
+								},
+								{
+									"name": "targetFramework",
+									"value": "4.0",
+									"norm": "[configuration(1)][system.web(1)][compilation(1)]targetFramework",
+									"guid": "54526cca4b562"
+								}
+							],
+							"data": [
+								{
+									"path": "assemblies",
+									"guid": "54526cca4b5bb",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4b5ea",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(1)]assembly",
+													"guid": "54526cca4b611"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4b66d",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(2)]assembly",
+													"guid": "54526cca4b677"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4b6d4",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(3)]assembly",
+													"guid": "54526cca4b6de"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4b733",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "System.Web.Mobile, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(4)]assembly",
+													"guid": "54526cca4b73e"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4b799",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(5)]assembly",
+													"guid": "54526cca4b7aa"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4b858",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][assemblies(1)][add(6)]assembly",
+													"guid": "54526cca4b879"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "expressionBuilders",
+									"guid": "54526cca4b8ee",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4b914",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "expressionPrefix",
+													"value": "Code",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][expressionBuilders(1)][add(1)]expressionPrefix",
+													"guid": "54526cca4b92a"
+												},
+												{
+													"name": "type",
+													"value": "CodeExpressionBuilder",
+													"norm": "[configuration(1)][system.web(1)][compilation(1)][expressionBuilders(1)][add(1)]type",
+													"guid": "54526cca4b9a1"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "authentication",
+							"guid": "54526cca4b9ed",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "mode",
+									"value": "Forms",
+									"norm": "[configuration(1)][system.web(1)][authentication(1)]mode",
+									"guid": "54526cca4b9f8"
+								}
+							],
+							"data": [
+								{
+									"path": "forms",
+									"guid": "54526cca4ba4f",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "loginUrl",
+											"value": "~\/Orion\/Login.aspx",
+											"norm": "[configuration(1)][system.web(1)][authentication(1)][forms(1)]loginUrl",
+											"guid": "54526cca4ba5b"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "identity",
+							"guid": "54526cca4ba9c",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "impersonate",
+									"value": "false",
+									"norm": "[configuration(1)][system.web(1)][identity(1)]impersonate",
+									"guid": "54526cca4baa7"
+								}
+							]
+						},
+						{
+							"path": "authorization",
+							"guid": "54526cca4baf8",
+							"depth": 3,
+							"data": [
+								{
+									"path": "deny",
+									"guid": "54526cca4bb0a",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "users",
+											"value": "?",
+											"norm": "[configuration(1)][system.web(1)][authorization(1)][deny(1)]users",
+											"guid": "54526cca4bb19"
+										}
+									]
+								},
+								{
+									"path": "allow",
+									"guid": "54526cca4bb98",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "users",
+											"value": "*",
+											"norm": "[configuration(1)][system.web(1)][authorization(1)][allow(1)]users",
+											"guid": "54526cca4bbb6"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "membership",
+							"guid": "54526cca4bbfa",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "defaultProvider",
+									"value": "OrionMembershipProvider",
+									"norm": "[configuration(1)][system.web(1)][membership(1)]defaultProvider",
+									"guid": "54526cca4bc06"
+								}
+							],
+							"data": [
+								{
+									"path": "providers",
+									"guid": "54526cca4bc60",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4bc75",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "OrionMembershipProvider",
+													"norm": "[configuration(1)][system.web(1)][membership(1)][providers(1)][add(1)]name",
+													"guid": "54526cca4bc95"
+												},
+												{
+													"name": "type",
+													"value": "SolarWinds.Orion.Web.OrionMembershipProvider",
+													"norm": "[configuration(1)][system.web(1)][membership(1)][providers(1)][add(1)]type",
+													"guid": "54526cca4bcf5"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "profile",
+							"guid": "54526cca4bd2b",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "enabled",
+									"value": "true",
+									"norm": "[configuration(1)][system.web(1)][profile(1)]enabled",
+									"guid": "54526cca4bd34"
+								},
+								{
+									"name": "defaultProvider",
+									"value": "SWOrionProfileProvider",
+									"norm": "[configuration(1)][system.web(1)][profile(1)]defaultProvider",
+									"guid": "54526cca4bd6b"
+								},
+								{
+									"name": "automaticSaveEnabled",
+									"value": "false",
+									"norm": "[configuration(1)][system.web(1)][profile(1)]automaticSaveEnabled",
+									"guid": "54526cca4bda2"
+								}
+							],
+							"data": [
+								{
+									"path": "providers",
+									"guid": "54526cca4be09",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4be36",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "SWOrionProfileProvider",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][providers(1)][add(1)]name",
+													"guid": "54526cca4be42"
+												},
+												{
+													"name": "type",
+													"value": "SolarWinds.Orion.Web.OrionProfileProvider",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][providers(1)][add(1)]type",
+													"guid": "54526cca4be92"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "properties",
+									"guid": "54526cca4beda",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4beeb",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AccountEnabled",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(1)]name",
+													"guid": "54526cca4bf02"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(1)]type",
+													"guid": "54526cca4bf63"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4bfb0",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "DisableSessionTimeout",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(2)]name",
+													"guid": "54526cca4bfbd"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(2)]type",
+													"guid": "54526cca4c027"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c092",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AllowAdmin",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(3)]name",
+													"guid": "54526cca4c0bc"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(3)]type",
+													"guid": "54526cca4c10d"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c17d",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AllowNodeManagement",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(4)]name",
+													"guid": "54526cca4c18a"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(4)]type",
+													"guid": "54526cca4c1ec"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c239",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AllowCustomize",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(5)]name",
+													"guid": "54526cca4c246"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(5)]type",
+													"guid": "54526cca4c2ae"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c308",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AllowReportManagement",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(6)]name",
+													"guid": "54526cca4c32c"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(6)]type",
+													"guid": "54526cca4c3ac"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c3fd",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AlertSound",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(7)]name",
+													"guid": "54526cca4c409"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(7)]type",
+													"guid": "54526cca4c45f"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c4b1",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "LastLogin",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(8)]name",
+													"guid": "54526cca4c4bc"
+												},
+												{
+													"name": "type",
+													"value": "DateTime",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(8)]type",
+													"guid": "54526cca4c517"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c568",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "LimitationID1",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(9)]name",
+													"guid": "54526cca4c58d"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(9)]type",
+													"guid": "54526cca4c5f8"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c69c",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "LimitationID2",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(10)]name",
+													"guid": "54526cca4c6b9"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(10)]type",
+													"guid": "54526cca4c727"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c779",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "LimitationID3",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(11)]name",
+													"guid": "54526cca4c788"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(11)]type",
+													"guid": "54526cca4c7f2"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c887",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "SummaryViewID",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(12)]name",
+													"guid": "54526cca4c8a5"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(12)]type",
+													"guid": "54526cca4c921"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4c972",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "HomePageViewID",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(13)]name",
+													"guid": "54526cca4c989"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(13)]type",
+													"guid": "54526cca4c9ea"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4ca37",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "DefaultNetObject",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(14)]name",
+													"guid": "54526cca4ca44"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(14)]type",
+													"guid": "54526cca4caaf"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cb1a",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "DefaultNetObjectID",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(15)]name",
+													"guid": "54526cca4cb43"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(15)]type",
+													"guid": "54526cca4cb98"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cbe3",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Expires",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(16)]name",
+													"guid": "54526cca4cbf9"
+												},
+												{
+													"name": "type",
+													"value": "DateTime",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(16)]type",
+													"guid": "54526cca4cc5b"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cca8",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "ReportFolder",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(17)]name",
+													"guid": "54526cca4ccbf"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(17)]type",
+													"guid": "54526cca4cd1f"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cd89",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AllowEventClear",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(18)]name",
+													"guid": "54526cca4cdb3"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(18)]type",
+													"guid": "54526cca4ce19"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4ce66",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "MenuName",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(19)]name",
+													"guid": "54526cca4ce71"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(19)]type",
+													"guid": "54526cca4cec4"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cf11",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "ToolsetIntegration",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(20)]name",
+													"guid": "54526cca4cf26"
+												},
+												{
+													"name": "type",
+													"value": "Boolean",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(20)]type",
+													"guid": "54526cca4cf86"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4cfee",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AccountType",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(21)]name",
+													"guid": "54526cca4d017"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(21)]type",
+													"guid": "54526cca4d07d"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4d0c9",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "GroupInfo",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(22)]name",
+													"guid": "54526cca4d0d5"
+												},
+												{
+													"name": "type",
+													"value": "String",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(22)]type",
+													"guid": "54526cca4d13a"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4d188",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "GroupPriority",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(23)]name",
+													"guid": "54526cca4d194"
+												},
+												{
+													"name": "type",
+													"value": "Int32",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][add(23)]type",
+													"guid": "54526cca4d1fa"
+												}
+											]
+										},
+										{
+											"path": "group",
+											"guid": "54526cca4d271",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NetPerfMon",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)]name",
+													"guid": "54526cca4d2a6"
+												}
+											],
+											"data": [
+												{
+													"path": "add",
+													"guid": "54526cca4d314",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VolumeDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(1)]name",
+															"guid": "54526cca4d321"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(1)]type",
+															"guid": "54526cca4d37c"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4d3d7",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "NodeDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(2)]name",
+															"guid": "54526cca4d3e4"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(2)]type",
+															"guid": "54526cca4d441"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4d49f",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "ContainerDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(3)]name",
+															"guid": "54526cca4d4c7"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(1)][add(3)]type",
+															"guid": "54526cca4d541"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "group",
+											"guid": "54526cca4d593",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NPM",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)]name",
+													"guid": "54526cca4d5a9"
+												}
+											],
+											"data": [
+												{
+													"path": "add",
+													"guid": "54526cca4d612",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "InterfaceDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(1)]name",
+															"guid": "54526cca4d61f"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(1)]type",
+															"guid": "54526cca4d680"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4d743",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VSANDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(2)]name",
+															"guid": "54526cca4d76c"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(2)]type",
+															"guid": "54526cca4d867"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4d8ee",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "UCSChassisDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(3)]name",
+															"guid": "54526cca4d901"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(3)]type",
+															"guid": "54526cca4d97a"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4d9e8",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "MulticastGroupDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(4)]name",
+															"guid": "54526cca4d9f4"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(2)][add(4)]type",
+															"guid": "54526cca4da76"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "group",
+											"guid": "54526cca4daf9",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "VIM",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)]name",
+													"guid": "54526cca4db15"
+												}
+											],
+											"data": [
+												{
+													"path": "add",
+													"guid": "54526cca4db88",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VimHyperVSummaryViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(1)]name",
+															"guid": "54526cca4db95"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(1)]type",
+															"guid": "54526cca4dc09"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4dc7e",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VimDataCenterDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(2)]name",
+															"guid": "54526cca4dc95"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(2)]type",
+															"guid": "54526cca4dd00"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4dd5a",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VimVMwareSummaryViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(3)]name",
+															"guid": "54526cca4dd70"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(3)]type",
+															"guid": "54526cca4dddb"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4de35",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VimClusterDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(4)]name",
+															"guid": "54526cca4de5d"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(4)]type",
+															"guid": "54526cca4ded6"
+														}
+													]
+												},
+												{
+													"path": "add",
+													"guid": "54526cca4df2e",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "VimSummaryViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(5)]name",
+															"guid": "54526cca4df3b"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(3)][add(5)]type",
+															"guid": "54526cca4df9b"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "group",
+											"guid": "54526cca4dfee",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "HardwareHealth",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(4)]name",
+													"guid": "54526cca4dffa"
+												}
+											],
+											"data": [
+												{
+													"path": "add",
+													"guid": "54526cca4e056",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "HWHTemperatureUnit",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(4)][add(1)]name",
+															"guid": "54526cca4e07e"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(4)][add(1)]type",
+															"guid": "54526cca4e0f9"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "group",
+											"guid": "54526cca4e149",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Interfaces",
+													"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(5)]name",
+													"guid": "54526cca4e15f"
+												}
+											],
+											"data": [
+												{
+													"path": "add",
+													"guid": "54526cca4e22c",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "name",
+															"value": "InterfacesPackageInterfaceDetailsViewID",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(5)][add(1)]name",
+															"guid": "54526cca4e259"
+														},
+														{
+															"name": "type",
+															"value": "System.Int32",
+															"norm": "[configuration(1)][system.web(1)][profile(1)][properties(1)][group(5)][add(1)]type",
+															"guid": "54526cca4e2c3"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "pages",
+							"guid": "54526cca4e339",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "validateRequest",
+									"value": "false",
+									"norm": "[configuration(1)][system.web(1)][pages(1)]validateRequest",
+									"guid": "54526cca4e34b"
+								},
+								{
+									"name": "enableEventValidation",
+									"value": "false",
+									"norm": "[configuration(1)][system.web(1)][pages(1)]enableEventValidation",
+									"guid": "54526cca4e3b0"
+								},
+								{
+									"name": "clientIDMode",
+									"value": "AutoID",
+									"norm": "[configuration(1)][system.web(1)][pages(1)]clientIDMode",
+									"guid": "54526cca4e414"
+								}
+							],
+							"data": [
+								{
+									"path": "namespaces",
+									"guid": "54526cca4e4a2",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4e4ce",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "namespace",
+													"value": "SolarWinds.Orion.Web",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][namespaces(1)][add(1)]namespace",
+													"guid": "54526cca4e502"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4e5a0",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "namespace",
+													"value": "SolarWinds.Orion.Web.UI",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][namespaces(1)][add(2)]namespace",
+													"guid": "54526cca4e5b2"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4e649",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "namespace",
+													"value": "System.Collections.Generic",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][namespaces(1)][add(3)]namespace",
+													"guid": "54526cca4e66a"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "controls",
+									"guid": "54526cca4e6c6",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4e6ec",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "assembly",
+													"value": "OrionWeb",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(1)]assembly",
+													"guid": "54526cca4e704"
+												},
+												{
+													"name": "namespace",
+													"value": "SolarWinds.Orion.Web.UI",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(1)]namespace",
+													"guid": "54526cca4e796"
+												},
+												{
+													"name": "tagPrefix",
+													"value": "orion",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(1)]tagPrefix",
+													"guid": "54526cca4e824"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4e8b6",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "tagPrefix",
+													"value": "orion",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(2)]tagPrefix",
+													"guid": "54526cca4e8d8"
+												},
+												{
+													"name": "src",
+													"value": "~\/Orion\/ResourceWrapper.ascx",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(2)]src",
+													"guid": "54526cca4e986"
+												},
+												{
+													"name": "tagName",
+													"value": "resourceWrapper",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(2)]tagName",
+													"guid": "54526cca4ea29"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4ead4",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "tagPrefix",
+													"value": "asp",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(3)]tagPrefix",
+													"guid": "54526cca4eaf7"
+												},
+												{
+													"name": "namespace",
+													"value": "System.Web.UI",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(3)]namespace",
+													"guid": "54526cca4eb66"
+												},
+												{
+													"name": "assembly",
+													"value": "System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+													"norm": "[configuration(1)][system.web(1)][pages(1)][controls(1)][add(3)]assembly",
+													"guid": "54526cca4ec1b"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "httpHandlers",
+							"guid": "54526cca4ec82",
+							"depth": 3,
+							"data": [
+								{
+									"path": "remove",
+									"guid": "54526cca4ec95",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][remove(1)]verb",
+											"guid": "54526cca4eca3"
+										},
+										{
+											"name": "path",
+											"value": "*.asmx",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][remove(1)]path",
+											"guid": "54526cca4ed03"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4ed50",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(1)]verb",
+											"guid": "54526cca4ed5d"
+										},
+										{
+											"name": "path",
+											"value": "*.asmx",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(1)]path",
+											"guid": "54526cca4edb6"
+										},
+										{
+											"name": "validate",
+											"value": "false",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(1)]validate",
+											"guid": "54526cca4ee30"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(1)]type",
+											"guid": "54526cca4ee93"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4eee4",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(2)]verb",
+											"guid": "54526cca4eeef"
+										},
+										{
+											"name": "path",
+											"value": "*_AppService.axd",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(2)]path",
+											"guid": "54526cca4ef3e"
+										},
+										{
+											"name": "validate",
+											"value": "false",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(2)]validate",
+											"guid": "54526cca4ef90"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(2)]type",
+											"guid": "54526cca4efe0"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f03b",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "verb",
+											"value": "GET,HEAD",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(3)]verb",
+											"guid": "54526cca4f067"
+										},
+										{
+											"name": "path",
+											"value": "ScriptResource.axd",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(3)]path",
+											"guid": "54526cca4f12b"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(3)]type",
+											"guid": "54526cca4f1b0"
+										},
+										{
+											"name": "validate",
+											"value": "false",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(3)]validate",
+											"guid": "54526cca4f235"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f2ba",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(4)]verb",
+											"guid": "54526cca4f2eb"
+										},
+										{
+											"name": "path",
+											"value": "Orion\/Skipi18n\/Profiler\/*",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(4)]path",
+											"guid": "54526cca4f375"
+										},
+										{
+											"name": "type",
+											"value": "StackExchange.Profiling.UI.MiniProfilerHandler, MiniProfiler, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3",
+											"norm": "[configuration(1)][system.web(1)][httpHandlers(1)][add(4)]type",
+											"guid": "54526cca4f3f3"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "httpModules",
+							"guid": "54526cca4f47d",
+							"depth": 3,
+							"data": [
+								{
+									"path": "add",
+									"guid": "54526cca4f494",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "ScriptModule",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(1)]name",
+											"guid": "54526cca4f4a7"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(1)]type",
+											"guid": "54526cca4f508"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f558",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "WebProxy",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(2)]name",
+											"guid": "54526cca4f565"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.HttpModules.WebProxy",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(2)]type",
+											"guid": "54526cca4f5be"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f61a",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "i18nRedirector",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(3)]name",
+											"guid": "54526cca4f638"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.HttpModules.i18nRedirector",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(3)]type",
+											"guid": "54526cca4f6ab"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f6f6",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "HubbleModule",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(4)]name",
+											"guid": "54526cca4f702"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.Hubble.HubbleModule",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(4)]type",
+											"guid": "54526cca4f756"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca4f7a2",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "Detector",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(5)]name",
+											"guid": "54526cca4f7ae"
+										},
+										{
+											"name": "type",
+											"value": "FiftyOne.Foundation.Mobile.Detection.DetectorModule, FiftyOne.Foundation",
+											"norm": "[configuration(1)][system.web(1)][httpModules(1)][add(5)]type",
+											"guid": "54526cca4f80b"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "siteMap",
+							"guid": "54526cca4f896",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "enabled",
+									"value": "true",
+									"norm": "[configuration(1)][system.web(1)][siteMap(1)]enabled",
+									"guid": "54526cca4f8cf"
+								}
+							],
+							"data": [
+								{
+									"path": "providers",
+									"guid": "54526cca4f94e",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca4f975",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "AdminSitemapProvider",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(1)]name",
+													"guid": "54526cca4f988"
+												},
+												{
+													"name": "type",
+													"value": "System.Web.XmlSiteMapProvider",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(1)]type",
+													"guid": "54526cca4fa26"
+												},
+												{
+													"name": "siteMapFile",
+													"value": "Admin.sitemap",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(1)]siteMapFile",
+													"guid": "54526cca4faba"
+												}
+											]
+										},
+										{
+											"path": "add",
+											"guid": "54526cca4fb58",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NPMSitemapProvider",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(2)]name",
+													"guid": "54526cca4fb8a"
+												},
+												{
+													"name": "type",
+													"value": "System.Web.XmlSiteMapProvider",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(2)]type",
+													"guid": "54526cca4fc28"
+												},
+												{
+													"name": "siteMapFile",
+													"value": "\\Orion\\NPM\\NPM.sitemap",
+													"norm": "[configuration(1)][system.web(1)][siteMap(1)][providers(1)][add(2)]siteMapFile",
+													"guid": "54526cca4fcb7"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "location",
+					"guid": "54526cca4fd0e",
+					"depth": 2,
+					"keydata": [
+						{
+							"name": "path",
+							"value": "~\/Orion\/images",
+							"norm": "[configuration(1)][location(1)]path",
+							"guid": "54526cca4fd1f"
+						}
+					],
+					"data": [
+						{
+							"path": "system.web",
+							"guid": "54526cca4fda3",
+							"depth": 3,
+							"data": [
+								{
+									"path": "authorization",
+									"guid": "54526cca4fde3",
+									"depth": 4,
+									"data": [
+										{
+											"path": "allow",
+											"guid": "54526cca4fe04",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "users",
+													"value": "?",
+													"norm": "[configuration(1)][location(1)][system.web(1)][authorization(1)][allow(1)]users",
+													"guid": "54526cca4fe17"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "location",
+					"guid": "54526cca4fe6c",
+					"depth": 2,
+					"keydata": [
+						{
+							"name": "path",
+							"value": "Orion\/Error.aspx",
+							"norm": "[configuration(1)][location(2)]path",
+							"guid": "54526cca4fe7c"
+						}
+					],
+					"data": [
+						{
+							"path": "system.web",
+							"guid": "54526cca4fef8",
+							"depth": 3,
+							"data": [
+								{
+									"path": "authorization",
+									"guid": "54526cca4ff23",
+									"depth": 4,
+									"data": [
+										{
+											"path": "allow",
+											"guid": "54526cca4ff43",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "users",
+													"value": "?",
+													"norm": "[configuration(1)][location(2)][system.web(1)][authorization(1)][allow(1)]users",
+													"guid": "54526cca4ff56"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "location",
+					"guid": "54526cca4ffc3",
+					"depth": 2,
+					"keydata": [
+						{
+							"name": "path",
+							"value": "Orion\/WindowsLogin.aspx",
+							"norm": "[configuration(1)][location(3)]path",
+							"guid": "54526cca4ffde"
+						}
+					],
+					"data": [
+						{
+							"path": "system.web",
+							"guid": "54526cca50030",
+							"depth": 3,
+							"data": [
+								{
+									"path": "authorization",
+									"guid": "54526cca50044",
+									"depth": 4,
+									"data": [
+										{
+											"path": "allow",
+											"guid": "54526cca50057",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "users",
+													"value": "*",
+													"norm": "[configuration(1)][location(3)][system.web(1)][authorization(1)][allow(1)]users",
+													"guid": "54526cca50066"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "system.webServer",
+					"guid": "54526cca500bc",
+					"depth": 2,
+					"data": [
+						{
+							"path": "defaultDocument",
+							"guid": "54526cca500ce",
+							"depth": 3,
+							"data": [
+								{
+									"path": "files",
+									"guid": "54526cca500e0",
+									"depth": 4,
+									"data": [
+										{
+											"path": "add",
+											"guid": "54526cca500f5",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "value",
+													"value": "Default.aspx",
+													"norm": "[configuration(1)][system.webServer(1)][defaultDocument(1)][files(1)][add(1)]value",
+													"guid": "54526cca50103"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "validation",
+							"guid": "54526cca5014c",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "validateIntegratedModeConfiguration",
+									"value": "false",
+									"norm": "[configuration(1)][system.webServer(1)][validation(1)]validateIntegratedModeConfiguration",
+									"guid": "54526cca50158"
+								}
+							]
+						},
+						{
+							"path": "modules",
+							"guid": "54526cca501a9",
+							"depth": 3,
+							"data": [
+								{
+									"path": "add",
+									"guid": "54526cca501c9",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "ScriptModule",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(1)]name",
+											"guid": "54526cca501e8"
+										},
+										{
+											"name": "preCondition",
+											"value": "integratedMode",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(1)]preCondition",
+											"guid": "54526cca50267"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(1)]type",
+											"guid": "54526cca5030e"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca5038d",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "WebProxy",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(2)]name",
+											"guid": "54526cca5039f"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.HttpModules.WebProxy",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(2)]type",
+											"guid": "54526cca50436"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca5048f",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "i18nRedirector",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(3)]name",
+											"guid": "54526cca5049b"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.HttpModules.i18nRedirector",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(3)]type",
+											"guid": "54526cca504f4"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca50541",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "HubbleModule",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(4)]name",
+											"guid": "54526cca5054d"
+										},
+										{
+											"name": "type",
+											"value": "SolarWinds.Orion.Web.Hubble.HubbleModule",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(4)]type",
+											"guid": "54526cca505a3"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca506d8",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "Session",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(5)]name",
+											"guid": "54526cca506e4"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.SessionState.SessionStateModule",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(5)]type",
+											"guid": "54526cca50738"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca507f5",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "Detector",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(6)]name",
+											"guid": "54526cca50801"
+										},
+										{
+											"name": "type",
+											"value": "FiftyOne.Foundation.Mobile.Detection.DetectorModule, FiftyOne.Foundation",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][add(6)]type",
+											"guid": "54526cca50858"
+										}
+									]
+								},
+								{
+									"path": "remove",
+									"guid": "54526cca5064f",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "Session",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][remove(1)]name",
+											"guid": "54526cca5067d"
+										}
+									]
+								},
+								{
+									"path": "remove",
+									"guid": "54526cca5078d",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "Detector",
+											"norm": "[configuration(1)][system.webServer(1)][modules(1)][remove(2)]name",
+											"guid": "54526cca5079c"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "handlers",
+							"guid": "54526cca508d2",
+							"depth": 3,
+							"data": [
+								{
+									"path": "remove",
+									"guid": "54526cca5090a",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "WebServiceHandlerFactory-Integrated",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][remove(1)]name",
+											"guid": "54526cca50928"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca509be",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "ScriptHandlerFactory",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(1)]name",
+											"guid": "54526cca509dc"
+										},
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(1)]verb",
+											"guid": "54526cca50a84"
+										},
+										{
+											"name": "path",
+											"value": "*.asmx",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(1)]path",
+											"guid": "54526cca50b10"
+										},
+										{
+											"name": "preCondition",
+											"value": "integratedMode",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(1)]preCondition",
+											"guid": "54526cca50ba5"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(1)]type",
+											"guid": "54526cca50c38"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca50d02",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "ScriptHandlerFactoryAppServices",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(2)]name",
+											"guid": "54526cca50d30"
+										},
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(2)]verb",
+											"guid": "54526cca50d91"
+										},
+										{
+											"name": "path",
+											"value": "*_AppService.axd",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(2)]path",
+											"guid": "54526cca50deb"
+										},
+										{
+											"name": "preCondition",
+											"value": "integratedMode",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(2)]preCondition",
+											"guid": "54526cca50e3f"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(2)]type",
+											"guid": "54526cca50e90"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca50ee2",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "ScriptResource",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(3)]name",
+											"guid": "54526cca50ef5"
+										},
+										{
+											"name": "preCondition",
+											"value": "integratedMode,runtimeVersionv2.0",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(3)]preCondition",
+											"guid": "54526cca50f5f"
+										},
+										{
+											"name": "path",
+											"value": "ScriptResource.axd",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(3)]path",
+											"guid": "54526cca50fe9"
+										},
+										{
+											"name": "verb",
+											"value": "GET,HEAD",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(3)]verb",
+											"guid": "54526cca51089"
+										},
+										{
+											"name": "type",
+											"value": "System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(3)]type",
+											"guid": "54526cca51165"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca5121d",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "name",
+											"value": "profiler",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(4)]name",
+											"guid": "54526cca5125e"
+										},
+										{
+											"name": "verb",
+											"value": "*",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(4)]verb",
+											"guid": "54526cca512ca"
+										},
+										{
+											"name": "path",
+											"value": "Orion\/Skipi18n\/Profiler\/*",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(4)]path",
+											"guid": "54526cca5131e"
+										},
+										{
+											"name": "type",
+											"value": "StackExchange.Profiling.UI.MiniProfilerHandler, MiniProfiler, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b44f9351044011a3",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(4)]type",
+											"guid": "54526cca5136f"
+										},
+										{
+											"name": "preCondition",
+											"value": "managedHandler",
+											"norm": "[configuration(1)][system.webServer(1)][handlers(1)][add(4)]preCondition",
+											"guid": "54526cca513c4"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "httpErrors",
+							"guid": "54526cca5140f",
+							"depth": 3,
+							"keydata": [
+								{
+									"name": "errorMode",
+									"value": "Detailed",
+									"norm": "[configuration(1)][system.webServer(1)][httpErrors(1)]errorMode",
+									"guid": "54526cca5141d"
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "system.serviceModel",
+					"guid": "54526cca5147b",
+					"depth": 2,
+					"data": [
+						{
+							"path": "client",
+							"guid": "54526cca514b1",
+							"depth": 3,
+							"data": [
+								{
+									"path": "endpoint",
+									"guid": "54526cca514d5",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "address",
+											"value": "net.tcp:\/\/localhost:17777\/SW\/InformationService\/Orion\/ssl",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(1)]address",
+											"guid": "54526cca514e3"
+										},
+										{
+											"name": "binding",
+											"value": "netTcpBinding",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(1)]binding",
+											"guid": "54526cca51539"
+										},
+										{
+											"name": "bindingConfiguration",
+											"value": "TransportMessage",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(1)]bindingConfiguration",
+											"guid": "54526cca5158c"
+										},
+										{
+											"name": "name",
+											"value": "OrionTcpBinding_InformationService",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(1)]name",
+											"guid": "54526cca515e1"
+										},
+										{
+											"name": "contract",
+											"value": "SolarWinds.InformationService.Contract.IInformationService",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(1)]contract",
+											"guid": "54526cca51634"
+										}
+									]
+								},
+								{
+									"path": "endpoint",
+									"guid": "54526cca51689",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "address",
+											"value": "net.tcp:\/\/localhost:17777\/SolarWinds\/InformationService\/Orion\/ssl",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(2)]address",
+											"guid": "54526cca51695"
+										},
+										{
+											"name": "binding",
+											"value": "netTcpBinding",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(2)]binding",
+											"guid": "54526cca516f9"
+										},
+										{
+											"name": "bindingConfiguration",
+											"value": "TransportMessage",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(2)]bindingConfiguration",
+											"guid": "54526cca5176f"
+										},
+										{
+											"name": "name",
+											"value": "OrionTcpBinding_InformationServicev2",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(2)]name",
+											"guid": "54526cca517d7"
+										},
+										{
+											"name": "contract",
+											"value": "SolarWinds.InformationService.Contract2.IInformationService",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(2)]contract",
+											"guid": "54526cca5183a"
+										}
+									]
+								},
+								{
+									"path": "endpoint",
+									"guid": "54526cca5188f",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "address",
+											"value": "net.tcp:\/\/localhost:17777\/SolarWinds\/InformationService\/v3\/Orion\/ssl",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(3)]address",
+											"guid": "54526cca5189c"
+										},
+										{
+											"name": "binding",
+											"value": "netTcpBinding",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(3)]binding",
+											"guid": "54526cca518f7"
+										},
+										{
+											"name": "bindingConfiguration",
+											"value": "TransportMessage",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(3)]bindingConfiguration",
+											"guid": "54526cca51942"
+										},
+										{
+											"name": "name",
+											"value": "OrionTcpBinding_InformationServicev3",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(3)]name",
+											"guid": "54526cca5198b"
+										},
+										{
+											"name": "contract",
+											"value": "SolarWinds.InformationService.Contract2.IInformationService",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(3)]contract",
+											"guid": "54526cca519db"
+										}
+									]
+								},
+								{
+									"path": "endpoint",
+									"guid": "54526cca51a25",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "address",
+											"value": "net.tcp:\/\/localhost:17777\/SolarWinds\/InformationService\/v3\/Orion\/certificate",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(4)]address",
+											"guid": "54526cca51a2f"
+										},
+										{
+											"name": "binding",
+											"value": "netTcpBinding",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(4)]binding",
+											"guid": "54526cca51a7f"
+										},
+										{
+											"name": "bindingConfiguration",
+											"value": "Certificate",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(4)]bindingConfiguration",
+											"guid": "54526cca51acb"
+										},
+										{
+											"name": "name",
+											"value": "OrionCertificateTcpBinding_InformationServicev3",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(4)]name",
+											"guid": "54526cca51b33"
+										},
+										{
+											"name": "contract",
+											"value": "SolarWinds.InformationService.Contract2.IInformationService",
+											"norm": "[configuration(1)][system.serviceModel(1)][client(1)][endpoint(4)]contract",
+											"guid": "54526cca51bb5"
+										}
+									]
+								}
+							]
+						},
+						{
+							"path": "bindings",
+							"guid": "54526cca51c3c",
+							"depth": 3,
+							"data": [
+								{
+									"path": "customBinding",
+									"guid": "54526cca51c4f",
+									"depth": 4,
+									"data": [
+										{
+											"path": "binding",
+											"guid": "54526cca51c63",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "UserNameNamedPipe",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)]name",
+													"guid": "54526cca51c6f"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca51ce1",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "authenticationMode",
+															"value": "UserNameOverTransport",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][security(1)]authenticationMode",
+															"guid": "54526cca51cec"
+														}
+													]
+												},
+												{
+													"path": "binaryMessageEncoding",
+													"guid": "54526cca51d79",
+													"depth": 6,
+													"data": [
+														{
+															"path": "readerQuotas",
+															"guid": "54526cca51d9d",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "maxArrayLength",
+																	"value": "2147483647",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][binaryMessageEncoding(1)][readerQuotas(1)]maxArrayLength",
+																	"guid": "54526cca51dc6"
+																},
+																{
+																	"name": "maxStringContentLength",
+																	"value": "2147483647",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][binaryMessageEncoding(1)][readerQuotas(1)]maxStringContentLength",
+																	"guid": "54526cca51e48"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "sslStreamSecurity",
+													"guid": "54526cca51eb5",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "requireClientCertificate",
+															"value": "false",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][sslStreamSecurity(1)]requireClientCertificate",
+															"guid": "54526cca51ebf"
+														}
+													]
+												},
+												{
+													"path": "namedPipeTransport",
+													"guid": "54526cca51f2f",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxReceivedMessageSize",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][namedPipeTransport(1)]maxReceivedMessageSize",
+															"guid": "54526cca51f3d"
+														},
+														{
+															"name": "maxBufferSize",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(1)][namedPipeTransport(1)]maxBufferSize",
+															"guid": "54526cca51faa"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca52026",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "SWOIS.Over.NamedPipes",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)]name",
+													"guid": "54526cca5204d"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca520bb",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "authenticationMode",
+															"value": "UserNameOverTransport",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][security(1)]authenticationMode",
+															"guid": "54526cca520c7"
+														}
+													]
+												},
+												{
+													"path": "binaryMessageEncoding",
+													"guid": "54526cca52147",
+													"depth": 6,
+													"data": [
+														{
+															"path": "readerQuotas",
+															"guid": "54526cca5215a",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "maxArrayLength",
+																	"value": "2147483647",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][binaryMessageEncoding(1)][readerQuotas(1)]maxArrayLength",
+																	"guid": "54526cca52166"
+																},
+																{
+																	"name": "maxStringContentLength",
+																	"value": "2147483647",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][binaryMessageEncoding(1)][readerQuotas(1)]maxStringContentLength",
+																	"guid": "54526cca521e1"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "sslStreamSecurity",
+													"guid": "54526cca5224b",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "requireClientCertificate",
+															"value": "false",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][sslStreamSecurity(1)]requireClientCertificate",
+															"guid": "54526cca52274"
+														}
+													]
+												},
+												{
+													"path": "namedPipeTransport",
+													"guid": "54526cca5232d",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxReceivedMessageSize",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][namedPipeTransport(1)]maxReceivedMessageSize",
+															"guid": "54526cca52339"
+														},
+														{
+															"name": "maxBufferSize",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][customBinding(1)][binding(2)][namedPipeTransport(1)]maxBufferSize",
+															"guid": "54526cca523a6"
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "netTcpBinding",
+									"guid": "54526cca523fe",
+									"depth": 4,
+									"data": [
+										{
+											"path": "binding",
+											"guid": "54526cca5240c",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Windows",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)]name",
+													"guid": "54526cca52417"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)]maxReceivedMessageSize",
+													"guid": "54526cca52478"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)]maxBufferSize",
+													"guid": "54526cca524f4"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca52579",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "Transport",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)][security(1)]mode",
+															"guid": "54526cca52586"
+														}
+													],
+													"data": [
+														{
+															"path": "transport",
+															"guid": "54526cca52604",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "Windows",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)][security(1)][transport(1)]clientCredentialType",
+																	"guid": "54526cca52612"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca52677",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca52682"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(1)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca526ef"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca52764",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "TransportMessage",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)]name",
+													"guid": "54526cca5278a"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)]maxReceivedMessageSize",
+													"guid": "54526cca527e6"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)]maxBufferSize",
+													"guid": "54526cca52843"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca528ac",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "TransportWithMessageCredential",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)][security(1)]mode",
+															"guid": "54526cca528b7"
+														}
+													],
+													"data": [
+														{
+															"path": "message",
+															"guid": "54526cca52936",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "UserName",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)][security(1)][message(1)]clientCredentialType",
+																	"guid": "54526cca52945"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca529a7",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca529b4"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(2)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca52a15"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca52a72",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NPM.WindowsClientOverTcp.ToOrionBusinessLayer",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)]name",
+													"guid": "54526cca52a7b"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)]maxReceivedMessageSize",
+													"guid": "54526cca52ad3"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)]maxBufferSize",
+													"guid": "54526cca52b35"
+												},
+												{
+													"name": "sendTimeout",
+													"value": "00:05:00",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)]sendTimeout",
+													"guid": "54526cca52ba5"
+												},
+												{
+													"name": "portSharingEnabled",
+													"value": "true",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)]portSharingEnabled",
+													"guid": "54526cca52bf5"
+												}
+											],
+											"data": [
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca52c52",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca52c5f"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca52cc0"
+														},
+														{
+															"name": "maxBytesPerRead",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][readerQuotas(1)]maxBytesPerRead",
+															"guid": "54526cca52d22"
+														},
+														{
+															"name": "maxDepth",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][readerQuotas(1)]maxDepth",
+															"guid": "54526cca52d81"
+														}
+													]
+												},
+												{
+													"path": "security",
+													"guid": "54526cca52dfa",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "TransportWithMessageCredential",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][security(1)]mode",
+															"guid": "54526cca52e25"
+														}
+													],
+													"data": [
+														{
+															"path": "message",
+															"guid": "54526cca52e96",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "UserName",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(3)][security(1)][message(1)]clientCredentialType",
+																	"guid": "54526cca52ead"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca52f10",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Core.WindowsClientOverTcp.ToOrionBusinessLayer",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)]name",
+													"guid": "54526cca52f25"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)]maxReceivedMessageSize",
+													"guid": "54526cca52fb5"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)]maxBufferSize",
+													"guid": "54526cca53026"
+												},
+												{
+													"name": "sendTimeout",
+													"value": "00:05:00",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)]sendTimeout",
+													"guid": "54526cca530ac"
+												},
+												{
+													"name": "portSharingEnabled",
+													"value": "true",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)]portSharingEnabled",
+													"guid": "54526cca53140"
+												}
+											],
+											"data": [
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca531c7",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca531dd"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca53253"
+														},
+														{
+															"name": "maxBytesPerRead",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][readerQuotas(1)]maxBytesPerRead",
+															"guid": "54526cca532c8"
+														},
+														{
+															"name": "maxDepth",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][readerQuotas(1)]maxDepth",
+															"guid": "54526cca53332"
+														}
+													]
+												},
+												{
+													"path": "security",
+													"guid": "54526cca533ae",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "TransportWithMessageCredential",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][security(1)]mode",
+															"guid": "54526cca533d6"
+														}
+													],
+													"data": [
+														{
+															"path": "message",
+															"guid": "54526cca53447",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "UserName",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(4)][security(1)][message(1)]clientCredentialType",
+																	"guid": "54526cca53451"
+																}
+															]
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca534aa",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "SWOIS.Over.TCP",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)]name",
+													"guid": "54526cca534b7"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)]maxReceivedMessageSize",
+													"guid": "54526cca5350c"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)]maxBufferSize",
+													"guid": "54526cca5355d"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca535be",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "TransportWithMessageCredential",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)][security(1)]mode",
+															"guid": "54526cca535e8"
+														}
+													],
+													"data": [
+														{
+															"path": "message",
+															"guid": "54526cca53675",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "UserName",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)][security(1)][message(1)]clientCredentialType",
+																	"guid": "54526cca53682"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca536e0",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca536ef"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(5)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca53751"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca537a3",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Certificate",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)]name",
+													"guid": "54526cca537af"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)]maxBufferSize",
+													"guid": "54526cca53808"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)]maxReceivedMessageSize",
+													"guid": "54526cca53886"
+												},
+												{
+													"name": "portSharingEnabled",
+													"value": "true",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)]portSharingEnabled",
+													"guid": "54526cca538f3"
+												}
+											],
+											"data": [
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca5397b",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca53990"
+														},
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca53a0a"
+														}
+													]
+												},
+												{
+													"path": "security",
+													"guid": "54526cca53a74",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "Transport",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)][security(1)]mode",
+															"guid": "54526cca53a80"
+														}
+													],
+													"data": [
+														{
+															"path": "transport",
+															"guid": "54526cca53afc",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "clientCredentialType",
+																	"value": "Certificate",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netTcpBinding(1)][binding(6)][security(1)][transport(1)]clientCredentialType",
+																	"guid": "54526cca53b08"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "netNamedPipeBinding",
+									"guid": "54526cca53b6e",
+									"depth": 4,
+									"data": [
+										{
+											"path": "binding",
+											"guid": "54526cca53b81",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NamedPipe",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)]name",
+													"guid": "54526cca53bae"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)]maxReceivedMessageSize",
+													"guid": "54526cca53c34"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)]maxBufferSize",
+													"guid": "54526cca53c97"
+												}
+											],
+											"data": [
+												{
+													"path": "security",
+													"guid": "54526cca53d0a",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "mode",
+															"value": "Transport",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)][security(1)]mode",
+															"guid": "54526cca53d17"
+														}
+													],
+													"data": [
+														{
+															"path": "transport",
+															"guid": "54526cca53da1",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "protectionLevel",
+																	"value": "EncryptAndSign",
+																	"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)][security(1)][transport(1)]protectionLevel",
+																	"guid": "54526cca53db0"
+																}
+															]
+														}
+													]
+												},
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca53e42",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca53e6d"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(1)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca53ee3"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca53f46",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "NPM.NamedPipeClientBinding.ToOrionBusinessLayer",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)]name",
+													"guid": "54526cca53f51"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)]maxReceivedMessageSize",
+													"guid": "54526cca53fb9"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)]maxBufferSize",
+													"guid": "54526cca54015"
+												},
+												{
+													"name": "sendTimeout",
+													"value": "00:03:00",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)]sendTimeout",
+													"guid": "54526cca54072"
+												}
+											],
+											"data": [
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca540fb",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca54122"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(2)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca54193"
+														}
+													]
+												}
+											]
+										},
+										{
+											"path": "binding",
+											"guid": "54526cca54220",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "Core.NamedPipeClientBinding.ToOrionBusinessLayer",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)]name",
+													"guid": "54526cca5423f"
+												},
+												{
+													"name": "maxReceivedMessageSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)]maxReceivedMessageSize",
+													"guid": "54526cca542c2"
+												},
+												{
+													"name": "maxBufferSize",
+													"value": "2147483647",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)]maxBufferSize",
+													"guid": "54526cca54335"
+												},
+												{
+													"name": "sendTimeout",
+													"value": "00:03:00",
+													"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)]sendTimeout",
+													"guid": "54526cca543a3"
+												}
+											],
+											"data": [
+												{
+													"path": "readerQuotas",
+													"guid": "54526cca5442a",
+													"depth": 6,
+													"keydata": [
+														{
+															"name": "maxArrayLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)][readerQuotas(1)]maxArrayLength",
+															"guid": "54526cca54439"
+														},
+														{
+															"name": "maxStringContentLength",
+															"value": "2147483647",
+															"norm": "[configuration(1)][system.serviceModel(1)][bindings(1)][netNamedPipeBinding(1)][binding(3)][readerQuotas(1)]maxStringContentLength",
+															"guid": "54526cca544a6"
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "system.codedom",
+					"guid": "54526cca544ed",
+					"depth": 2,
+					"data": [
+						{
+							"path": "compilers",
+							"guid": "54526cca544fc",
+							"depth": 3,
+							"data": [
+								{
+									"path": "compiler",
+									"guid": "54526cca5450b",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "language",
+											"value": "c#;cs;csharp",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)]language",
+											"guid": "54526cca54518"
+										},
+										{
+											"name": "extension",
+											"value": ".cs",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)]extension",
+											"guid": "54526cca54568"
+										},
+										{
+											"name": "type",
+											"value": "Microsoft.CSharp.CSharpCodeProvider,System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)]type",
+											"guid": "54526cca545b4"
+										},
+										{
+											"name": "warningLevel",
+											"value": "4",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)]warningLevel",
+											"guid": "54526cca54621"
+										}
+									],
+									"data": [
+										{
+											"path": "providerOption",
+											"guid": "54526cca546bd",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "CompilerVersion",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)][providerOption(1)]name",
+													"guid": "54526cca546d0"
+												},
+												{
+													"name": "value",
+													"value": "v4.0",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)][providerOption(1)]value",
+													"guid": "54526cca54749"
+												}
+											]
+										},
+										{
+											"path": "providerOption",
+											"guid": "54526cca547ae",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "WarnAsError",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)][providerOption(2)]name",
+													"guid": "54526cca547d7"
+												},
+												{
+													"name": "value",
+													"value": "false",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(1)][providerOption(2)]value",
+													"guid": "54526cca5484a"
+												}
+											]
+										}
+									]
+								},
+								{
+									"path": "compiler",
+									"guid": "54526cca548b6",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "language",
+											"value": "vb;vbs;visualbasic;vbscript",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)]language",
+											"guid": "54526cca548d2"
+										},
+										{
+											"name": "extension",
+											"value": ".vb",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)]extension",
+											"guid": "54526cca54928"
+										},
+										{
+											"name": "type",
+											"value": "Microsoft.VisualBasic.VBCodeProvider, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)]type",
+											"guid": "54526cca54977"
+										},
+										{
+											"name": "warningLevel",
+											"value": "4",
+											"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)]warningLevel",
+											"guid": "54526cca549c8"
+										}
+									],
+									"data": [
+										{
+											"path": "providerOption",
+											"guid": "54526cca54a28",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "CompilerVersion",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(1)]name",
+													"guid": "54526cca54a33"
+												},
+												{
+													"name": "value",
+													"value": "v4.0",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(1)]value",
+													"guid": "54526cca54a9b"
+												}
+											]
+										},
+										{
+											"path": "providerOption",
+											"guid": "54526cca54b1c",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "OptionInfer",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(2)]name",
+													"guid": "54526cca54b44"
+												},
+												{
+													"name": "value",
+													"value": "true",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(2)]value",
+													"guid": "54526cca54bbc"
+												}
+											]
+										},
+										{
+											"path": "providerOption",
+											"guid": "54526cca54c2b",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "name",
+													"value": "WarnAsError",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(3)]name",
+													"guid": "54526cca54c36"
+												},
+												{
+													"name": "value",
+													"value": "false",
+													"norm": "[configuration(1)][system.codedom(1)][compilers(1)][compiler(2)][providerOption(3)]value",
+													"guid": "54526cca54c92"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "sw.web.compression",
+					"guid": "54526cca54cd7",
+					"depth": 2,
+					"data": [
+						{
+							"path": "exclusions",
+							"guid": "54526cca54ceb",
+							"depth": 3,
+							"data": [
+								{
+									"path": "add",
+									"guid": "54526cca54cfa",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "url",
+											"value": "\/Orion\/NetPerfMon\/NetworkMap.aspx",
+											"norm": "[configuration(1)][sw.web.compression(1)][exclusions(1)][add(1)]url",
+											"guid": "54526cca54d05"
+										}
+									]
+								},
+								{
+									"path": "add",
+									"guid": "54526cca54d53",
+									"depth": 4,
+									"keydata": [
+										{
+											"name": "url",
+											"value": "\/Orion\/StatusIcon.ashx",
+											"norm": "[configuration(1)][sw.web.compression(1)][exclusions(1)][add(2)]url",
+											"guid": "54526cca54d7e"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"path": "system.web.extensions",
+					"guid": "54526cca54dee",
+					"depth": 2,
+					"data": [
+						{
+							"path": "scripting",
+							"guid": "54526cca54e02",
+							"depth": 3,
+							"data": [
+								{
+									"path": "webServices",
+									"guid": "54526cca54e16",
+									"depth": 4,
+									"data": [
+										{
+											"path": "jsonSerialization",
+											"guid": "54526cca54e27",
+											"depth": 5,
+											"keydata": [
+												{
+													"name": "maxJsonLength",
+													"value": "64000000",
+													"norm": "[configuration(1)][system.web.extensions(1)][scripting(1)][webServices(1)][jsonSerialization(1)]maxJsonLength",
+													"guid": "54526cca54e33"
+												}
+											],
+											"data": [
+												{
+													"path": "converters",
+													"guid": "54526cca54ead",
+													"depth": 6,
+													"data": [
+														{
+															"path": "add",
+															"guid": "54526cca54ec1",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "name",
+																	"value": "JsonObjectConverter",
+																	"norm": "[configuration(1)][system.web.extensions(1)][scripting(1)][webServices(1)][jsonSerialization(1)][converters(1)][add(1)]name",
+																	"guid": "54526cca54ecc"
+																},
+																{
+																	"name": "type",
+																	"value": "SolarWinds.Orion.Web.Charting.v2.JsonObjectConverter",
+																	"norm": "[configuration(1)][system.web.extensions(1)][scripting(1)][webServices(1)][jsonSerialization(1)][converters(1)][add(1)]type",
+																	"guid": "54526cca54f45"
+																}
+															]
+														},
+														{
+															"path": "add",
+															"guid": "54526cca54fbf",
+															"depth": 7,
+															"keydata": [
+																{
+																	"name": "name",
+																	"value": "DataPointWithOptionsJavascriptConverter",
+																	"norm": "[configuration(1)][system.web.extensions(1)][scripting(1)][webServices(1)][jsonSerialization(1)][converters(1)][add(2)]name",
+																	"guid": "54526cca54fe8"
+																},
+																{
+																	"name": "type",
+																	"value": "SolarWinds.Orion.Web.Charting.v2.DataPointWithOptionsJavascriptConverter",
+																	"norm": "[configuration(1)][system.web.extensions(1)][scripting(1)][webServices(1)][jsonSerialization(1)][converters(1)][add(2)]type",
+																	"guid": "54526cca55082"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"track_id": "1",
+	"provider_version_id": "3",
+	"path": "Config IIS and Features",
+	"depth": 0
+}

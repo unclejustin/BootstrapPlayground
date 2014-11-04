@@ -1,0 +1,36 @@
+.cd-wrapper {
+//  margin: @padding-large-vertical 0;
+}
+
+.cd-wrapper * .cd-wrapper {
+  margin-left: @padding-base-horizontal * 2;
+}
+
+.cd-header {
+  padding: 4px 0;
+  border-bottom: solid 1px @gray-lighter;
+}
+
+.cd-header:hover {
+  background-color: lighten(@state-info-bg, 5%);
+}
+
+.cd-header.selected {
+  background-color: @state-warning-bg;
+  color: @state-warning-text;
+}
+
+.cd-key {
+  padding: 4px 0;
+  border-bottom: solid 1px @gray-lighter;
+}
+
+.cd-key:hover {
+  background-color: @gray-lighter;
+}
+
+.cd-menu {
+  z-index: 20;
+}
+
+.position-fixed { position: fixed; }

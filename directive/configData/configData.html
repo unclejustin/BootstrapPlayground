@@ -1,0 +1,63 @@
+<div>
+	<div ng-repeat="d in data track by $index" ng-init="d.showdata = showdata">
+		<div class="dropdown position-fixed cd-menu" id="cd-menu-{{ d.guid }}">
+			<ul class="dropdown-menu" role="menu">
+				<li><a ng-click="addData(d)"><i class="fa fa-fw fa-code"></i> Add data</a></li>
+				<li><a ng-click="addKey(d)"><i class="fa fa-fw fa-key"></i> Add key/value</a></li>
+				<li><a ng-click="cloneData(d, data)"><i class="fa fa-fw fa-copy"></i> Clone</a></li>
+				<li ng-if="clipboard" class="divider"></li>
+				<li ng-if="clipboard">
+					<a ng-click="pasteData(d, data, 0)">
+						<i class="fa fa-fw fa-paste"></i> Paste before
+					</a>
+				</li>
+				<li ng-if="clipboard">
+					<a ng-click="pasteData(d, data, 1)">
+						<i class="fa fa-fw fa-paste"></i> Paste after
+					</a>
+				</li>
+				<li ng-if="clipboard && !d.data">
+					<a ng-click="pasteData(d, data, -1)">
+						<i class="fa fa-fw fa-paste"></i> Paste into
+					</a>
+				</li>
+				<li class="divider"></li>
+				<li>
+					<a ng-click="cutData(d, data)">
+						<i class="fa fa-fw fa-cut"></i> Cut
+					</a>
+				</li>
+				<li>
+					<a ng-click="delData(d, data)">
+						<span class="text-danger"><i class="fa fa-fw fa-times"></i> Delete</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="cd-wrapper">
+			<div class="row cd-header" context-menu data-target="cd-menu-{{ d.guid }}">
+				<div class="col-md-12 config-data">
+					<div ng-class="d.guid">
+						<input ng-show="d.edit" class="form-control" type="text" ng-model="d.path" placeholder="Name"
+						       ui-keypress="{'enter':'d.edit=false'}"/>
+						<span ng-hide="d.edit" class="pointer" ng-click="d.showdata = !d.showdata">
+							<i class="fa fa-fw"
+							   ng-class="{ 'fa-chevron-right':!d.showdata, 'fa-chevron-down':d.showdata }"></i>
+							{{d.path}}
+						</span>
+					</div>
+				</div>
+			</div>
+			<!--data-->
+
+			<div class="cd-body" collapse="!d.showdata">
+				<div class="row cd-key"
+				     ng-repeat="k in d.keydata track by $index">
+					<config-key key="k" data="d.keydata"></config-key>
+				</div>
+
+				<config-data data="d.data" clipboard="clip.board"></config-data>
+			</div>
+		</div>
+	</div>
+</div>

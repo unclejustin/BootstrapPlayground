@@ -1,0 +1,24 @@
+<div ng-class="key.guid">
+	<div class="col-md-3">
+		<span ng-hide="key.edit"><i class="fa fa-fw"></i> {{ key.name }}</span>
+		<input ng-show="key.edit" class="form-control" type="text" ng-model="key.name" placeholder="Key"/>
+	</div>
+	<div class="col-md-7">
+		<span ng-hide="key.edit" class="cd-key-value">{{ key.value }}</span>
+		<input ng-show="key.edit" class="form-control" type="text" ng-model="key.value" placeholder="Value"
+		       ui-keypress="{'enter':'key.edit=false'}"/>
+	</div>
+	<div class="col-md-2 text-right">
+		<div class="btn-group btn-group-xs">
+			<a class="btn btn-default" href="#" ng-click="key.edit=!key.edit" tooltip="Edit"  tooltip-append-to-body="true">
+				<i class="fa fa-edit"></i>
+			</a>
+			<a class="btn btn-default" href="#" ng-click="cloneKey(key, data)" tooltip="Clone" tooltip-append-to-body="true">
+				<i class="fa fa-copy"></i>
+			</a>
+			<a class="btn btn-danger" href="#" ng-click="delKey(key, data)" tooltip="Delete" tooltip-append-to-body="true">
+				<i class="fa fa-times"></i>
+			</a>
+		</div>
+	</div>
+</div>
