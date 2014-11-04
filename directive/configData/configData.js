@@ -10,12 +10,12 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 			var contents = tElement.contents().remove();
 			var compiledContents;
 
-			return function (scope, iElement, iAttr) {
+			return function (scope, iElement) {
 				if (!compiledContents) {
 					compiledContents = $compile(contents, transclude);
 				}
 
-				compiledContents(scope, function (clone, scope) {
+				compiledContents(scope, function (clone) {
 					iElement.append(clone);
 				});
 			};
@@ -62,7 +62,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 
 					            index = Math.min(branch.length, index);
 					            index = Math.max(0, index);
-					            branch.splice(index, 1, $scope.clipboard);
+						            branch.splice(index, 1, $scope.clipboard);
 				            }
 			            }
 			            $scope.$emit('clear clipboard');

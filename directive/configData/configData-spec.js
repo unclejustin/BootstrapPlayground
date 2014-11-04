@@ -48,13 +48,13 @@ describe('Directive: configData', function () {
 	// Load templates
 	beforeEach(module('templates'));
 
-	var scope, compile, elem, html;
-	html = '<config-data data="data.data" showdata="true" clipboard="clipboard"></config-data>';
+	var scope, elem, html;
+	html = '<config-data data="data.data"></config-data>';
 
 	beforeEach(inject(function ($rootScope, $compile) {
 		elem = angular.element(html);
 		scope = $rootScope.$new();
-		scope.data = data;
+		scope.data = angular.copy(data);
 		$compile(elem)(scope);
 		scope.$digest();
 	}));
@@ -67,7 +67,7 @@ describe('Directive: configData', function () {
 });
 
 describe('Controller: ConfigDataCtrl', function () {
-	var $scope, ctrl;
+	var $rootScope, $scope, ctrl;
 
 	var new_data = {path:'New Path', edit:true, data:[], keydata:[]};
 	var empty_data = {edit:true, data:[], keydata:[]};
@@ -78,23 +78,26 @@ describe('Controller: ConfigDataCtrl', function () {
 	beforeEach(function () {
 		module('BootstrapPlayground');
 
-		inject(function ($rootScope, $controller) {
+		inject(function (_$rootScope_, $controller) {
+			$rootScope = _$rootScope_;
 			$scope = $rootScope.$new();
 			ctrl = $controller('ConfigDataCtrl', {
 				$scope:$scope
 			});
 		});
 
-		$scope.data = data;
+		$scope.data = angular.copy(data);
 	});
 
-	afterEach(function() {
-		$scope.data = data;
+	it('should update the local clipboard when clipboard updated is fired', function () {
+		spyOn($scope, '$on');
+		$rootScope.$broadcast('clipboard updated', {});
+		expect($scope.clipboard).toEqual({});
 	});
 
 	describe('Data functions', function () {
 		it('should have data', function () {
-			expect($scope.data).toBe(data);
+			expect($scope.data).toEqual(data);
 		});
 
 		describe('addData', function () {
@@ -124,13 +127,22 @@ describe('Controller: ConfigDataCtrl', function () {
 	});
 
 	describe('Clipboard functions', function () {
+		beforeEach(function() {
+			$scope.data = angular.copy(data);
+		});
+
 		describe('cutData', function () {
-			it('should remove the item from the collection and emit a notice to the clipboard', function () {
+			it('should remove the item from the collection', function () {
 				var datalength = $scope.data.data[0].data.length;
-				spyOn($scope, '$emit');
 
 				$scope.cutData($scope.data.data[0].data[0], $scope.data.data[0].data);
 				expect($scope.data.data[0].data.length).toBeLessThan(datalength);
+			});
+
+			it('emit a notice to the clipboard', function () {
+				spyOn($scope, '$emit');
+
+				$scope.cutData($scope.data.data[0].data[0], $scope.data.data[0].data);
 				expect($scope.$emit).toHaveBeenCalledWith('cut to clipboard', jasmine.any(Object));
 			});
 		});
@@ -139,37 +151,29 @@ describe('Controller: ConfigDataCtrl', function () {
 			var leaf;
 
 			beforeEach(function() {
-				leaf = $scope.data.data[0].data[0];
+				$scope.clipboard = leaf = $scope.data.data[0].data[0];
 				$scope.cutData($scope.data.data[0].data[0], $scope.data.data[0].data);
-			});
-
-			afterEach(function() {
-				$scope.data = data;
 			});
 
 			it('should add the clipboard to the given array before the target', function () {
 				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
-				expect($scope.data.data[0]).toBe(leaf);
+				expect($scope.data.data[0]).toEqual(leaf);
 			});
 
-			xit('should add the clipboard to the given array after the target', function () {
-				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
-				expect($scope.data.data[0]).toBe(leaf);
+			it('should add the clipboard to the given array after the target', function () {
+				$scope.pasteData($scope.data.data[0], $scope.data.data, 1);
+				expect($scope.data.data[1]).toEqual(leaf);
 			});
 
 			it('should add the clipboard to the given array in the target', function () {
 				$scope.pasteData($scope.data.data[0], $scope.data.data, -1);
-				expect(false).toBe(true);
+				expect($scope.data.data[0].data).toContain(leaf);
 			});
 
-			xit('should emit a notice to clear the clipboard', function () {
+			it('should emit a "clear clipboard" to clear the clipboard', function () {
+				spyOn($scope, '$emit');
 				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
-				expect($scope.$emit).toHaveBeenCalledWith('clear clipboard', jasmine.any(Object));
-			});
-
-			xit('should update the local clipboard after the parent clipboard is cleared', function () {
-				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
-				expect($scope.clipboard).toBe({});
+				expect($scope.$emit).toHaveBeenCalledWith('clear clipboard');
 			});
 		});
 	});
