@@ -217,6 +217,10 @@ module.exports = function (grunt) {
 				                 browsers: ['PhantomJS', 'Chrome'],
 				                 singleRun:false
 			                 },
+			                 one_test:   {
+				                 browsers: ['PhantomJS'],
+				                 singleRun:true
+			                 },
 			                 during_watch:{
 				                 browsers: ['PhantomJS'],
 				                 singleRun:true
@@ -230,7 +234,8 @@ module.exports = function (grunt) {
 		'htmlmin', 'imagemin', 'clean:after'
 	]);
 	grunt.registerTask('serve', ['dom_munger:read', 'jshint', 'connect', 'watch']);
-	grunt.registerTask('test', ['dom_munger:read', 'karma:all_tests']);
+	grunt.registerTask('test', ['dom_munger:read', 'karma:one_test']);
+	grunt.registerTask('all_tests', ['dom_munger:read', 'karma:all_tests']);
 
 	grunt.event.on('watch', function (action, filepath) {
 		//https://github.com/gruntjs/grunt-contrib-watch/issues/156
