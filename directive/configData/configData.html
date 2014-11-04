@@ -16,7 +16,7 @@
 						<i class="fa fa-fw fa-paste"></i> Paste after
 					</a>
 				</li>
-				<li ng-if="clipboard && !d.data">
+				<li ng-if="clipboard">
 					<a ng-click="pasteData(d, data, -1)">
 						<i class="fa fa-fw fa-paste"></i> Paste into
 					</a>
@@ -35,7 +35,7 @@
 			</ul>
 		</div>
 		<div class="cd-wrapper">
-			<div class="row cd-header" context-menu data-target="cd-menu-{{ d.guid }}">
+			<div class="row cd-header" ng-class="{'dirty':d.dirty}" context-menu data-target="cd-menu-{{ d.guid }}">
 				<div class="col-md-12 config-data">
 					<div ng-class="d.guid">
 						<input ng-show="d.edit" class="form-control" type="text" ng-model="d.path" placeholder="Name"
@@ -56,7 +56,7 @@
 					<config-key key="k" data="d.keydata"></config-key>
 				</div>
 
-				<config-data data="d.data" clipboard="clip.board"></config-data>
+				<config-data data="d.data"></config-data>
 			</div>
 		</div>
 	</div>

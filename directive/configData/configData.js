@@ -51,6 +51,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		            };
 
 		            $scope.pasteData = function (leaf, branch, position) {
+			            $scope.clipboard.dirty = true;
 			            if (position === -1) {
 				            $scope.addData(leaf, $scope.clipboard);
 			            } else {
@@ -60,7 +61,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 
 					            index = Math.min(branch.length, index);
 					            index = Math.max(0, index);
-						            branch.splice(index, 1, $scope.clipboard);
+						            branch.splice(index, 0, $scope.clipboard);
 				            }
 			            }
 			            $scope.$emit('clear clipboard');

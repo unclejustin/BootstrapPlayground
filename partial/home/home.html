@@ -9,11 +9,5 @@
 		</div>
 	</div>
 
-	<!--UITODO: remove this button-->
-	<button class="btn btn-info btn-sm" ng-click="CDInfoToggle = !CDInfoToggle">Clipboard</button>
-	<div collapse="!CDInfoToggle">
-		<pre>{{ clipboard | json }}</pre>
-	</div>
-
-	<config-data data="configdata.data" showdata="true" clipboard="clipboard"></config-data>
+	<config-data data="configdata.data"></config-data>
 </div>

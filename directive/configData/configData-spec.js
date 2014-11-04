@@ -148,26 +148,36 @@ describe('Controller: ConfigDataCtrl', function () {
 		});
 
 		describe('pasteData', function () {
-			var leaf;
+			var leaf, branch_count;
 
 			beforeEach(function() {
 				$scope.clipboard = leaf = $scope.data.data[0].data[0];
 				$scope.cutData($scope.data.data[0].data[0], $scope.data.data[0].data);
+				branch_count = $scope.data.data.length + 1;
+			});
+
+			it('should set the leaf as dirty', function () {
+				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
+				expect($scope.data.data[0].dirty).toEqual(true);
 			});
 
 			it('should add the clipboard to the given array before the target', function () {
 				$scope.pasteData($scope.data.data[0], $scope.data.data, 0);
 				expect($scope.data.data[0]).toEqual(leaf);
+				expect(branch_count).toEqual($scope.data.data.length);
 			});
 
 			it('should add the clipboard to the given array after the target', function () {
 				$scope.pasteData($scope.data.data[0], $scope.data.data, 1);
 				expect($scope.data.data[1]).toEqual(leaf);
+				expect(branch_count).toEqual($scope.data.data.length);
 			});
 
 			it('should add the clipboard to the given array in the target', function () {
+				branch_count = $scope.data.data[0].data.length + 1;
 				$scope.pasteData($scope.data.data[0], $scope.data.data, -1);
 				expect($scope.data.data[0].data).toContain(leaf);
+				expect(branch_count).toEqual($scope.data.data[0].data.length);
 			});
 
 			it('should emit a "clear clipboard" to clear the clipboard', function () {
