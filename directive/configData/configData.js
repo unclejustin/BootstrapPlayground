@@ -27,9 +27,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
 
 		            $scope.addData = function (d, new_d) {
-			            if (!d.data) {
-				            d.data = [];
-			            }
+			            d.data = d.data || [];
 			            d.data.push(new_d || {edit:true, data:[], keydata:[]});
 		            };
 
