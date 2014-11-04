@@ -71,7 +71,6 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 			            if (!d.keydata) {
 				            d.keydata = [];
 			            }
-
 			            d.keydata.push(new_key || {edit:true, name:'', value:''});
 		            };
 	            });
