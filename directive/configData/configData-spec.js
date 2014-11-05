@@ -115,6 +115,12 @@ describe('Controller: ConfigDataCtrl', function () {
 				scope.delData(new_data, scope.data.data);
 				expect(scope.data.data).not.toContain(new_data);
 			});
+
+			it('should not alter branch if leaf is not found', function () {
+				var tmp_branch = angular.copy(scope.data.data);
+				scope.delData({some:'fake object'}, scope.data.data);
+				expect(tmp_branch).toEqual(scope.data.data);
+			});
 		});
 	});
 
@@ -156,11 +162,6 @@ describe('Controller: ConfigDataCtrl', function () {
 				scope.clipboard = leaf = scope.data.data[0].data[0];
 				scope.cutData(scope.data.data[0].data[0], scope.data.data[0].data);
 				branch_count = scope.data.data.length + 1;
-			});
-
-			it('should set the leaf as dirty', function () {
-				scope.pasteData(scope.data.data[0], scope.data.data, 0);
-				expect(scope.data.data[0].dirty).toEqual(true);
 			});
 
 			it('should add the clipboard to the given array before the target', function () {
