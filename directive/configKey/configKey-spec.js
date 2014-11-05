@@ -1,23 +1,21 @@
-describe('configKey', function() {
+describe('configKey', function () {
 
-  beforeEach(module('BootstrapPlayground'));
+	beforeEach(module('BootstrapPlayground'));
 
-  var scope,compile;
+	var scope, ctrl, new_key;
 
-  beforeEach(inject(function($rootScope,$compile) {
-    scope = $rootScope.$new();
-    compile = $compile;
-  }));
+	beforeEach(inject(function ($rootScope, $controller) {
+		scope = $rootScope.$new();
+		ctrl = $controller('ConfigKeyCtrl', {
+			$scope:scope
+		});
+		new_key = { edit:true };
+	}));
 
-  it('should ...', function() {
-
-    /* 
-    To test your directive, you need to create some html that would use your directive,
-    send that through compile() then compare the results.
-
-    var element = compile('<div mydirective name="name">hi</div>')(scope);
-    expect(element.text()).toBe('hello, world');
-    */
-
-  });
+	it('should change key.edit to false and flag key as dirty', function () {
+		scope.key = angular.copy(new_key);
+		scope.saveKey();
+		expect(scope.key.edit).toBe(false);
+		expect(scope.key.dirty).toBe(true);
+	});
 });

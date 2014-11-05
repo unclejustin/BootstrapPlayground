@@ -13,7 +13,7 @@ describe('HomeCtrl', function () {
 
 	it('should set clipboard to leaf', function () {
 		spyOn($scope, '$on');
-		$rootScope.$broadcast('cut to clipboard', leaf);
+		$rootScope.$broadcast('copy to clipboard', leaf);
 		expect($scope.clipboard).toEqual(leaf);
 	});
 

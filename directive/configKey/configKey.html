@@ -1,24 +1,48 @@
 <div ng-class="key.guid">
-	<div class="col-md-3">
-		<span ng-hide="key.edit"><i class="fa fa-fw"></i> {{ key.name }}</span>
-		<input ng-show="key.edit" class="form-control" type="text" ng-model="key.name" placeholder="Key"/>
-	</div>
-	<div class="col-md-7">
-		<span ng-hide="key.edit" class="cd-key-value">{{ key.value }}</span>
-		<input ng-show="key.edit" class="form-control" type="text" ng-model="key.value" placeholder="Value"
-		       ui-keypress="{'enter':'key.edit=false'}"/>
-	</div>
-	<div class="col-md-2 text-right">
-		<div class="btn-group btn-group-xs">
-			<a class="btn btn-default" href="#" ng-click="key.edit=!key.edit" tooltip="Edit"  tooltip-append-to-body="true">
-				<i class="fa fa-edit"></i>
-			</a>
-			<a class="btn btn-default" href="#" ng-click="cloneKey(key, data)" tooltip="Clone" tooltip-append-to-body="true">
-				<i class="fa fa-copy"></i>
-			</a>
-			<a class="btn btn-danger" href="#" ng-click="delKey(key, data)" tooltip="Delete" tooltip-append-to-body="true">
-				<i class="fa fa-times"></i>
-			</a>
+	<div context-menu data-target="cd-key-menu-{{ key.guid }}">
+		<div class="col-md-3">
+			<a ng-click="editKey()" ng-hide="key.add"><i class="fa fa-fw"></i> {{ key.name }}</a>
+			<input ng-show="key.add"
+			       class="form-control"
+			       type="text"
+			       ng-model="key.new_name"
+			       placeholder="Key"
+			       ui-keydown="{'enter':'saveKey()', 'esc':'cancelKey()'}"/>
+		</div>
+		<div ng-show="key.edit || key.add" class="col-md-9">
+			<input class="form-control"
+			       type="text"
+			       ng-model="key.new_value"
+			       placeholder="Value"
+			       ui-keydown="{'enter':'saveKey()', 'esc':'cancelKey()'}"/>
+		</div>
+		<div ng-hide="key.edit || key.add" class="col-md-8">
+			<a ng-click="editKey()" ng-hide="key.edit || key.add" class="cd-key-value">{{ key.value }}</a>
+		</div>
+		<div ng-hide="key.edit || key.add" class="col-md-1 text-right">
+			<i ng-if="key.dirty" class="fa fa-star"></i>
+		</div>
+		<div class="dropdown position-fixed cd-key-menu" id="cd-key-menu-{{ key.guid }}">
+			<ul class="dropdown-menu" role="menu">
+				<li>
+					<a ng-if="!key.edit" ng-click="editKey()">
+						<i class="fa fa-edit"></i> Edit
+					</a>
+					<a ng-if="key.edit" ng-click="cancelKey()">
+						<i class="fa fa-ban"></i> Cancel
+					</a>
+				</li>
+				<li>
+					<a ng-click="cloneKey(key, data)">
+						<i class="fa fa-copy"></i> Clone
+					</a>
+				</li>
+				<li>
+					<a ng-click="delKey(key, data)">
+						<i class="fa fa-times"></i> Delete
+					</a>
+				</li>
+			</ul>
 		</div>
 	</div>
 </div>

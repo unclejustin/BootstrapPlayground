@@ -38,12 +38,12 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 			            }
 		            };
 
-		            $scope.cloneData = function (leaf, branch) {
-			            branch.push(angular.copy(leaf));
+		            $scope.copyData = function (leaf) {
+			            $scope.$emit('copy to clipboard', angular.copy(leaf));
 		            };
 
 		            $scope.cutData = function (leaf, branch) {
-			            $scope.$emit('cut to clipboard', leaf);
+			            $scope.copyData(leaf);
 			            var index = branch.indexOf(leaf);
 			            if (index !== -1) {
 				            branch.splice(index, 1);
@@ -51,7 +51,6 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		            };
 
 		            $scope.pasteData = function (leaf, branch, position) {
-			            $scope.clipboard.dirty = true;
 			            if (position === -1) {
 				            $scope.addData(leaf, $scope.clipboard);
 			            } else {
@@ -71,6 +70,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 			            if (!d.keydata) {
 				            d.keydata = [];
 			            }
-			            d.keydata.push(new_key || {edit:true, name:'', value:''});
+			            d.showdata = true;
+			            d.keydata.push(new_key || {add:true, name:'', value:''});
 		            };
 	            });

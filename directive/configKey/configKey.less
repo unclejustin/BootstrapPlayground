@@ -1,1 +1,17 @@
+.cd-key {
+  padding: 4px 0;
+  border-bottom: solid 1px @gray-lighter;
+}
+
+.cd-key.dirty {
+  background-color: @state-warning-bg;
+  color: @state-warning-text;
+}
+
+.cd-key:hover {
+  background-color: @gray-lighter;
+}
+
 .cd-key-value { word-wrap: break-word; }
+.cd-key-menu { z-index: 20; }
+
