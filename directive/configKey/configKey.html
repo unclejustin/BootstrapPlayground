@@ -32,9 +32,24 @@
 						<i class="fa fa-ban"></i> Cancel
 					</a>
 				</li>
+				<li ng-if="clipboard.dirty && clipboard.type ==='key'">
+					<a ng-click="pasteKey(key, 0)">
+						<i class="fa fa-fw fa-paste"></i> Paste before
+					</a>
+				</li>
+				<li ng-if="clipboard.dirty && clipboard.type ==='key'">
+					<a ng-click="pasteKey(key, 1)">
+						<i class="fa fa-fw fa-paste"></i> Paste after
+					</a>
+				</li>
 				<li>
-					<a ng-click="cloneKey(key, data)">
-						<i class="fa fa-copy"></i> Clone
+					<a ng-click="cutKey(key)">
+						<i class="fa fa-copy"></i> Cut
+					</a>
+				</li>
+				<li>
+					<a ng-click="copyKey(key)">
+						<i class="fa fa-copy"></i> Copy
 					</a>
 				</li>
 				<li>

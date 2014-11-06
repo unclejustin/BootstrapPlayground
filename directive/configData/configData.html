@@ -1,5 +1,5 @@
 <div>
-	<div ng-repeat="d in data track by $index" ng-init="d.showdata = showdata">
+	<div ng-repeat="d in configdata track by $index" ng-init="d.showdata = showdata">
 		<div class="dropdown position-fixed cd-menu" id="cd-menu-{{ d.guid }}">
 			<ul class="dropdown-menu" role="menu">
 				<li><a ng-click="addData(d)"><i class="fa fa-fw fa-code"></i> Add data</a></li>
@@ -7,28 +7,28 @@
 				<li><a ng-click="copyData(d)"><i class="fa fa-fw fa-copy"></i> Copy</a></li>
 				<li ng-if="clipboard.dirty" class="divider"></li>
 				<li ng-if="clipboard.dirty">
-					<a ng-click="pasteData(d, data, 0)">
+					<a ng-click="pasteData(d, 0)">
 						<i class="fa fa-fw fa-paste"></i> Paste before
 					</a>
 				</li>
 				<li ng-if="clipboard.dirty">
-					<a ng-click="pasteData(d, data, 1)">
+					<a ng-click="pasteData(d, 1)">
 						<i class="fa fa-fw fa-paste"></i> Paste after
 					</a>
 				</li>
 				<li ng-if="clipboard.dirty">
-					<a ng-click="pasteData(d, data, -1)">
+					<a ng-click="pasteData(d, -1)">
 						<i class="fa fa-fw fa-paste"></i> Paste into
 					</a>
 				</li>
 				<li class="divider"></li>
 				<li>
-					<a ng-click="cutData(d, data)">
+					<a ng-click="cutData(d)">
 						<i class="fa fa-fw fa-cut"></i> Cut
 					</a>
 				</li>
 				<li>
-					<a ng-click="delData(d, data)">
+					<a ng-click="delData(d)">
 						<span class="text-danger"><i class="fa fa-fw fa-times"></i> Delete</span>
 					</a>
 				</li>
@@ -54,7 +54,7 @@
 					<config-key key="k" data="d.keydata"></config-key>
 				</div>
 
-				<config-data data="d.data"></config-data>
+				<config-data configdata="d.data"></config-data>
 			</div>
 		</div>
 	</div>

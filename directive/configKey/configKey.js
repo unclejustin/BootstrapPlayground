@@ -8,17 +8,14 @@ angular.module('BootstrapPlayground')
 				           data:'='
 			           },
 			           templateUrl:'directive/configKey/configKey.html',
-			           link:       function (scope, element, attrs, fn) {
-
-			           },
 			           controller: 'ConfigKeyCtrl'
 		           };
 	           })
 	.controller('ConfigKeyCtrl', function ($scope) {
-		            $scope.delKey = function (leaf, branch) {
-			            var index = branch.indexOf(leaf);
+		            $scope.delKey = function (leaf) {
+			            var index = $scope.data.indexOf(leaf);
 			            if (index !== -1) {
-				            branch.splice(index, 1);
+				            $scope.data.splice(index, 1);
 			            }
 		            };
 
@@ -42,7 +39,27 @@ angular.module('BootstrapPlayground')
 			            $scope.key.edit = false;
 		            };
 
-		            $scope.cloneKey = function (leaf, branch) {
-			            branch.push(angular.copy(leaf));
+		            $scope.copyKey = function (leaf) {
+			            $scope.$emit('copy to clipboard', angular.copy(leaf), 'key');
 		            };
+
+	                $scope.cutKey = function (leaf) {
+		                $scope.copyKey(leaf);
+		                var index = $scope.data.indexOf(leaf);
+		                if (index !== -1) {
+			                $scope.data.splice(index, 1);
+		                }
+	                };
+
+	                $scope.pasteKey = function (leaf, position) {
+		                var index = $scope.data.indexOf(leaf);
+		                if (index !== -1) {
+			                index += position;
+
+			                index = Math.min($scope.data.length, index);
+			                index = Math.max(0, index);
+			                $scope.data.splice(index, 0, $scope.clipboard);
+		                }
+		                $scope.$emit('clear clipboard');
+	                };
 	            });

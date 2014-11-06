@@ -1,4 +1,8 @@
 var data = {
+	"track_id": "1",
+	"provider_version_id": "3",
+	"path": "Config IIS and Features",
+	"depth": 0,
 	"data":[
 		{
 			"path": "configuration",
@@ -49,12 +53,12 @@ describe('Directive: configData', function () {
 	beforeEach(module('templates'));
 
 	var scope, elem, html;
-	html = '<config-data data="data.data"></config-data>';
+	html = '<config-data configdata="configdata.data"></config-data>';
 
 	beforeEach(inject(function ($rootScope, $compile) {
 		elem = angular.element(html);
 		scope = $rootScope.$new();
-		scope.data = angular.copy(data);
+		scope.configdata = angular.copy(data);
 		$compile(elem)(scope);
 		scope.$digest();
 	}));
@@ -86,7 +90,7 @@ describe('Controller: ConfigDataCtrl', function () {
 			});
 		});
 
-		scope.data = angular.copy(data);
+		scope.configdata = angular.copy(data);
 	});
 
 	it('should update the local clipboard when clipboard updated is fired', function () {
@@ -97,61 +101,58 @@ describe('Controller: ConfigDataCtrl', function () {
 
 	describe('Data functions', function () {
 		it('should have data', function () {
-			expect(scope.data).toEqual(data);
+			expect(scope.configdata).toEqual(data);
 		});
 
 		describe('addData', function () {
 			it('should add data', function () {
-				scope.addData(scope.data);
-				expect(_.isUndefined(_.find(scope.data.data, function (d) { return _.isEqual(d, empty_data); }))).toBe(false);
+				scope.addData(scope.configdata);
+				expect(_.isUndefined(_.find(scope.configdata.data, function (d) { return _.isEqual(d, empty_data); }))).toBe(false);
 
-				scope.addData(scope.data, new_data);
-				expect(scope.data.data).toContain(new_data);
+				scope.addData(scope.configdata, new_data);
+				expect(scope.configdata.data).toContain(new_data);
 			});
 		});
 
 		describe('delData', function () {
 			it('should delete data', function () {
-				scope.delData(new_data, scope.data.data);
-				expect(scope.data.data).not.toContain(new_data);
+				scope.delData(new_data);
+				expect(scope.configdata.data).not.toContain(new_data);
 			});
 
 			it('should not alter branch if leaf is not found', function () {
-				var tmp_branch = angular.copy(scope.data.data);
-				scope.delData({some:'fake object'}, scope.data.data);
-				expect(tmp_branch).toEqual(scope.data.data);
+				var tmp_branch = angular.copy(scope.configdata.data);
+				scope.delData({some:'fake object'});
+				expect(tmp_branch).toEqual(scope.configdata.data);
 			});
 		});
 	});
 
 	describe('Clipboard functions', function () {
 		beforeEach(function() {
-			scope.data = angular.copy(data);
+			scope.configdata = angular.copy(data);
 		});
 
 		describe('copyData', function () {
 			it('emit a notice to the clipboard', function () {
 				spyOn(scope, '$emit');
-
-				scope.copyData(scope.data.data[0].data[0]);
-
-				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object));
+				scope.copyData(scope.configdata.data[0].data[0]);
+				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object), 'data');
 			});
 		});
 
 		describe('cutData', function () {
 			it('should remove the item from the collection', function () {
-				var datalength = scope.data.data[0].data.length;
+				var datalength = scope.configdata.data.length;
 
-				scope.cutData(scope.data.data[0].data[0], scope.data.data[0].data);
-				expect(scope.data.data[0].data.length).toBeLessThan(datalength);
+				scope.cutData(scope.configdata.data[0]);
+				expect(scope.configdata.data.length).toBeLessThan(datalength);
 			});
 
 			it('emit a notice to the clipboard', function () {
 				spyOn(scope, '$emit');
-
-				scope.cutData(scope.data.data[0].data[0], scope.data.data[0].data);
-				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object));
+				scope.cutData(scope.configdata.data[0]);
+				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object),'data');
 			});
 		});
 
@@ -159,33 +160,34 @@ describe('Controller: ConfigDataCtrl', function () {
 			var leaf, branch_count;
 
 			beforeEach(function() {
-				scope.clipboard = leaf = scope.data.data[0].data[0];
-				scope.cutData(scope.data.data[0].data[0], scope.data.data[0].data);
-				branch_count = scope.data.data.length + 1;
+				scope.clipboard = leaf = angular.copy(scope.configdata.data[0].data[0]);
+				scope.clipboard.type = 'data';
+				scope.cutData(scope.configdata.data[0].data[0]);
+				branch_count = scope.configdata.data.length + 1;
 			});
 
 			it('should add the clipboard to the given array before the target', function () {
-				scope.pasteData(scope.data.data[0], scope.data.data, 0);
-				expect(scope.data.data[0]).toEqual(leaf);
-				expect(branch_count).toEqual(scope.data.data.length);
+				scope.pasteData(scope.configdata.data[0], 0);
+				expect(scope.configdata.data[0]).toEqual(leaf);
+				expect(branch_count).toEqual(scope.configdata.data.length);
 			});
 
 			it('should add the clipboard to the given array after the target', function () {
-				scope.pasteData(scope.data.data[0], scope.data.data, 1);
-				expect(scope.data.data[1]).toEqual(leaf);
-				expect(branch_count).toEqual(scope.data.data.length);
+				scope.pasteData(scope.configdata.data[0], 1);
+				expect(scope.configdata.data[1]).toEqual(leaf);
+				expect(branch_count).toEqual(scope.configdata.data.length);
 			});
 
 			it('should add the clipboard to the given array in the target', function () {
-				branch_count = scope.data.data[0].data.length + 1;
-				scope.pasteData(scope.data.data[0], scope.data.data, -1);
-				expect(scope.data.data[0].data).toContain(leaf);
-				expect(branch_count).toEqual(scope.data.data[0].data.length);
+				branch_count = scope.configdata.data[0].data.length + 1;
+				scope.pasteData(scope.configdata.data[0], -1);
+				expect(scope.configdata.data[0].data).toContain(leaf);
+				expect(branch_count).toEqual(scope.configdata.data[0].data.length);
 			});
 
 			it('should emit a "clear clipboard" to clear the clipboard', function () {
 				spyOn(scope, '$emit');
-				scope.pasteData(scope.data.data[0], scope.data.data, 0);
+				scope.pasteData(scope.configdata.data[0], 0);
 				expect(scope.$emit).toHaveBeenCalledWith('clear clipboard');
 			});
 		});
@@ -193,11 +195,11 @@ describe('Controller: ConfigDataCtrl', function () {
 
 	describe('Key functions', function () {
 		it('should add a key', function () {
-			scope.addKey(scope.data);
-			expect(_.find(scope.data.keydata, function (k) { return _.isEqual(k, empty_key); })).not.toBeUndefined();
+			scope.addKey(scope.configdata);
+			expect(_.find(scope.configdata.keydata, function (k) { return _.isEqual(k, empty_key); })).not.toBeUndefined();
 
-			scope.addKey(scope.data, new_key);
-			expect(scope.data.keydata).toContain(new_key);
+			scope.addKey(scope.configdata, new_key);
+			expect(scope.configdata.keydata).toContain(new_key);
 		});
 	});
 });

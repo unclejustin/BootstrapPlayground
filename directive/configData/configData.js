@@ -3,7 +3,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		restrict:   'E',
 		replace:    true,
 		scope:      {
-			data:     '='
+			configdata:     '='
 		},
 		templateUrl:'directive/configData/configData.html',
 		compile:    function (tElement, tAttr, transclude) {
@@ -23,46 +23,71 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		controller: 'ConfigDataCtrl'
 	};
 })
-	.controller('ConfigDataCtrl', function ($scope) {
+	.controller('ConfigDataCtrl', function ($scope, Alerts) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
 
-		            $scope.addData = function (d, new_d) {
-			            d.data = d.data || [];
-			            d.data.push(new_d || {edit:true, data:[], keydata:[]});
+		            $scope.addData = function (target, new_d) {
+			            target.data = target.data || [];
+			            target.data.push(new_d || {edit:true, data:[], keydata:[]});
 		            };
 
-		            $scope.delData = function (leaf, branch) {
-			            var index = branch.indexOf(leaf);
+		            $scope.delData = function (d) {
+			            var index = $scope.configdata.data.indexOf(d);
 			            if (index !== -1) {
-				            branch.splice(index, 1);
+				            $scope.configdata.splice(index, 1);
 			            }
 		            };
 
-		            $scope.copyData = function (leaf) {
-			            $scope.$emit('copy to clipboard', angular.copy(leaf));
+		            $scope.copyData = function (d) {
+			            $scope.$emit('copy to clipboard', angular.copy(d),'data');
+			            Alerts.addAlert('success', 'Copied to clipboard.');
 		            };
 
-		            $scope.cutData = function (leaf, branch) {
-			            $scope.copyData(leaf);
-			            var index = branch.indexOf(leaf);
+		            $scope.cutData = function (d) {
+			            var index = $scope.configdata.data.indexOf(d);
 			            if (index !== -1) {
-				            branch.splice(index, 1);
+				            $scope.copyData(d);
+				            $scope.configdata.data.splice(index, 1);
 			            }
 		            };
 
-		            $scope.pasteData = function (leaf, branch, position) {
+		            $scope.pasteData = function (target, position) {
 			            if (position === -1) {
-				            $scope.addData(leaf, $scope.clipboard);
+				            // Insert into target
+				            if ($scope.clipboard.type==='data') {
+					            $scope.addData(target, $scope.clipboard);
+				            } else {
+					            $scope.addKey(target, $scope.clipboard);
+				            }
 			            } else {
-				            var index = branch.indexOf(leaf);
-				            if (index !== -1) {
-					            index += position;
+				            var index, list; // position in list and the list to paste into
 
-					            index = Math.min(branch.length, index);
-					            index = Math.max(0, index);
-						            branch.splice(index, 0, $scope.clipboard);
+				            // Which list type, and make sure the list exists
+				            if ($scope.clipboard.type === 'data') {
+					            if (!$scope.configdata.data) { $scope.configdata.data = []; }
+					            list = $scope.configdata.data;
+				            } else {
+					            if (!$scope.configdata.keydata) { $scope.configdata.keydata = []; }
+					            list = $scope.configdata.keydata;
+				            }
+
+				            index = list.indexOf(target);
+
+				            // Index should always be found, but just in case we throw and alert
+				            if (index !== -1) {
+					            index += position; // Where in the array
+
+					            // Safe guard to make sure we don't try and splice outside the bounds of the array
+					            index = Math.min(list.length, index);
+
+					            // Finally insert the clipboard into the array
+					            list.splice(index, 0, $scope.clipboard);
+				            } else {
+					            Alerts.addAlert('danger', 'Could not paste item!');
 				            }
 			            }
+
+			            // And clean up the clipboard
 			            $scope.$emit('clear clipboard');
 		            };
 

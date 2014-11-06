@@ -1,5 +1,10 @@
 <div class="col-md-12" ng-controller="HomeCtrl">
 	<h1>Config Data</h1>
 
-	<config-data data="configdata.data"></config-data>
+	<div class="alert alert-{{ alert.type }}" ng-repeat="alert in alerts">
+		<button class="close" ng-click="closeAlert($index)"><i class="fa fa-times"></i></button>
+		{{ alert.msg }}
+	</div>
+
+	<config-data configdata="configdata.data"></config-data>
 </div>
