@@ -23,6 +23,7 @@
     "less.js": "~1.6",
     "font-awesome": "~4.0",
     "jquery-ui": "~1.11.2",
-    "ng-context-menu": "~1.0.1"
+    "ng-context-menu": "~1.0.1",
+    "ng-focus-on": "~0.2.2"
   }
 }

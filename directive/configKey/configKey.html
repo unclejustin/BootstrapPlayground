@@ -6,6 +6,7 @@
 			       class="form-control"
 			       type="text"
 			       ng-model="key.new_name"
+			       focus-on="add key"
 			       placeholder="Key"
 			       ui-keydown="{'enter':'saveKey()', 'esc':'cancelKey()'}"/>
 		</div>
@@ -13,6 +14,7 @@
 			<input class="form-control"
 			       type="text"
 			       ng-model="key.new_value"
+			       focus-on="edit key"
 			       placeholder="Value"
 			       ui-keydown="{'enter':'saveKey()', 'esc':'cancelKey()'}"/>
 		</div>

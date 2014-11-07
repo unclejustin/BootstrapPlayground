@@ -23,18 +23,30 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		controller: 'ConfigDataCtrl'
 	};
 })
-	.controller('ConfigDataCtrl', function ($scope, Alerts) {
+	.controller('ConfigDataCtrl', function ($scope, Alerts, focus) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
 
 		            $scope.addData = function (target, new_d) {
+			            focus('focus data');
 			            target.data = target.data || [];
-			            target.data.push(new_d || {edit:true, data:[], keydata:[]});
+			            target.data.splice(0, 0, new_d || {add:true, data:[], keydata:[]});
 		            };
+
+	                $scope.saveData = function (d) {
+		                d.path = d.new_path;
+		                d.add = false;
+		                d.dirty = true;
+	                };
+
+	                $scope.cancelData = function (d) {
+		                d.add = false;
+		                $scope.delData(d);
+	                };
 
 		            $scope.delData = function (d) {
 			            var index = $scope.configdata.data.indexOf(d);
 			            if (index !== -1) {
-				            $scope.configdata.splice(index, 1);
+				            $scope.configdata.data.splice(index, 1);
 			            }
 		            };
 
@@ -92,6 +104,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		            };
 
 		            $scope.addKey = function (d, new_key) {
+			            focus('add key');
 			            if (!d.keydata) {
 				            d.keydata = [];
 			            }

@@ -53,7 +53,7 @@ describe('Directive: configData', function () {
 	beforeEach(module('templates'));
 
 	var scope, elem, html;
-	html = '<config-data configdata="configdata.data"></config-data>';
+	html = '<config-data configdata="configdata"></config-data>';
 
 	beforeEach(inject(function ($rootScope, $compile) {
 		elem = angular.element(html);
@@ -74,7 +74,7 @@ describe('Controller: ConfigDataCtrl', function () {
 	var $rootScope, scope, ctrl;
 
 	var new_data = {path:'New Path', edit:true, data:[], keydata:[]};
-	var empty_data = {edit:true, data:[], keydata:[]};
+	var empty_data = {add:true, data:[], keydata:[]};
 
 	var new_key = {edit:true, name:'New Key', value:'New Value'};
 	var empty_key = {add:true, name:'', value:''};

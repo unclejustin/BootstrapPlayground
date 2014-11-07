@@ -11,7 +11,7 @@ angular.module('BootstrapPlayground')
 			           controller: 'ConfigKeyCtrl'
 		           };
 	           })
-	.controller('ConfigKeyCtrl', function ($scope) {
+	.controller('ConfigKeyCtrl', function ($scope, focus) {
 		            $scope.delKey = function (leaf) {
 			            var index = $scope.data.indexOf(leaf);
 			            if (index !== -1) {
@@ -29,6 +29,7 @@ angular.module('BootstrapPlayground')
 		            };
 
 		            $scope.editKey = function () {
+			            focus('edit key');
 			            $scope.key.new_name = $scope.key.name;
 			            $scope.key.new_value = $scope.key.value;
 
