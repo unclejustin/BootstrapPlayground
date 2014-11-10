@@ -34,20 +34,20 @@ describe('configKey', function () {
 	}));
 
 	describe('saveKey', function () {
-		it('should change key.edit to false and flag key as dirty', function () {
+		it('should change key.edit to false and flag key as edit', function () {
 			scope.key =new_key;
 			scope.saveKey();
 			expect(scope.key.edit).toBe(false);
-			expect(scope.key.dirty).toBe(true);
+			expect(scope.key.change).toBe('edit');
 		});
 	});
 
 	describe('delKey', function () {
-		it('should delete the key', function () {
+		it('should flag key for deletion', function () {
 			var key = scope.data[0];
 
 			scope.delKey(key);
-			expect(scope.data).not.toContain(key);
+			expect(key.change).toBe('delete');
 		});
 	});
 

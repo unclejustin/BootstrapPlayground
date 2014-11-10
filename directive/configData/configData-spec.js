@@ -74,10 +74,10 @@ describe('Controller: ConfigDataCtrl', function () {
 	var $rootScope, scope, ctrl;
 
 	var new_data = {path:'New Path', edit:true, data:[], keydata:[]};
-	var empty_data = {add:true, data:[], keydata:[]};
+	var empty_data = {add:true, change:'add', data:[], keydata:[]};
 
 	var new_key = {edit:true, name:'New Key', value:'New Value'};
-	var empty_key = {add:true, name:'', value:''};
+	var empty_key = {add:true, change:'add', name:'', value:''};
 
 	beforeEach(function () {
 		module('BootstrapPlayground');

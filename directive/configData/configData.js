@@ -23,40 +23,58 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		controller: 'ConfigDataCtrl'
 	};
 })
-	.controller('ConfigDataCtrl', function ($scope, Alerts, focus) {
+	.controller('ConfigDataCtrl', function ($scope, Alerts, GUID, focus) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
+	                $scope.$on('child changed', function(evt, change) { $scope.configdata.change = change; });
+
+	                $scope.getClasses = function(d) {
+		                var classes = [];
+
+		                switch(d.change) {
+			                case 'add':
+				                classes.push('alert-success');
+				                break;
+			                case 'edit':
+				                classes.push('alert-warning');
+				                break;
+			                case 'delete':
+				                classes.push('alert-danger');
+				                break;
+			                default:
+				                break;
+		                }
+
+		                return classes;
+	                };
 
 		            $scope.addData = function (target, new_d) {
 			            target.showdata = true;
 			            focus('focus data');
 			            target.data = target.data || [];
-			            target.data.splice(0, 0, new_d || {add:true, data:[], keydata:[]});
+			            target.data.splice(0, 0, new_d || {add:true, change:'add', data:[], keydata:[]});
 		            };
 
 	                $scope.saveData = function (d) {
 		                d.path = d.new_path;
 		                d.add = false;
-		                d.dirty = true;
+		                if(d.change !== 'add') {
+			                d.change = 'edit';
+		                }
 	                };
 
 	                $scope.cancelData = function (d) {
-		                d.add = false;
-		                $scope.delData(d);
+		                var index = $scope.configdata.data.indexOf(d);
+		                if (index !== -1) {
+			                $scope.configdata.data.splice(index, 1);
+		                }
 	                };
 
-	                $scope.confirmDel = function(evt, d) {
-		                evt.stopPropagation();
-		                d.delete=true;
-	                };
-
-		            $scope.delData = function (d) {
-			            var index = $scope.configdata.data.indexOf(d);
-			            if (index !== -1) {
-				            $scope.configdata.data.splice(index, 1);
-			            }
+	                $scope.delData = function (d) {
+		                d.change = 'delete';
 		            };
 
 		            $scope.copyData = function (d) {
+			            d.guid = GUID.create();
 			            $scope.$emit('copy to clipboard', angular.copy(d),'data');
 			            Alerts.addAlert('success', '`'+ d.path +'` copied to clipboard.');
 		            };
@@ -117,6 +135,6 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 				            d.keydata = [];
 			            }
 			            d.showdata = true;
-			            d.keydata.push(new_key || {add:true, name:'', value:''});
+			            d.keydata.push(new_key || {add:true, name:'', value:'', change:'add'});
 		            };
 	            });

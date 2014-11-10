@@ -11,19 +11,32 @@ angular.module('BootstrapPlayground')
 			           controller: 'ConfigKeyCtrl'
 		           };
 	           })
-	.controller('ConfigKeyCtrl', function ($scope, focus, Alerts) {
+	.controller('ConfigKeyCtrl', function ($scope, focus, Alerts, GUID) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
 
-	                $scope.confirmDel = function(evt, key) {
-		                evt.stopPropagation();
-		                key.delete=true;
+	                $scope.getClasses = function(key) {
+		                var classes = [key.guid];
+
+		                switch(key.change) {
+			                case 'add':
+				                classes.push('alert-success');
+				                break;
+			                case 'edit':
+				                classes.push('alert-warning');
+				                break;
+			                case 'delete':
+				                classes.push('alert-danger');
+				                break;
+			                default:
+				                break;
+		                }
+
+		                return classes;
 	                };
 
-		            $scope.delKey = function (key) {
-			            var index = $scope.data.indexOf(key);
-			            if (index !== -1) {
-				            $scope.data.splice(index, 1);
-			            }
+	                $scope.delKey = function (key) {
+			            key.change = 'delete';
+		                $scope.$emit('child changed', 'edit');
 		            };
 
 		            $scope.saveKey = function () {
@@ -32,7 +45,9 @@ angular.module('BootstrapPlayground')
 
 			            $scope.key.edit = false;
 			            $scope.key.add = false;
-			            $scope.key.dirty = true;
+			            if ($scope.key.change !== 'add') {
+				            $scope.key.change = 'edit';
+			            }
 		            };
 
 		            $scope.editKey = function () {
@@ -45,9 +60,18 @@ angular.module('BootstrapPlayground')
 
 		            $scope.cancelKey = function () {
 			            $scope.key.edit = false;
+
+			            // If we just added this key, then we need to remove it from keydata
+			            if ($scope.key.change==='add') {
+				            var index = $scope.data.indexOf($scope.key);
+				            if (index !== -1) {
+					            $scope.data.splice(index, 1);
+				            }
+			            }
 		            };
 
 		            $scope.copyKey = function (key) {
+			            key.guid = GUID.create();
 			            $scope.$emit('copy to clipboard', angular.copy(key), 'key');
 			            Alerts.addAlert('success', '`'+ key.name +'` copied to clipboard.');
 		            };

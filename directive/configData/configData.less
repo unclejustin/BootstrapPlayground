@@ -11,9 +11,19 @@
   border-bottom: solid 1px @gray-lighter;
 }
 
-.cd-header.dirty {
+.cd-header.add, .cd-key.add {
+  background-color: @state-success-bg;
+  color: @state-success-text;
+}
+
+.cd-header.edit, .cd-key.edit {
   background-color: @state-warning-bg;
   color: @state-warning-text;
+}
+
+.cd-header.delete, .cd-key.delete {
+  background-color: @state-danger-bg;
+  color: @state-danger-text;
 }
 
 .cd-header:hover {

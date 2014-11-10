@@ -1,7 +1,7 @@
-<div ng-class="key.guid">
+<div ng-class="getClasses(key)" class="row cd-key">
 	<div context-menu data-target="cd-key-menu-{{ key.guid }}">
 		<div class="col-md-3">
-			<a ng-click="editKey()" ng-hide="key.add"><i class="fa fa-fw"></i> {{ key.name }}</a>
+			<a class="alert-link" ng-click="editKey()" ng-hide="key.add"><i class="fa fa-fw"></i> {{ key.name }}</a>
 			<input ng-show="key.add"
 			       class="form-control"
 			       type="text"
@@ -19,10 +19,12 @@
 			       ui-keydown="{'enter':'saveKey()', 'esc':'cancelKey()'}"/>
 		</div>
 		<div ng-hide="key.edit || key.add" class="col-md-8">
-			<a ng-click="editKey()" ng-hide="key.edit || key.add" class="cd-key-value">{{ key.value }}</a>
+			<a ng-click="editKey()" ng-hide="key.edit || key.add" class="cd-key-value alert-link">{{ key.value }}</a>
 		</div>
 		<div ng-hide="key.edit || key.add" class="col-md-1 text-right">
-			<i ng-if="key.dirty" class="fa fa-star"></i>
+			<i ng-if="key.change==='add'" class="fa fa-plus"></i>
+			<i ng-if="key.change==='edit'" class="fa fa-exclamation"></i>
+			<i ng-if="key.change==='delete'" class="fa fa-times"></i>
 		</div>
 		<div class="dropdown position-fixed cd-key-menu" id="cd-key-menu-{{ key.guid }}">
 			<ul class="dropdown-menu" role="menu">
@@ -34,12 +36,12 @@
 						<i class="fa fa-ban"></i> Cancel
 					</a>
 				</li>
-				<li ng-if="clipboard.dirty && clipboard.type ==='key'">
+				<li ng-if="clipboard.change && clipboard.type ==='key'">
 					<a ng-click="pasteKey(key, 0)">
 						<i class="fa fa-fw fa-paste"></i> Paste before
 					</a>
 				</li>
-				<li ng-if="clipboard.dirty && clipboard.type ==='key'">
+				<li ng-if="clipboard.change && clipboard.type ==='key'">
 					<a ng-click="pasteKey(key, 1)">
 						<i class="fa fa-fw fa-paste"></i> Paste after
 					</a>
@@ -55,11 +57,8 @@
 					</a>
 				</li>
 				<li>
-					<a ng-click="confirmDel($event, key)" ng-hide="key.delete">
+					<a ng-click="delKey(key, data)">
 						<span class="text-danger"><i class="fa fa-times"></i> Delete</span>
-					</a>
-					<a ng-click="delKey(key, data)" ng-show="key.delete">
-						<span class="text-danger"><i class="fa fa-times"></i> Confirm</span>
 					</a>
 				</li>
 			</ul>
