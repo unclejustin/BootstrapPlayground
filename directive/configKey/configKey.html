@@ -55,8 +55,11 @@
 					</a>
 				</li>
 				<li>
-					<a ng-click="delKey(key, data)">
-						<i class="fa fa-times"></i> Delete
+					<a ng-click="confirmDel($event, key)" ng-hide="key.delete">
+						<span class="text-danger"><i class="fa fa-times"></i> Delete</span>
+					</a>
+					<a ng-click="delKey(key, data)" ng-show="key.delete">
+						<span class="text-danger"><i class="fa fa-times"></i> Confirm</span>
 					</a>
 				</li>
 			</ul>

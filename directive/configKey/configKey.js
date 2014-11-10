@@ -14,8 +14,13 @@ angular.module('BootstrapPlayground')
 	.controller('ConfigKeyCtrl', function ($scope, focus, Alerts) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
 
-		            $scope.delKey = function (leaf) {
-			            var index = $scope.data.indexOf(leaf);
+	                $scope.confirmDel = function(evt, key) {
+		                evt.stopPropagation();
+		                key.delete=true;
+	                };
+
+		            $scope.delKey = function (key) {
+			            var index = $scope.data.indexOf(key);
 			            if (index !== -1) {
 				            $scope.data.splice(index, 1);
 			            }
@@ -47,16 +52,16 @@ angular.module('BootstrapPlayground')
 			            Alerts.addAlert('success', '`'+ key.name +'` copied to clipboard.');
 		            };
 
-	                $scope.cutKey = function (leaf) {
-		                $scope.copyKey(leaf);
-		                var index = $scope.data.indexOf(leaf);
+	                $scope.cutKey = function (key) {
+		                $scope.copyKey(key);
+		                var index = $scope.data.indexOf(key);
 		                if (index !== -1) {
 			                $scope.data.splice(index, 1);
 		                }
 	                };
 
-	                $scope.pasteKey = function (leaf, position) {
-		                var index = $scope.data.indexOf(leaf);
+	                $scope.pasteKey = function (key, position) {
+		                var index = $scope.data.indexOf(key);
 		                if (index !== -1) {
 			                index += position;
 

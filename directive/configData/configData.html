@@ -28,8 +28,11 @@
 					</a>
 				</li>
 				<li>
-					<a ng-click="delData(d)">
+					<a ng-click="confirmDel($event, d)" ng-hide="d.delete">
 						<span class="text-danger"><i class="fa fa-fw fa-times"></i> Delete</span>
+					</a>
+					<a ng-click="delData(d)" ng-show="d.delete">
+						<span class="text-danger"><i class="fa fa-fw fa-times"></i> Confirm</span>
 					</a>
 				</li>
 			</ul>

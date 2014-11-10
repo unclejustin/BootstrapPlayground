@@ -44,6 +44,11 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		                $scope.delData(d);
 	                };
 
+	                $scope.confirmDel = function(evt, d) {
+		                evt.stopPropagation();
+		                d.delete=true;
+	                };
+
 		            $scope.delData = function (d) {
 			            var index = $scope.configdata.data.indexOf(d);
 			            if (index !== -1) {
