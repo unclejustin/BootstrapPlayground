@@ -6,12 +6,12 @@
 				<li><a ng-click="addKey(d)"><i class="fa fa-fw fa-key"></i> Add key/value</a></li>
 				<li><a ng-click="copyData(d)"><i class="fa fa-fw fa-copy"></i> Copy</a></li>
 				<li ng-if="clipboard.dirty" class="divider"></li>
-				<li ng-if="clipboard.dirty">
+				<li ng-if="clipboard.dirty && clipboard.type!=='key'">
 					<a ng-click="pasteData(d, 0)">
 						<i class="fa fa-fw fa-paste"></i> Paste before
 					</a>
 				</li>
-				<li ng-if="clipboard.dirty">
+				<li ng-if="clipboard.dirty && clipboard.type!=='key'">
 					<a ng-click="pasteData(d, 1)">
 						<i class="fa fa-fw fa-paste"></i> Paste after
 					</a>
@@ -45,7 +45,9 @@
 					<i ng-if="d.dirty" class="fa fa-star"></i>
 				</div>
 				<div class="col-md-12" ng-show="d.add">
+					<label for="path" class="sr-only">Path</label>
 					<input
+							id="path"
 							class="form-control focus"
 							type="text"
 							ng-model="d.new_path"
