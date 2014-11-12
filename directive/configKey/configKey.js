@@ -36,7 +36,6 @@ angular.module('BootstrapPlayground')
 
 	                $scope.delKey = function (key) {
 			            key.change = 'delete';
-		                $scope.$emit('child changed', 'edit');
 		            };
 
 		            $scope.saveKey = function () {

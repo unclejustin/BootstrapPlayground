@@ -25,7 +25,6 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 })
 	.controller('ConfigDataCtrl', function ($scope, Alerts, GUID, focus) {
 	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
-	                $scope.$on('child changed', function(evt, change) { $scope.configdata.change = change; });
 
 	                $scope.getClasses = function(d) {
 		                var classes = [];

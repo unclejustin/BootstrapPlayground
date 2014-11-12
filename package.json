@@ -1,6 +1,10 @@
 {
   "name": "bootstrap-playground",
   "version": "0.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/unclejustin/BootstrapPlayground.git"
+	},
   "devDependencies": {
     "grunt": "~0.4",
     "grunt-angular-templates": "~0.5",
