@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'ng-context-menu', 'focusOn']);
+angular.module('BootstrapPlayground', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'ngResource', 'ng-context-menu', 'focusOn']);
 
 angular.module('BootstrapPlayground').config(function($stateProvider, $urlRouterProvider) {
 

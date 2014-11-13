@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground').controller('HomeCtrl', function ($scope, Alerts) {
+angular.module('BootstrapPlayground').controller('HomeCtrl', function ($scope, Alerts, Servers) {
 	$scope.configdata = {};
 	$scope.clipboard = {};
 
@@ -9,9 +9,7 @@ angular.module('BootstrapPlayground').controller('HomeCtrl', function ($scope, A
 	$scope.alerts = Alerts.getAlerts();
 	$scope.closeAlert = function(index) { Alerts.closeAlert(index); };
 
-	//$scope.configdata = {data:[]};
-
-	$.getJSON('configdata.json', function(data) {
-		$scope.configdata = data;
+	Servers.getConfig({id:1}).then(function(resp) {
+		$scope.configdata.data = resp.data;
 	});
 });
