@@ -2,7 +2,7 @@ angular.module('BootstrapPlayground').controller('HomeCtrl', function ($scope, A
 	$scope.configdata = {};
 	$scope.clipboard = {};
 
-	$scope.$on('copy to clipboard', function(evt, leaf, type) { leaf.dirty = true; leaf.type = type; $scope.clipboard = leaf; });
+	$scope.$on('copy to clipboard', function(evt, leaf, type) { leaf.change = 'add'; leaf.dirty = true; leaf.type = type; $scope.clipboard = leaf; });
 	$scope.$on('clear clipboard', function() { $scope.clipboard = {}; });
 	$scope.$watch('clipboard', function() { $scope.$broadcast('clipboard updated', $scope.clipboard); });
 

@@ -22,9 +22,9 @@
 			<a ng-click="editKey()" ng-hide="key.edit || key.add" class="cd-key-value alert-link">{{ key.value }}</a>
 		</div>
 		<div ng-hide="key.edit || key.add" class="col-md-1 text-right">
-			<i ng-if="key.change==='add'" class="fa fa-plus"></i>
-			<i ng-if="key.change==='edit'" class="fa fa-exclamation"></i>
-			<i ng-if="key.change==='delete'" class="fa fa-times"></i>
+			<i ng-if="key.change==='add'" class="fa fa-fw fa-plus"></i>
+			<i ng-if="key.change==='edit'" class="fa fa-fw fa-exclamation"></i>
+			<i ng-if="key.change==='delete'" class="fa fa-fw fa-times"></i>
 		</div>
 		<div class="dropdown position-fixed cd-key-menu" id="cd-key-menu-{{ key.guid }}">
 			<ul class="dropdown-menu" role="menu">

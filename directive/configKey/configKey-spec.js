@@ -1,4 +1,4 @@
-describe('configKey', function () {
+describe('Directive: configKey', function () {
 	var data = [
 		{
 			"name": "name",
@@ -21,6 +21,7 @@ describe('configKey', function () {
 	];
 
 	beforeEach(module('BootstrapPlayground'));
+	beforeEach(module('templates'));
 
 	var scope, ctrl, new_key;
 
@@ -33,98 +34,136 @@ describe('configKey', function () {
 		scope.data = angular.copy(data);
 	}));
 
-	describe('saveKey', function () {
-		it('should change key.edit to false and flag key as edit', function () {
-			scope.key =new_key;
-			scope.saveKey();
-			expect(scope.key.edit).toBe(false);
-			expect(scope.key.change).toBe('edit');
-		});
-	});
+	describe('Directive', function () {
+		var html, elem, directive, compiled;
+		var key = { name:'name', value:'value', new_name:'new name', new_value:'new value', guid:'1234565789' };
 
-	describe('delKey', function () {
-		it('should flag key for deletion', function () {
-			var key = scope.data[0];
-
-			scope.delKey(key);
-			expect(key.change).toBe('delete');
-		});
-	});
-
-	describe('editKey', function () {
-		it('should set new values and flag key as edit', function () {
-			scope.key = scope.data[0];
-			scope.editKey();
-			expect(scope.key.new_name).toEqual(scope.key.name);
-			expect(scope.key.new_value).toEqual(scope.key.value);
-			expect(scope.key.edit).toBe(true);
-		});
-	});
-
-	describe('cancelKey', function () {
-		it('should set edit flag to false', function () {
-			scope.key = scope.data[0];
-			scope.editKey();
-			expect(scope.key.edit).toBe(true);
-
-			scope.cancelKey();
-			expect(scope.key.edit).toBe(false);
-		});
-	});
-
-	describe('Clipboard functions', function () {
 		beforeEach(function() {
-			scope.data = angular.copy(scope.data);
-		});
-
-		describe('copyKey', function () {
-			it('should emit a notice to the clipboard', function () {
-				spyOn(scope, '$emit');
-				scope.copyKey(scope.data[0]);
-				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object),'key');
+			scope.key = angular.copy(key);
+			scope.data = angular.copy(data);
+			html = '<config-key key="key" data="data"></config-key>';
+			inject(function($compile) {
+				elem = angular.element(html);
+				compiled = $compile(elem);
+				compiled(scope);
+				scope.$digest();
 			});
 		});
 
-		describe('cutKey', function () {
-			it('should remove the item from the collection', function () {
-				var datalength = scope.data.length;
+		it('should highlight added keys', function () {
+			scope.key.change = 'add';
+			scope.saveKey();
+			scope.$digest();
+			expect(elem.hasClass('alert-success')).toBe(true);
+		});
 
-				scope.cutKey(scope.data[0]);
-				expect(scope.data.length).toBeLessThan(datalength);
-			});
+		it('should highlight edited keys', function () {
+			scope.saveKey();
+			scope.$digest();
+			expect(elem.hasClass('alert-warning')).toBe(true);
+		});
 
-			it('emit a notice to the clipboard', function () {
-				spyOn(scope, '$emit');
-				scope.cutKey(scope.data[0]);
-				expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object),'key');
+		it('should highlight deleted keys', function () {
+			scope.delKey(scope.key);
+			scope.$digest();
+			expect(elem.hasClass('alert-danger')).toBe(true);
+		});
+	});
+
+	describe('Controller', function () {
+		describe('saveKey', function () {
+			it('should change key.edit to false and flag key as edit', function () {
+				scope.key =new_key;
+				scope.saveKey();
+				expect(scope.key.edit).toBe(false);
+				expect(scope.key.change).toBe('edit');
 			});
 		});
 
-		describe('pasteKey', function () {
-			var leaf, branch_count;
+		describe('delKey', function () {
+			it('should flag key for deletion', function () {
+				var key = scope.data[0];
 
+				scope.delKey(key);
+				expect(key.change).toBe('delete');
+			});
+		});
+
+		describe('editKey', function () {
+			it('should set new values and flag key as edit', function () {
+				scope.key = scope.data[0];
+				scope.editKey();
+				expect(scope.key.new_name).toEqual(scope.key.name);
+				expect(scope.key.new_value).toEqual(scope.key.value);
+				expect(scope.key.edit).toBe(true);
+			});
+		});
+
+		describe('cancelKey', function () {
+			it('should set edit flag to false', function () {
+				scope.key = scope.data[0];
+				scope.editKey();
+				expect(scope.key.edit).toBe(true);
+
+				scope.cancelKey();
+				expect(scope.key.edit).toBe(false);
+			});
+		});
+
+		describe('Clipboard functions', function () {
 			beforeEach(function() {
-				scope.clipboard = leaf = scope.data[0];
-				scope.cutKey(scope.data[0]);
-				branch_count = scope.data.length + 1;
+				scope.data = angular.copy(scope.data);
 			});
 
-			it('should add the clipboard to the given array before the target', function () {
-				scope.pasteKey(scope.data[0], 0);
-				expect(scope.data[0]).toEqual(leaf);
-				expect(branch_count).toEqual(scope.data.length);
+			describe('copyKey', function () {
+				it('should emit a notice to the clipboard', function () {
+					spyOn(scope, '$emit');
+					scope.copyKey(scope.data[0]);
+					expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object),'key');
+				});
 			});
 
-			it('should add the clipboard to the given array after the target', function () {
-				scope.pasteKey(scope.data[0], 1);
-				expect(scope.data[1]).toEqual(leaf);
-				expect(branch_count).toEqual(scope.data.length);
+			describe('cutKey', function () {
+				it('should remove the item from the collection', function () {
+					var datalength = scope.data.length;
+
+					scope.cutKey(scope.data[0]);
+					expect(scope.data.length).toBeLessThan(datalength);
+				});
+
+				it('emit a notice to the clipboard', function () {
+					spyOn(scope, '$emit');
+					scope.cutKey(scope.data[0]);
+					expect(scope.$emit).toHaveBeenCalledWith('copy to clipboard', jasmine.any(Object),'key');
+				});
 			});
 
-			it('should emit a "clear clipboard" to clear the clipboard', function () {
-				spyOn(scope, '$emit');
-				scope.pasteKey(scope.data[0], 0);
-				expect(scope.$emit).toHaveBeenCalledWith('clear clipboard');
+			describe('pasteKey', function () {
+				var leaf, branch_count;
+
+				beforeEach(function() {
+					scope.clipboard = leaf = scope.data[0];
+					scope.cutKey(scope.data[0]);
+					branch_count = scope.data.length + 1;
+				});
+
+				it('should add the clipboard to the given array before the target', function () {
+					scope.pasteKey(scope.data[0], 0);
+					expect(scope.data[0]).toEqual(leaf);
+					expect(branch_count).toEqual(scope.data.length);
+				});
+
+				it('should add the clipboard to the given array after the target', function () {
+					scope.pasteKey(scope.data[0], 1);
+					expect(scope.data[1]).toEqual(leaf);
+					expect(branch_count).toEqual(scope.data.length);
+				});
+
+				it('should emit a "clear clipboard" to clear the clipboard', function () {
+					spyOn(scope, '$emit');
+					scope.pasteKey(scope.data[0], 0);
+					expect(scope.$emit).toHaveBeenCalledWith('clear clipboard');
+				});
 			});
 		});
 	});
