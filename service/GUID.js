@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground').factory('GUID',function() {
+angular.module('orca').factory('GUID',function() {
 	return {
 		create:(function () {
 			function s4() {

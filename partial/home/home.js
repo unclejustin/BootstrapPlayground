@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground').controller('HomeCtrl', function ($scope, Alerts, Servers) {
+angular.module('orca').controller('HomeCtrl', function ($scope, Alerts, Servers) {
 	$scope.configdata = {};
 	$scope.clipboard = {};
 

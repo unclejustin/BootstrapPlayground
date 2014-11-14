@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground')
+angular.module('orca')
 	.directive('configKey', function () {
 		           return {
 			           restrict:   'E',

@@ -6,7 +6,7 @@ describe('HomeCtrl', function () {
 	});
 
 	beforeEach(function () {
-		module('BootstrapPlayground');
+		module('orca');
 
 		inject(function (_$rootScope_, $controller, $httpBackend) {
 			$httpBackend.when('POST', 'http://localhost:8888/index.php/servers/getConfig.json?authtoken=54651b0d9a69a:default').respond(data);

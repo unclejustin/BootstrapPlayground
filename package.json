@@ -1,9 +1,9 @@
 {
-  "name": "BootstrapPlayground",
+  "name": "orca",
   "version": "0.0.0",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/unclejustin/BootstrapPlayground.git"
+		"url": "https://github.com/unclejustin/orca.git"
 	},
   "devDependencies": {
     "grunt": "~0.4",

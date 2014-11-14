@@ -1,0 +1,31 @@
+<div class="col-md-12">
+	<!--UITODO: remove this button-->
+	<button class="btn btn-info" ng-click="jobInfoToggle = !jobInfoToggle">Job Info</button>
+	<div collapse="!jobInfoToggle">
+		<pre>{{ job.data.topo_nodes[0].TopoNode.name | json }}</pre>
+	</div>
+	<h1>
+		{{ job.data.topo_nodes[0].TopoNode.name }}
+		<button class="btn btn-info btn-sm">Apply Changes</button>
+		<button class="btn btn-warning btn-sm">Return to {{ job.node }}</button>
+	</h1>
+
+	<tabset>
+		<tab>
+			<tab-heading>Servers</tab-heading>
+			Servers
+		</tab>
+		<tab>
+			<tab-heading>Activities</tab-heading>
+			Activities
+		</tab>
+		<tab>
+			<tab-heading>Config Data</tab-heading>
+			Config Data
+		</tab>
+		<tab>
+			<tab-heading>Preview</tab-heading>
+			Preview
+		</tab>
+	</tabset>
+</div>

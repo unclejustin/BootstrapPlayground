@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground').factory('Alerts',function() {
+angular.module('orca').factory('Alerts',function() {
 	var alerts = [];
 
 	var addAlert = function (type, msg, inline) {

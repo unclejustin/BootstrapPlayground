@@ -47,7 +47,7 @@ var data = {
 };
 
 describe('Directive: configData', function () {
-	beforeEach(module('BootstrapPlayground'));
+	beforeEach(module('orca'));
 
 	// Load templates
 	//beforeEach(module('templates'));
@@ -55,8 +55,7 @@ describe('Directive: configData', function () {
 	var scope, elem, html;
 	html = '<config-data configdata="configdata"></config-data>';
 
-	beforeEach(inject(function ($rootScope, $compile, $httpBackend) {
-		//$httpBackend.whenGET('ecosystem/job/directive/configData/configData.html').passThrough();
+	beforeEach(inject(function ($rootScope, $compile) {
 		elem = angular.element(html);
 		scope = $rootScope.$new();
 		scope.configdata = angular.copy(data);
@@ -81,7 +80,7 @@ describe('Controller: ConfigDataCtrl', function () {
 	var empty_key = {add:true, change:'add', name:'', value:''};
 
 	beforeEach(function () {
-		module('BootstrapPlayground');
+		module('orca');
 
 		inject(function (_$rootScope_, $controller, $httpBackend) {
 			$httpBackend.whenGET('ecosystem/job/directive/configData/configData.html').respond(200);

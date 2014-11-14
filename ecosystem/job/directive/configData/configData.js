@@ -1,4 +1,4 @@
-angular.module('BootstrapPlayground').directive('configData', function ($compile) {
+angular.module('orca').directive('configData', function ($compile) {
 	return {
 		restrict:   'E',
 		replace:    true,

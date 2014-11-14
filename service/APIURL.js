@@ -1,0 +1,1 @@
+angular.module('orca').value('APIURL', 'http://localhost:8888');

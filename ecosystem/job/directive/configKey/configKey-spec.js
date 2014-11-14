@@ -20,7 +20,7 @@ describe('Directive: configKey', function () {
 		}
 	];
 
-	beforeEach(module('BootstrapPlayground'));
+	beforeEach(module('orca'));
 	beforeEach(module('ngMockE2E'));
 
 	var scope, ctrl, new_key;
@@ -35,7 +35,7 @@ describe('Directive: configKey', function () {
 	}));
 
 	describe('Directive', function () {
-		var html, elem, directive, compiled;
+		var html, elem, compiled;
 		var key = { name:'name', value:'value', new_name:'new name', new_value:'new value', guid:'1234565789' };
 
 		beforeEach(function() {

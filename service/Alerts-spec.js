@@ -1,6 +1,6 @@
 describe('Alerts', function() {
 
-  beforeEach(module('BootstrapPlayground'));
+  beforeEach(module('orca'));
 
 	describe('getAlerts', function () {
 		it('should return an array of alerts', inject(function(Alerts) {

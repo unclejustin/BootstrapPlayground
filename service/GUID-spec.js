@@ -1,6 +1,6 @@
 describe('GUID', function() {
 
-  beforeEach(module('BootstrapPlayground'));
+  beforeEach(module('orca'));
 
   it('should ...', inject(function(GUID) {
 
