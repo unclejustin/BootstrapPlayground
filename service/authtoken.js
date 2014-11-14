@@ -1,1 +1,1 @@
-angular.module('BootstrapPlayground').value('authtoken','54526cae3966c:default');
+angular.module('BootstrapPlayground').value('authtoken','54651b0d9a69a:default');

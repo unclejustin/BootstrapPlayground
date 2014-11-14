@@ -9,7 +9,7 @@ describe('HomeCtrl', function () {
 		module('BootstrapPlayground');
 
 		inject(function (_$rootScope_, $controller, $httpBackend) {
-			$httpBackend.when('POST', 'http://localhost:8888/index.php/servers/getConfig.json?authtoken=54526cae3966c:default').respond(data);
+			$httpBackend.when('POST', 'http://localhost:8888/index.php/servers/getConfig.json?authtoken=54651b0d9a69a:default').respond(data);
 
 			$rootScope = _$rootScope_;
 			$scope = $rootScope.$new();
