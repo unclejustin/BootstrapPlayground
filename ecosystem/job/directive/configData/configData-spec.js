@@ -50,12 +50,13 @@ describe('Directive: configData', function () {
 	beforeEach(module('BootstrapPlayground'));
 
 	// Load templates
-	beforeEach(module('templates'));
+	//beforeEach(module('templates'));
 
 	var scope, elem, html;
 	html = '<config-data configdata="configdata"></config-data>';
 
-	beforeEach(inject(function ($rootScope, $compile) {
+	beforeEach(inject(function ($rootScope, $compile, $httpBackend) {
+		//$httpBackend.whenGET('ecosystem/job/directive/configData/configData.html').passThrough();
 		elem = angular.element(html);
 		scope = $rootScope.$new();
 		scope.configdata = angular.copy(data);
@@ -82,7 +83,8 @@ describe('Controller: ConfigDataCtrl', function () {
 	beforeEach(function () {
 		module('BootstrapPlayground');
 
-		inject(function (_$rootScope_, $controller) {
+		inject(function (_$rootScope_, $controller, $httpBackend) {
+			$httpBackend.whenGET('ecosystem/job/directive/configData/configData.html').respond(200);
 			$rootScope = _$rootScope_;
 			scope = $rootScope.$new();
 			ctrl = $controller('ConfigDataCtrl', {

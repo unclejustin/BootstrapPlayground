@@ -5,7 +5,7 @@ angular.module('BootstrapPlayground').directive('configData', function ($compile
 		scope:      {
 			configdata:     '='
 		},
-		templateUrl:'directive/configData/configData.html',
+		templateUrl:'ecosystem/job/directive/configData/configData.html',
 		compile:    function (tElement, tAttr, transclude) {
 			var contents = tElement.contents().remove();
 			var compiledContents;

@@ -21,7 +21,7 @@ describe('Directive: configKey', function () {
 	];
 
 	beforeEach(module('BootstrapPlayground'));
-	beforeEach(module('templates'));
+	beforeEach(module('ngMockE2E'));
 
 	var scope, ctrl, new_key;
 
@@ -39,6 +39,7 @@ describe('Directive: configKey', function () {
 		var key = { name:'name', value:'value', new_name:'new name', new_value:'new value', guid:'1234565789' };
 
 		beforeEach(function() {
+
 			scope.key = angular.copy(key);
 			scope.data = angular.copy(data);
 			html = '<config-key key="key" data="data"></config-key>';

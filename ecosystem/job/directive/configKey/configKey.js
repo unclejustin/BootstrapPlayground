@@ -7,7 +7,7 @@ angular.module('BootstrapPlayground')
 				           key: '=',
 				           data:'='
 			           },
-			           templateUrl:'directive/configKey/configKey.html',
+			           templateUrl:'ecosystem/job/directive/configKey/configKey.html',
 			           controller: 'ConfigKeyCtrl'
 		           };
 	           })

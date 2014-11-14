@@ -187,21 +187,17 @@ module.exports = function (grunt) {
 			                 options:     {
 				                 frameworks:           ['jasmine'],
 				                 preprocessors:        {
-					                 'directive/**/*.html':['ng-html2js'],
 					                 'directive/**/*.js':  'coverage',
 					                 'partial/**/*.js':    'coverage',
 					                 'app.js':             'coverage'
 				                 },
 				                 files:                [  //this files data is also updated in the watch handler, if updated change there too
 					                 '<%= dom_munger.data.appjs %>',
-					                 'bower_components/angular-mocks/angular-mocks.js',
+					                 '<%= ngtemplates.main.dest %>',
+					                 'bower_components/angular-mocks/angulsar-mocks.js',
 					                 'directive/**/*.html',
-					                 //'configdata.json',
 					                 createFolderGlobs(['*-spec.js'])
 				                 ],
-				                 ngHtml2JsPreprocessor:{
-					                 moduleName:'templates'
-				                 },
 				                 logLevel:             'ERROR',
 				                 reporters:            ['mocha', 'progress', 'html', 'coverage'],
 				                 htmlReporter:         {
@@ -214,7 +210,7 @@ module.exports = function (grunt) {
 				                 autoWatch:            false, //watching is handled by grunt-contrib-watch
 			                 },
 			                 all_tests:   {
-				                 browsers: ['PhantomJS', 'Chrome'],
+				                 browsers: ['Chrome'],
 				                 singleRun:false
 			                 },
 			                 one_test:   {
@@ -261,7 +257,6 @@ module.exports = function (grunt) {
 				files.push(spec);
 				files.push('directive/**/*.html');
 				grunt.config('karma.options.files', files);
-				grunt.config('karma.options.ngHtml2JsPreprocessor.moduleName', 'templates');
 				tasksToRun.push('karma:during_watch');
 			}
 		}
