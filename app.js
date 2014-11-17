@@ -1,4 +1,4 @@
-angular.module('orca', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'ngResource', 'ng-context-menu', 'focusOn']);
+angular.module('orca', ['ui.bootstrap','ui.utils','ui.router','ngAnimate', 'ngResource', 'ng-context-menu', 'focusOn', 'xeditable']);
 
 angular.module('orca').config(function($stateProvider, $urlRouterProvider) {
 
@@ -21,7 +21,9 @@ angular.module('orca').config(function($stateProvider, $urlRouterProvider) {
 
 });
 
-angular.module('orca').run(function($rootScope) {
+angular.module('orca').run(function($rootScope, editableOptions) {
+
+	editableOptions.theme = 'bs3';
 
     $rootScope.safeApply = function(fn) {
         var phase = $rootScope.$$phase;
@@ -35,3 +37,23 @@ angular.module('orca').run(function($rootScope) {
     };
 
 });
+
+angular.module('orca').config(
+	function ($httpProvider) {
+
+		var authRequest = function ($window) {
+			return {
+				'request':function (config) {
+					if(config.url.indexOf('.html') > -1 || config.url.indexOf('template') > -1 || config.url.indexOf('bootstrap') > -1) {
+						return config;
+					}
+					config.params = config.params || {};
+
+					config.params.authtoken = '54651b0d9a69a:default';
+					return config;
+				}
+			};
+		};
+		$httpProvider.interceptors.push(authRequest);
+	}
+);

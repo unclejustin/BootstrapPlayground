@@ -7,6 +7,7 @@ angular.module('orca').factory('Alerts',function() {
 		if (alerts.length > 5 && msg !== 'Loading...') {
 			alerts.pop();
 		}
+		console.debug(msg);
 	};
 
 	var closeAlert = function (index) {

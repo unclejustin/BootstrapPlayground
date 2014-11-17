@@ -1,29 +1,30 @@
 <div class="col-md-12">
-	<!--UITODO: remove this button-->
-	<button class="btn btn-info" ng-click="jobInfoToggle = !jobInfoToggle">Job Info</button>
-	<div collapse="!jobInfoToggle">
-		<pre>{{ job.data.topo_nodes[0].TopoNode.name | json }}</pre>
-	</div>
 	<h1>
-		{{ job.data.topo_nodes[0].TopoNode.name }}
-		<button class="btn btn-info btn-sm">Apply Changes</button>
-		<button class="btn btn-warning btn-sm">Return to {{ job.node }}</button>
+		<span class="pointer"
+		      editable-text="job.data.name"
+		      buttons="no"
+		      e-style="font-size:1em; height:auto; border-radius:0; border-top:none; border-right:none; border-left:none; box-shadow:none; padding:0;"
+		      e-form="jobNameForm"
+		      onaftersave="job.data.dirty=true"
+		      ng-click="jobNameForm.$show()">{{ job.data.name || 'Enter job name' }}</span>
+		<button class="btn btn-success btn-sm" ng-click="saveJob()">Apply Changes</button>
+		<button class="btn btn-warning btn-sm">Return to {{ job.data.topo_nodes[0].TopoNode.name }}</button>
 	</h1>
 
 	<tabset>
-		<tab>
+		<tab select="updateJob()">
 			<tab-heading>Servers</tab-heading>
-			Servers
+			<job-servers job="job.data" columns="3"></job-servers>
 		</tab>
-		<tab>
+		<tab select="updateJob()">
 			<tab-heading>Activities</tab-heading>
 			Activities
 		</tab>
-		<tab>
+		<tab select="updateJob()">
 			<tab-heading>Config Data</tab-heading>
 			Config Data
 		</tab>
-		<tab>
+		<tab select="updateJob()">
 			<tab-heading>Preview</tab-heading>
 			Preview
 		</tab>

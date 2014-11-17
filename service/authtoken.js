@@ -1,1 +1,0 @@
-angular.module('orca').value('authtoken','54651b0d9a69a:default');
