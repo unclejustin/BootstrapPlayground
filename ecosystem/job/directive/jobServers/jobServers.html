@@ -1,0 +1,48 @@
+<div>
+	<div class="row padding-top">
+		<div class="col-md-4 margin-bottom">
+			<orca-search search="search"></orca-search>
+		</div>
+	</div>
+
+	<div ng-repeat="nodeRow in (job.topo_nodes.length/columns | arrayMod)">
+		<div class="row">
+			<div class="col-md-4" ng-show="servers.length > 0"
+			     ng-repeat="node in job.topo_nodes.slice(columns * $index, columns * $index + columns)">
+				<div class="panel panel-info no-margin-bottom">
+					<div class="panel-heading panel-title clearfix">
+						<span class="panel-title-bg">{{ node.TopoNode.name }}</span>
+
+						<div class="btn-group btn-group-xs pull-right">
+							<button class="btn btn-primary"
+							        ng-click="setServers(node.TopoNode, 'N')">
+								<i class="fa fa-plus-square"></i>
+							</button>
+							<button class="btn btn-warning"
+							        ng-click="setServers(node.TopoNode, 'Y')">
+								<i class="fa fa-minus-square"></i>
+							</button>
+						</div>
+					</div>
+					<div class="panel-body">
+				<span
+						class="pointer"
+						ng-repeat="server in servers = (node.TopoNode.servers | filter:{Server:{name:search.query}})"
+						ng-class="{'text-success':server.Server.skip!=='Y','text-muted':server.Server.skip==='Y'}"
+						ng-click="toggleServer(server)">
+					<i class="fa fa-fw"
+					   ng-class="{'fa-plus':server.Server.skip!=='Y','fa-minus':server.Server.skip==='Y'}"></i>
+					<span ng-class="{'strikethrough':server.Server.skip==='Y'}">{{ server.Server.name }}</span><span
+						ng-if="!$last">, </span>
+				</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr ng-hide="$last" />
+	</div>
+
+	<div ng-show="servers.length <= 0">
+		There are no servers in this ecosystem!
+	</div>
+</div>
