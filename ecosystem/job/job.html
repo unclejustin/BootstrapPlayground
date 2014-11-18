@@ -22,11 +22,12 @@
 		</tab>
 		<tab select="updateJob()">
 			<tab-heading>Config Data</tab-heading>
-			Config Data
+			<br/>
+			<config-data configdata="{ data:job.data.config }" job="job.data"></config-data>
 		</tab>
 		<tab select="updateJob()">
 			<tab-heading>Preview</tab-heading>
-			Preview
+			<job-preview preview="job.data.preview"></job-preview>
 		</tab>
 	</tabset>
 </div>

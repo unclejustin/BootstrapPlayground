@@ -36,6 +36,7 @@ angular.module('orca')
 
 	                $scope.delKey = function (key) {
 			            key.change = 'delete';
+		                $scope.$emit('job dirty');
 		            };
 
 		            $scope.saveKey = function () {
@@ -47,6 +48,7 @@ angular.module('orca')
 			            if ($scope.key.change !== 'add') {
 				            $scope.key.change = 'edit';
 			            }
+			            $scope.$emit('job dirty');
 		            };
 
 		            $scope.editKey = function () {
@@ -93,5 +95,10 @@ angular.module('orca')
 			                $scope.data.splice(index, 0, $scope.clipboard);
 		                }
 		                $scope.$emit('clear clipboard');
+	                };
+
+	                $scope.revertKey = function (key, data) {
+		                delete key.change;
+		                $scope.$emit('job update');
 	                };
 	            });

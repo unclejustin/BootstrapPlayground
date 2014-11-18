@@ -1,67 +1,69 @@
 <div>
-	<div ng-repeat="d in configdata.data track by $index" ng-init="d.showdata = showdata">
-		<div class="dropdown position-fixed cd-menu" id="cd-menu-{{ d.guid }}">
-			<ul class="dropdown-menu" role="menu">
-				<li><a ng-click="addData(d)"><i class="fa fa-fw fa-code"></i> Add section</a></li>
-				<li><a ng-click="addKey(d)"><i class="fa fa-fw fa-key"></i> Add key/value</a></li>
-				<li><a ng-click="copyData(d)"><i class="fa fa-fw fa-copy"></i> Copy</a></li>
-				<li ng-if="clipboard.dirty" class="divider"></li>
-				<li ng-if="clipboard.dirty && clipboard.type!=='key'">
-					<a ng-click="pasteData(d, 0)">
-						<i class="fa fa-fw fa-paste"></i> Paste before
-					</a>
-				</li>
-				<li ng-if="clipboard.dirty && clipboard.type!=='key'">
-					<a ng-click="pasteData(d, 1)">
-						<i class="fa fa-fw fa-paste"></i> Paste after
-					</a>
-				</li>
-				<li ng-if="clipboard.dirty">
-					<a ng-click="pasteData(d, -1)">
-						<i class="fa fa-fw fa-paste"></i> Paste into
-					</a>
-				</li>
-				<li class="divider"></li>
-				<li>
-					<a ng-click="cutData(d)">
-						<i class="fa fa-fw fa-cut"></i> Cut
-					</a>
-				</li>
-				<li>
-					<a ng-click="delData(d)">
-						<span class="text-danger"><i class="fa fa-fw fa-times"></i> Delete</span>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="cd-wrapper">
-			<div class="row cd-header pointer" ng-class="getClasses(d)" context-menu data-target="cd-menu-{{ d.guid }}" ng-click="d.showdata = !d.showdata">
-				<div class="col-md-11 config-data" ng-class="d.guid" ng-hide="d.add">
-					<i class="fa fa-fw"
-					   ng-class="{ 'fa-chevron-right':!d.showdata, 'fa-chevron-down':d.showdata }"></i>
-					{{d.path}}
-				</div>
-				<div class="col-md-1 config-data text-right" ng-hide="d.add">
-					<i ng-if="d.change==='add'" class="fa fa-fw fa-plus"></i>
-					<i ng-if="d.change==='edit'" class="fa fa-fw fa-exclamation"></i>
-					<i ng-if="d.change==='delete'" class="fa fa-fw fa-times"></i>
-				</div>
-				<div class="col-md-12" ng-show="d.add">
-					<label for="path" class="sr-only">Path</label>
-					<input
-							id="path"
-							class="form-control focus"
-							type="text"
-							ng-model="d.new_path"
-							focus-on="focus data"
-							ui-keydown="{'enter':'saveData(d)', 'esc':'cancelData(d)'}"/>
-				</div>
+	<div class="col-md-12">
+		<div ng-repeat="d in configdata.data track by $index" ng-init="d.showdata = showdata">
+			<div class="dropdown position-fixed cd-menu" id="cd-menu-{{ d.guid }}">
+				<ul class="dropdown-menu" role="menu">
+					<li><a ng-click="addData(d)"><i class="fa fa-fw fa-code"></i> Add section</a></li>
+					<li><a ng-click="addKey(d)"><i class="fa fa-fw fa-key"></i> Add key/value</a></li>
+					<li><a ng-click="copyData(d)"><i class="fa fa-fw fa-copy"></i> Copy</a></li>
+					<li ng-if="clipboard.dirty" class="divider"></li>
+					<li ng-if="clipboard.dirty && clipboard.type!=='key'">
+						<a ng-click="pasteData(d, 0)">
+							<i class="fa fa-fw fa-paste"></i> Paste before
+						</a>
+					</li>
+					<li ng-if="clipboard.dirty && clipboard.type!=='key'">
+						<a ng-click="pasteData(d, 1)">
+							<i class="fa fa-fw fa-paste"></i> Paste after
+						</a>
+					</li>
+					<li ng-if="clipboard.dirty">
+						<a ng-click="pasteData(d, -1)">
+							<i class="fa fa-fw fa-paste"></i> Paste into
+						</a>
+					</li>
+					<li class="divider"></li>
+					<li>
+						<a ng-click="cutData(d)">
+							<i class="fa fa-fw fa-cut"></i> Cut
+						</a>
+					</li>
+					<li>
+						<a ng-click="delData(d)">
+							<span class="text-danger"><i class="fa fa-fw fa-times"></i> Delete</span>
+						</a>
+					</li>
+				</ul>
 			</div>
-			<!--data-->
+			<div class="cd-wrapper">
+				<div class="row cd-header pointer" ng-class="getClasses(d)" context-menu data-target="cd-menu-{{ d.guid }}" ng-click="d.showdata = !d.showdata">
+					<div class="col-md-11 config-data" ng-class="d.guid" ng-hide="d.add">
+						<i class="fa fa-fw"
+						   ng-class="{ 'fa-chevron-right':!d.showdata, 'fa-chevron-down':d.showdata }"></i>
+						{{d.path}}
+					</div>
+					<div class="col-md-1 config-data text-right" ng-hide="d.add">
+						<i ng-if="d.change==='add'" class="fa fa-fw fa-plus"></i>
+						<i ng-if="d.change==='edit'" class="fa fa-fw fa-exclamation"></i>
+						<i ng-if="d.change==='delete'" class="fa fa-fw fa-times"></i>
+					</div>
+					<div class="col-md-12" ng-show="d.add">
+						<label for="path" class="sr-only">Path</label>
+						<input
+								id="path"
+								class="form-control focus"
+								type="text"
+								ng-model="d.new_path"
+								focus-on="focus data"
+								ui-keydown="{'enter':'saveData(d)', 'esc':'cancelData(d)'}"/>
+					</div>
+				</div>
+				<!--data-->
 
-			<div class="cd-body" collapse="!d.showdata">
-				<config-key key="k" data="d.keydata" ng-repeat="k in d.keydata track by $index"></config-key>
-				<config-data configdata="d"></config-data>
+				<div class="cd-body" collapse="!d.showdata">
+					<config-key key="k" data="d.keydata" job="job" ng-repeat="k in d.keydata track by $index"></config-key>
+					<config-data configdata="d"></config-data>
+				</div>
 			</div>
 		</div>
 	</div>

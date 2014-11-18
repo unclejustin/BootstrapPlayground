@@ -3,7 +3,8 @@ angular.module('orca').directive('configData', function ($compile) {
 		restrict:   'E',
 		replace:    true,
 		scope:      {
-			configdata:     '='
+			configdata:'=',
+			job:       '='
 		},
 		templateUrl:'ecosystem/job/directive/configData/configData.html',
 		compile:    function (tElement, tAttr, transclude) {
@@ -24,27 +25,44 @@ angular.module('orca').directive('configData', function ($compile) {
 	};
 })
 	.controller('ConfigDataCtrl', function ($scope, Alerts, GUID, focus) {
-	                $scope.$on('clipboard updated', function(evt, clipboard) { $scope.clipboard = clipboard; });
+		            $scope.$on('clipboard updated', function (evt, clipboard) { $scope.clipboard = clipboard; });
 
-	                $scope.getClasses = function(d) {
-		                var classes = [];
+		            $scope.getClasses = function (d) {
+			            var classes = [];
 
-		                switch(d.change) {
-			                case 'add':
-				                classes.push('alert-success');
-				                break;
-			                case 'edit':
-				                classes.push('alert-warning');
-				                break;
-			                case 'delete':
-				                classes.push('alert-danger');
-				                break;
-			                default:
-				                break;
+			            switch (d.change) {
+				            case 'add':
+					            classes.push('alert-success');
+					            break;
+				            case 'edit':
+					            classes.push('alert-warning');
+					            break;
+				            case 'delete':
+					            classes.push('alert-danger');
+					            break;
+				            default:
+					            break;
+			            }
+
+			            return classes;
+		            };
+
+	                function impeachObama(liberal_asshole) {
+		                delete liberal_asshole.change;
+		                var i;
+
+		                if (liberal_asshole.data) {
+			                for (i=0; i<liberal_asshole.data.length; i++) {
+				                impeachObama(liberal_asshole.data[i]);
+			                }
 		                }
 
-		                return classes;
-	                };
+		                if (liberal_asshole.keydata) {
+			                for (i=0; i<liberal_asshole.keydata.length; i++) {
+				                impeachObama(liberal_asshole.keydata[i]);
+			                }
+		                }
+	                }
 
 		            $scope.addData = function (target, new_d) {
 			            target.showdata = true;
@@ -53,29 +71,33 @@ angular.module('orca').directive('configData', function ($compile) {
 			            target.data.splice(0, 0, new_d || {add:true, change:'add', data:[], keydata:[]});
 		            };
 
-	                $scope.saveData = function (d) {
-		                d.path = d.new_path;
-		                d.add = false;
-		                if(d.change !== 'add') {
-			                d.change = 'edit';
-		                }
-	                };
+		            $scope.saveData = function (d) {
+			            d.path = d.new_path;
+			            d.add = false;
+			            if (d.change !== 'add') {
+				            d.change = 'edit';
+			            }
+			            $scope.$emit('job dirty');
+		            };
 
-	                $scope.cancelData = function (d) {
-		                var index = $scope.configdata.data.indexOf(d);
-		                if (index !== -1) {
-			                $scope.configdata.data.splice(index, 1);
-		                }
-	                };
+		            $scope.cancelData = function (d) {
+			            var index = $scope.configdata.data.indexOf(d);
+			            if (index !== -1) {
+				            $scope.configdata.data.splice(index, 1);
+			            }
+		            };
 
-	                $scope.delData = function (d) {
-		                d.change = 'delete';
+		            $scope.delData = function (d) {
+			            d.change = 'delete';
+			            $scope.$emit('job dirty');
 		            };
 
 		            $scope.copyData = function (d) {
-			            d.guid = GUID.create();
-			            $scope.$emit('copy to clipboard', angular.copy(d),'data');
-			            Alerts.addAlert('success', '`'+ d.path +'` copied to clipboard.');
+			            var copy = angular.copy(d);
+			            impeachObama(copy);
+			            copy.guid = GUID.create();
+			            $scope.$emit('copy to clipboard', copy, 'data');
+			            Alerts.addAlert('success', '`' + d.path + '` copied to clipboard.');
 		            };
 
 		            $scope.cutData = function (d) {
@@ -90,7 +112,7 @@ angular.module('orca').directive('configData', function ($compile) {
 			            target.showdata = true;
 			            if (position === -1) {
 				            // Insert into target
-				            if ($scope.clipboard.type==='data') {
+				            if ($scope.clipboard.type === 'data') {
 					            $scope.addData(target, $scope.clipboard);
 				            } else {
 					            $scope.addKey(target, $scope.clipboard);
@@ -100,7 +122,9 @@ angular.module('orca').directive('configData', function ($compile) {
 				            if ($scope.clipboard.type === 'data') {
 					            var index, list; // position in list and the list to paste into
 
-					            if (!$scope.configdata.data) { $scope.configdata.data = []; }
+					            if (!$scope.configdata.data) {
+						            $scope.configdata.data = [];
+					            }
 					            list = $scope.configdata.data;
 
 					            index = list.indexOf(target);
@@ -118,7 +142,9 @@ angular.module('orca').directive('configData', function ($compile) {
 						            Alerts.addAlert('danger', 'Could not paste item!');
 					            }
 				            } else {
-					            if (!$scope.configdata.keydata) { $scope.configdata.keydata = []; }
+					            if (!$scope.configdata.keydata) {
+						            $scope.configdata.keydata = [];
+					            }
 					            $scope.configdata.keydata.splice(0, 0, $scope.clipboard);
 				            }
 			            }

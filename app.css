@@ -5506,9 +5506,9 @@ button.close {
   padding: 15px;
   border-radius: 5px;
   height: auto;
-  background-color: rgba(51, 122, 183, 0.1);
-  border: 2px #337ab7;
-  color: #23527c; }
+  background-color: rgba(114, 153, 198, 0.1);
+  border: 2px #7299c6;
+  color: #4472a8; }
 
 /* Add Component SASS Above */
 /* Required for Angular UI Bootstrap */
