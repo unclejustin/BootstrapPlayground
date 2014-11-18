@@ -51,7 +51,7 @@ module.exports = function (grunt) {
 					                 spawn:            false
 				                 },
 				                 files:  [
-					                 createFolderGlobs(['*.js', '*.less', '*.html']), '!_SpecRunner.html', '!.grunt'
+					                 createFolderGlobs(['*.js', '*.scss', '*.html']), '!_SpecRunner.html', '!.grunt'
 				                 ],
 				                 tasks:  [] //all the tasks are run dynamically during the watch event handler
 			                 }
@@ -72,11 +72,12 @@ module.exports = function (grunt) {
 				                 src:['temp']
 			                 }
 		                 },
-		                 less:       {
+		                 sass:       {
 			                 production:{
 				                 options:{},
 				                 files:  {
-					                 'temp/app.css':'app.less'
+					                 'temp/app.css':'app.scss',
+					                 'app.css':'app.scss'
 				                 }
 			                 }
 		                 },
@@ -225,11 +226,11 @@ module.exports = function (grunt) {
 	                 });
 
 	grunt.registerTask('build', [
-		'jshint', 'clean:before', 'less', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngAnnotate', 'uglify',
+		'jshint', 'clean:before', 'sass', 'dom_munger', 'ngtemplates', 'cssmin', 'concat', 'ngAnnotate', 'uglify',
 		'copy',
 		'htmlmin', 'imagemin', 'clean:after'
 	]);
-	grunt.registerTask('serve', ['dom_munger:read', 'jshint', 'connect', 'watch']);
+	grunt.registerTask('serve', ['dom_munger:read', 'sass', 'jshint', 'connect', 'watch']);
 	grunt.registerTask('test', ['dom_munger:read', 'karma:one_test']);
 	grunt.registerTask('all_tests', ['dom_munger:read', 'karma:all_tests']);
 
@@ -265,6 +266,10 @@ module.exports = function (grunt) {
 		//will have the correct environment
 		if (filepath === 'index.html') {
 			tasksToRun.push('dom_munger:read');
+		}
+
+		if (filepath.lastIndexOf('.scss') !== -1 && filepath.lastIndexOf('.scss') === filepath.length - 5) {
+			tasksToRun.push('sass');
 		}
 
 		grunt.config('watch.main.tasks', tasksToRun);

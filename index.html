@@ -4,7 +4,8 @@
   <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="utf-8">
-  <link href="app.less" type="text/css" rel="stylesheet/less">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="app.css"/>
 	<link rel="stylesheet" href="bower_components/angular-xeditable/dist/css/xeditable.css"/>
 </head>
 <body>
@@ -13,10 +14,8 @@
   <script src="http://localhost:35729/livereload.js" data-concat="false"></script>
 
   <!-- JS from Bower Components -->
-  <script src="bower_components/less.js/dist/less-1.6.2.js" data-concat="false"></script>
   <script src="bower_components/jquery/jquery.js"></script>
   <script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/moment/moment.js"></script>
   <script src="bower_components/angular/angular.js"></script>
@@ -46,10 +45,15 @@
   <script src="ecosystem/job/directive/jobServers/jobServers.js"></script>
   <script src="filter/arrayModFilter.js"></script>
   <script src="directive/orcaSearch/orcaSearch.js"></script>
+  <script src="ecosystem/job/directive/jobActivities/jobActivities.js"></script>
+  <script src="service/Tracks.js"></script>
+  <script src="filter/orcaCondition.js"></script>
+  <script src="ecosystem/job/directive/jobActivityDrag/jobActivityDrag.js"></script>
+  <script src="ecosystem/job/directive/jobActivityDrop/jobActivityDrop.js"></script>
   <!-- Add New Component JS Above -->
 
   <div>
-    <div id="content" class="container">
+    <div id="content" class="container-fluid">
       <div class="row">
         <div ui-view></div>
       </div>

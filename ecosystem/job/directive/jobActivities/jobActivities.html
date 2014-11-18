@@ -1,0 +1,131 @@
+<div>
+	<div class="row">
+		<div class="col-sm-3 col-md-2">
+			<h3>Available</h3>
+			<div class="list-group">
+				<job-activity-drag track="track" ng-repeat="track in job.availableTracks"></job-activity-drag>
+			</div>
+		</div>
+		<div class="col-sm-9 col-md-10">
+			<h3>Selected</h3>
+
+			<div ng-repeat="ptrack in job.selectedTracks | orderBy:sortTracks">
+				<div class="row activity-drop">
+					<div class="col-md-6">
+						<div class="panel-panel-default">
+							<div collapse="!ptrack.showdrop">
+								<job-activity-drop
+								     serial="true"
+								     job="job"
+								     ptrack="ptrack">
+									Execute before step {{ ptrack[0].Track.seq }}
+								</job-activity-drop>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="panel-panel-default">
+							<div collapse="!ptrack.showdrop">
+								<job-activity-drop
+								     serial="false"
+								     job="job"
+								     ptrack="ptrack">
+									Execute in parallel with step {{ ptrack[0].Track.seq }}
+								</job-activity-drop>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div ng-class="{'panel panel-primary':ptrack.length > 1}">
+					<div class="panel-heading panel-title" ng-if="ptrack.length > 1">
+					<span class="fa-stack stack-margin-fix">
+						<i class="fa fa-circle-o fa-stack-2x"></i>
+						<i class="fa fa-stack-1x"><strong>{{ptrack[0].Track.seq}}</strong></i>
+					</span>
+						Parallel Processed
+					</div>
+					<div ng-class="{'panel-body':ptrack.length > 1}">
+
+						<div ng-repeat="track in ptrack">
+							<div class="panel panel-info">
+								<div class="panel-heading panel-title pointer">
+								<span ng-click="toggleTrack(track)">
+									<span class="fa-stack stack-margin-fix" ng-if="ptrack.length <= 1">
+										<i class="fa fa-circle-o fa-stack-2x"></i>
+										<i class="fa fa-stack-1x"><strong>{{track.Track.seq}}</strong></i>
+									</span>
+									<i class="fa fa-chevron-right" ng-class="{ 'fa-rotate-90':track.collapsed }"></i>
+									{{ track.Track.name }}
+								</span>
+
+									<div class="btn-group btn-group-xs pull-right">
+										<button class="btn btn-warning"
+										        ng-click="removeTrack(track, ptrack.length <= 1)">
+											<i class="fa fa-times"></i> Remove
+										</button>
+									</div>
+								</div>
+								<div class="panel-body" collapse="!track.collapsed">
+									<div class="well">
+										<ul>
+											<li ng-repeat="d in track.description">
+												<ul ng-if="_.isArray(d)">
+													<li ng-repeat="d2 in d">{{ d2.Script.name }}</li>
+												</ul>
+												<div ng-if="!_.isArray(d)">
+													<div>{{ d.Script.name }}</div>
+													<div class="row half-padding-top" ng-repeat="c in d.Script.TrackScriptConditions">
+														<div class="col-md-12">
+															<div ng-bind-html="'{{ c.TrackScriptCondition | orcaCondition:track.description }}'"></div>
+															<hr class="script-separator" ng-if="!$last"/>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div ng-repeat="action in track.Track.actions" class="panel panel-default">
+										<div class="panel-heading">{{ action.Action.action_name }}</div>
+										<div class="panel-body">
+											<form class="form-horizontal">
+												<div class="row repeat-padding" ng-repeat="envvar in action.Action.envvars">
+													<div class="col-md-4">
+														<label class="control-label">{{ envvar.EnvVar.name }}</label>
+													</div>
+													<div class="col-md-8">
+														<input type="text" class="form-control"
+														       ng-model="envvar.EnvVar.value" ng-change="job.dirty=true">
+													<span ng-if="envvar.EnvVar.desc && envvar.EnvVar.desc.length > 0"
+													      class="help-block">{{ envvar.EnvVar.desc }}</span>
+													</div>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div ng-if="!$last" class="text-center half-padding-bottom"><i
+						class="fa fa-arrow-circle-o-down fa-2x text-muted"></i></div>
+			</div>
+			<job-activity-drop
+					ptrack="{}"
+			     job="job"
+			     next-seq="nextSeq()"
+			     serial="true">
+				Execute as step {{ nextSeq() }}
+			</job-activity-drop>
+			<div ng-show="job.selectedTracks.length <= 0">
+				Drag a workflow from the list on the left.
+			</div>
+
+		</div>
+	</div>
+	<div ng-show="job.tracks.length <= 0">
+		There are no Workflows that can be associated with this Ecosystem.
+	</div>
+</div>
