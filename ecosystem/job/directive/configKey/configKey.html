@@ -1,5 +1,5 @@
 <div ng-class="getClasses(key)" class="row cd-key">
-	<div context-menu data-target="cd-key-menu-{{ key.guid }}">
+	<div context-menu context-menu-disabled="editable==='false'" data-target="cd-key-menu-{{ key.guid }}">
 		<div class="col-md-3">
 			<a class="alert-link" ng-click="editKey()" ng-hide="key.add"><i class="fa fa-fw"></i> {{ key.name }}</a>
 			<input ng-show="key.add"

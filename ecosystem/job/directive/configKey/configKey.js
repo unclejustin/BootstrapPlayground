@@ -5,7 +5,8 @@ angular.module('orca')
 			           replace:    true,
 			           scope:      {
 				           key: '=',
-				           data:'='
+				           data:'=',
+				           editable:'@'
 			           },
 			           templateUrl:'ecosystem/job/directive/configKey/configKey.html',
 			           controller: 'ConfigKeyCtrl'
@@ -52,11 +53,13 @@ angular.module('orca')
 		            };
 
 		            $scope.editKey = function () {
-			            focus('edit key');
-			            $scope.key.new_name = $scope.key.name;
-			            $scope.key.new_value = $scope.key.value;
+			            if($scope.editable === 'true') {
+				            focus('edit key');
+				            $scope.key.new_name = $scope.key.name;
+				            $scope.key.new_value = $scope.key.value;
 
-			            $scope.key.edit = true;
+				            $scope.key.edit = true;
+			            }
 		            };
 
 		            $scope.cancelKey = function () {

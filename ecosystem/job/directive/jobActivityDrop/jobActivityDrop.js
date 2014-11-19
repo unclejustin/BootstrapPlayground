@@ -22,13 +22,13 @@ angular.module('orca').directive('jobActivityDrop', function () {
 				var track = angular.element(ui.draggable).data('track');
 
 				track.Track.skip = 'N';
-				track.Track.seq = $scope.ptrack[0].Track.seq;
+				track.Track.seq = $scope.ptrack[0] ? $scope.ptrack[0].Track.seq : 0;
 				track.selected = 0;
 
 				$scope.job.dirty = true;
 
 				if ($scope.serial==='true') {
-					addSerial($scope.ptrack[0].Track.seq);
+					addSerial(track.Track.seq);
 				}
 
 				setTracks();

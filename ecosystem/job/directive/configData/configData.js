@@ -4,7 +4,9 @@ angular.module('orca').directive('configData', function ($compile) {
 		replace:    true,
 		scope:      {
 			configdata:'=',
-			job:       '='
+			job:       '=',
+			expand:    '@',
+			editable:  '@'
 		},
 		templateUrl:'ecosystem/job/directive/configData/configData.html',
 		compile:    function (tElement, tAttr, transclude) {
@@ -25,6 +27,8 @@ angular.module('orca').directive('configData', function ($compile) {
 	};
 })
 	.controller('ConfigDataCtrl', function ($scope, Alerts, GUID, focus) {
+
+
 		            $scope.$on('clipboard updated', function (evt, clipboard) { $scope.clipboard = clipboard; });
 
 		            $scope.getClasses = function (d) {

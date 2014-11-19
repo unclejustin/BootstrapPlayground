@@ -36,7 +36,7 @@
 				</ul>
 			</div>
 			<div class="cd-wrapper">
-				<div class="row cd-header pointer" ng-class="getClasses(d)" context-menu data-target="cd-menu-{{ d.guid }}" ng-click="d.showdata = !d.showdata">
+				<div class="row cd-header pointer" ng-class="getClasses(d)" context-menu context-menu-disabled="editable==='false'" data-target="cd-menu-{{ d.guid }}" ng-click="d.showdata = !d.showdata">
 					<div class="col-md-11 config-data" ng-class="d.guid" ng-hide="d.add">
 						<i class="fa fa-fw"
 						   ng-class="{ 'fa-chevron-right':!d.showdata, 'fa-chevron-down':d.showdata }"></i>
@@ -60,9 +60,12 @@
 				</div>
 				<!--data-->
 
-				<div class="cd-body" collapse="!d.showdata">
-					<config-key key="k" data="d.keydata" job="job" ng-repeat="k in d.keydata track by $index"></config-key>
-					<config-data configdata="d"></config-data>
+				<div class="cd-body" collapse="!d.showdata && expand==='false'">
+					<config-key key="k" data="d.keydata" job="job" editable="{{ editable }}" ng-repeat="k in d.keydata track by $index"></config-key>
+					<config-data
+							configdata="d"
+							expand="{{ expand }}"
+							editable="{{ editable }}"></config-data>
 				</div>
 			</div>
 		</div>

@@ -92,6 +92,7 @@ describe('Directive: configKey', function () {
 
 		describe('editKey', function () {
 			it('should set new values and flag key as edit', function () {
+				scope.editable = 'true';
 				scope.key = scope.data[0];
 				scope.editKey();
 				expect(scope.key.new_name).toEqual(scope.key.name);
@@ -102,6 +103,7 @@ describe('Directive: configKey', function () {
 
 		describe('cancelKey', function () {
 			it('should set edit flag to false', function () {
+				scope.editable = 'true';
 				scope.key = scope.data[0];
 				scope.editKey();
 				expect(scope.key.edit).toBe(true);

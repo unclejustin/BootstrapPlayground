@@ -23,11 +23,20 @@
 		<tab ng-click="updateJob('configdata')" active="jobtab.configdata">
 			<tab-heading>Config Data</tab-heading>
 			<br/>
-			<config-data configdata="{ data:job.data.config }" job="job.data" ng-if="jobtab.configdata"></config-data>
+			<config-data
+					configdata="{ data:job.data.config }"
+					job="job.data"
+					expand="false"
+					editable="true"
+					ng-if="jobtab.configdata"></config-data>
 		</tab>
 		<tab ng-click="updateJob('preview')" active="jobtab.preview">
 			<tab-heading>Preview</tab-heading>
-			<job-preview preview="job.data.preview"></job-preview>
+			<config-data
+					configdata="{ data:job.data.preview }"
+					job="job.data"
+					expand="true"
+					editable="false"></config-data>
 		</tab>
 	</tabset>
 </div>
