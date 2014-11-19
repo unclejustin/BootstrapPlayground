@@ -12,20 +12,20 @@
 	</h1>
 
 	<tabset>
-		<tab select="updateJob()">
+		<tab ng-click="updateJob('servers')" active="jobtab.servers">
 			<tab-heading>Servers</tab-heading>
 			<job-servers job="job.data" columns="3"></job-servers>
 		</tab>
-		<tab select="updateJob()">
+		<tab ng-click="updateJob('activities')" active="jobtab.activities">
 			<tab-heading>Activities</tab-heading>
 			<job-activities job="job.data"></job-activities>
 		</tab>
-		<tab select="updateJob()">
+		<tab ng-click="updateJob('configdata')" active="jobtab.configdata">
 			<tab-heading>Config Data</tab-heading>
 			<br/>
-			<config-data configdata="{ data:job.data.config }" job="job.data"></config-data>
+			<config-data configdata="{ data:job.data.config }" job="job.data" ng-if="jobtab.configdata"></config-data>
 		</tab>
-		<tab select="updateJob()">
+		<tab ng-click="updateJob('preview')" active="jobtab.preview">
 			<tab-heading>Preview</tab-heading>
 			<job-preview preview="job.data.preview"></job-preview>
 		</tab>

@@ -8,16 +8,21 @@ angular.module('orca').config(function($stateProvider, $urlRouterProvider) {
     });
     $stateProvider.state('job', {
         url: '/job/:id',
-        templateUrl: 'ecosystem/job/job.html',
-	    controller:'JobCtrl',
+	    abstract:true,
+	    template: '<div ui-view></div>',
 	    resolve:{
 		    job:function ($stateParams, ExecuteJob) {
 			    return ExecuteJob.getJob({id:$stateParams.id});
 		    }
 	    }
     });
+	$stateProvider.state('job.state', {
+		url:'/:state',
+		controller:'JobCtrl',
+		templateUrl: 'ecosystem/job/job.html'
+	});
     /* Add New States Above */
-    $urlRouterProvider.otherwise('/job');
+    $urlRouterProvider.otherwise('/job/720/activities');
 
 });
 
@@ -41,7 +46,7 @@ angular.module('orca').run(function($rootScope, editableOptions) {
 angular.module('orca').config(
 	function ($httpProvider) {
 
-		var authRequest = function ($window) {
+		var authRequest = function () {
 			return {
 				'request':function (config) {
 					if(config.url.indexOf('.html') > -1 || config.url.indexOf('template') > -1 || config.url.indexOf('bootstrap') > -1) {

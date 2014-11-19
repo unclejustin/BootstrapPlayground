@@ -47,22 +47,22 @@ angular.module('orca').directive('configData', function ($compile) {
 			            return classes;
 		            };
 
-	                function impeachObama(liberal_asshole) {
-		                delete liberal_asshole.change;
-		                var i;
+		            function impeachObama(liberal_asshole) {
+			            delete liberal_asshole.change;
+			            var i;
 
-		                if (liberal_asshole.data) {
-			                for (i=0; i<liberal_asshole.data.length; i++) {
-				                impeachObama(liberal_asshole.data[i]);
-			                }
-		                }
+			            if (liberal_asshole.data) {
+				            for (i = 0; i < liberal_asshole.data.length; i++) {
+					            impeachObama(liberal_asshole.data[i]);
+				            }
+			            }
 
-		                if (liberal_asshole.keydata) {
-			                for (i=0; i<liberal_asshole.keydata.length; i++) {
-				                impeachObama(liberal_asshole.keydata[i]);
-			                }
-		                }
-	                }
+			            if (liberal_asshole.keydata) {
+				            for (i = 0; i < liberal_asshole.keydata.length; i++) {
+					            impeachObama(liberal_asshole.keydata[i]);
+				            }
+			            }
+		            }
 
 		            $scope.addData = function (target, new_d) {
 			            target.showdata = true;
