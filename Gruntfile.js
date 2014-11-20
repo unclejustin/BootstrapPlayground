@@ -230,7 +230,7 @@ module.exports = function (grunt) {
 		'copy',
 		'htmlmin', 'imagemin', 'clean:after'
 	]);
-	grunt.registerTask('serve', ['dom_munger:read', 'sass', 'jshint', 'connect', 'watch']);
+	grunt.registerTask('serve', ['dom_munger:read', 'sass', 'jshint', 'ngtemplates', 'concat', 'connect', 'watch']);
 	grunt.registerTask('test', ['dom_munger:read', 'karma:one_test']);
 	grunt.registerTask('all_tests', ['dom_munger:read', 'karma:all_tests']);
 
@@ -253,7 +253,7 @@ module.exports = function (grunt) {
 
 			//if the spec exists then lets run it
 			if (grunt.file.exists(spec)) {
-				var files = [].concat(grunt.config('dom_munger.data.appjs'));
+				var files = [].concat(grunt.config('dom_munger.data.appjs'), grunt.config('ngtemplates.main.dest'));
 				files.push('bower_components/angular-mocks/angular-mocks.js');
 				files.push(spec);
 				files.push('directive/**/*.html');

@@ -34,42 +34,42 @@ describe('Directive: configKey', function () {
 		scope.data = angular.copy(data);
 	}));
 
-	//describe('Directive', function () {
-	//	var html, elem, compiled;
-	//	var key = { name:'name', value:'value', new_name:'new name', new_value:'new value', guid:'1234565789' };
-	//
-	//	beforeEach(function() {
-	//
-	//		scope.key = angular.copy(key);
-	//		scope.data = angular.copy(data);
-	//		html = '<config-key key="key" data="data"></config-key>';
-	//		inject(function($compile) {
-	//			elem = angular.element(html);
-	//			compiled = $compile(elem);
-	//			compiled(scope);
-	//			scope.$digest();
-	//		});
-	//	});
-	//
-	//	it('should highlight added keys', function () {
-	//		scope.key.change = 'add';
-	//		scope.saveKey();
-	//		scope.$digest();
-	//		expect(elem.hasClass('alert-success')).toBe(true);
-	//	});
-	//
-	//	it('should highlight edited keys', function () {
-	//		scope.saveKey();
-	//		scope.$digest();
-	//		expect(elem.hasClass('alert-warning')).toBe(true);
-	//	});
-	//
-	//	it('should highlight deleted keys', function () {
-	//		scope.delKey(scope.key);
-	//		scope.$digest();
-	//		expect(elem.hasClass('alert-danger')).toBe(true);
-	//	});
-	//});
+	describe('Directive', function () {
+		var html, elem, compiled;
+		var key = { name:'name', value:'value', new_name:'new name', new_value:'new value', guid:'1234565789' };
+
+		beforeEach(function() {
+
+			scope.key = angular.copy(key);
+			scope.data = angular.copy(data);
+			html = '<config-key key="key" data="data"></config-key>';
+			inject(function($compile) {
+				elem = angular.element(html);
+				compiled = $compile(elem);
+				compiled(scope);
+				scope.$digest();
+			});
+		});
+
+		it('should highlight added keys', function () {
+			scope.key.change = 'add';
+			scope.saveKey();
+			scope.$digest();
+			expect(elem.hasClass('alert-success')).toBe(true);
+		});
+
+		it('should highlight edited keys', function () {
+			scope.saveKey();
+			scope.$digest();
+			expect(elem.hasClass('alert-warning')).toBe(true);
+		});
+
+		it('should highlight deleted keys', function () {
+			scope.delKey(scope.key);
+			scope.$digest();
+			expect(elem.hasClass('alert-danger')).toBe(true);
+		});
+	});
 
 	describe('Controller', function () {
 		describe('saveKey', function () {
