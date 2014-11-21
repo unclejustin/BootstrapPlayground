@@ -12,10 +12,6 @@
 	</h1>
 
 	<tabset>
-		<tab ng-click="updateJob('servers')" active="jobtab.servers">
-			<tab-heading>Servers</tab-heading>
-			<job-servers job="job.data" columns="3"></job-servers>
-		</tab>
 		<tab ng-click="updateJob('activities')" active="jobtab.activities">
 			<tab-heading>Activities</tab-heading>
 			<job-activities job="job.data"></job-activities>
@@ -32,11 +28,7 @@
 		</tab>
 		<tab ng-click="updateJob('preview')" active="jobtab.preview">
 			<tab-heading>Preview</tab-heading>
-			<config-data
-					configdata="{ data:job.data.preview }"
-					job="job.data"
-					expand="true"
-					editable="false"></config-data>
+			<job-preview preview="job.data.preview"></job-preview>
 		</tab>
 	</tabset>
 </div>

@@ -1,0 +1,81 @@
+.padding
+{
+  padding: $padding;
+}
+
+.padding-top
+{
+  padding-top: $padding;
+}
+
+.padding-bottom
+{
+  padding-bottom: $padding;
+}
+
+.padding-left
+{
+  padding-left: $padding;
+}
+
+.padding-right
+{
+  padding-right: $padding;
+}
+
+.half-padding
+{
+  padding: $padding/2;
+}
+.half-padding-top
+{
+  padding-top: $padding/2;
+}
+.half-padding-bottom
+{
+  padding-bottom: $padding/2;
+}
+.half-padding-left
+{
+  padding-left: $padding/2;
+}
+.half-padding-right
+{
+  padding-right: $padding/2;
+}
+
+.margin
+{
+  margin: $padding;
+}
+
+.margin-top
+{
+  margin-top: $padding;
+}
+
+.margin-bottom
+{
+  margin-bottom: $padding;
+}
+
+.margin-left
+{
+  margin-left: $padding;
+}
+
+.margin-right
+{
+  margin-right: $padding;
+}
+
+.no-margin-bottom,
+.no-margin-bottom .form-group
+{
+  margin-bottom: 0;
+}
+
+.no-margin-top
+{
+  margin-top: 0;
+}

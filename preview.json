@@ -1,0 +1,82 @@
+{
+	"notes":"Hey what's up, I hold the notes.\nI can be multi-line using the new line character.",
+	"approvals":[
+		{ "name":"Dick" },
+		{ "name":"Jane" },
+		{ "name":"Team A" },
+		{ "name":"Team B" }
+	],
+	"activities":[
+		{
+			"name": "Activity 1",
+			"nodes":[
+				{
+					"name":      "Node 1",
+					"servers":   [
+						{
+							"name":"Server 1"
+						},
+						{
+							"name":"Server 2"
+						}
+					],
+					"configdata":[
+						{
+							"norm":  "Normalized/Path/Name 1",
+							"value": "Some value",
+							"change":"add"
+						},
+						{
+							"norm":  "Normalized/Path/Name 2",
+							"value": "Some value",
+							"change":"edit"
+						},
+						{
+							"norm":  "Normalized/Path/Name 3",
+							"value": "Some value",
+							"change":"delete"
+						}
+					]
+				},
+				{
+					"name":      "Node 2",
+					"servers":   [{"name":"Server 2"}],
+					"configdata":[
+						{
+							"norm":  "Normalized/Path/Name 5",
+							"value": "Some value",
+							"change":"edit"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Activity 2",
+			"nodes":[
+				{
+					"name":      "Node 1",
+					"servers":   [{"name":"Server 1"}],
+					"configdata":[
+						{
+							"norm":  "Normalized/Path/Name 4",
+							"value": "Some value",
+							"change":"add"
+						}
+					]
+				},
+				{
+					"name":      "Node 3",
+					"servers":   [{"name":"Server 4"}],
+					"configdata":[
+						{
+							"norm":  "Normalized/Path/Name 3",
+							"value": "Some value",
+							"change":"delete"
+						}
+					]
+				}
+			]
+		}
+	]
+}

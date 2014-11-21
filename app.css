@@ -5370,6 +5370,67 @@ button.close {
   .hidden-print {
     display: none !important; } }
 /* Component SASS */
+body {
+  padding-bottom: 20px; }
+
+.form-horizontal.left .control-label {
+  text-align: left; }
+
+a, .pointer {
+  cursor: pointer; }
+
+.padding {
+  padding: 20px; }
+
+.padding-top {
+  padding-top: 20px; }
+
+.padding-bottom {
+  padding-bottom: 20px; }
+
+.padding-left {
+  padding-left: 20px; }
+
+.padding-right {
+  padding-right: 20px; }
+
+.half-padding {
+  padding: 10px; }
+
+.half-padding-top {
+  padding-top: 10px; }
+
+.half-padding-bottom {
+  padding-bottom: 10px; }
+
+.half-padding-left {
+  padding-left: 10px; }
+
+.half-padding-right {
+  padding-right: 10px; }
+
+.margin {
+  margin: 20px; }
+
+.margin-top {
+  margin-top: 20px; }
+
+.margin-bottom {
+  margin-bottom: 20px; }
+
+.margin-left {
+  margin-left: 20px; }
+
+.margin-right {
+  margin-right: 20px; }
+
+.no-margin-bottom,
+.no-margin-bottom .form-group {
+  margin-bottom: 0; }
+
+.no-margin-top {
+  margin-top: 0; }
+
 .cd-wrapper * .cd-wrapper {
   margin-left: 24px; }
 
@@ -5510,25 +5571,32 @@ button.close {
   border: 2px #7299c6;
   color: #4472a8; }
 
+.preview-padding {
+  padding: 4px 0;
+  margin-top: 4px; }
+
+.preview-heading {
+  color: #3465aa;
+  border-bottom: solid 1px #3465aa;
+  padding-bottom: 4px;
+  margin-bottom: 4px; }
+
+.preview-panel.panel {
+  margin-bottom: 10px; }
+.preview-panel.panel:last-child {
+  margin-bottom: 0; }
+.preview-panel .panel-heading {
+  padding: 4px 15px; }
+.preview-panel .panel-body {
+  padding-top: 10px; }
+
+.preview-changes-title {
+  color: #8cc63f;
+  font-size: 18px;
+  padding: 0;
+  margin-top: 0; }
+
 /* Add Component SASS Above */
 /* Required for Angular UI Bootstrap */
 .nav, .pagination, .carousel a {
-  cursor: pointer; }
-
-.form-horizontal.left .control-label {
-  text-align: left; }
-
-.no-margin-bottom {
-  margin-bottom: 0; }
-
-.margin-bottom {
-  margin-bottom: 20px; }
-
-.padding-top {
-  padding-top: 20px; }
-
-.half-padding-bottom {
-  padding-bottom: 10px; }
-
-a, .pointer {
   cursor: pointer; }

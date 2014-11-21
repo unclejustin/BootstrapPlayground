@@ -1,3 +1,40 @@
-<div>
-	<pre>{{ preview|json }}</pre>
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-md-6">
+			<h3 class="preview-heading">Approvals</h3>
+			<p><span ng-repeat="approval in preview.approvals">{{ approval.name }}<span ng-hide="$last">, </span></span></p>
+		</div>
+		<div class="col-md-6">
+			<h3 class="preview-heading">Notes</h3>
+			<form>
+				<div class="form-group">
+					<textarea name="notes" id="notes" class="form-control" ng-model="preview.notes"></textarea>
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="preview-panel panel panel-primary" ng-repeat="activity in preview.activities">
+		<div class="panel-heading panel-title">
+			{{ activity.name }}
+		</div>
+
+		<div class="panel-body">
+			<div class="preview-panel panel panel-info" ng-repeat="node in activity.nodes">
+				<div class="panel-heading">
+					<span class="panel-title">{{ node.name }}:</span> <span ng-repeat="server in node.servers">{{ server.name }}<span ng-hide="$last">, </span></span>
+				</div>
+				<div class="panel-body">
+					<div class="preview-padding preview-changes-title">Changes</div>
+					<div class="row" ng-repeat="cd in node.configdata">
+						<div class="col-md-12">
+							<div class="preview-padding preview-change-norm" ng-class="getChangeBg(cd.change)">
+								<i class="fa fa-fw" ng-class="getChangeIcon(cd.change)"></i> {{ cd.norm }}/<strong>{{ cd.value }}</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
