@@ -17,7 +17,6 @@
     "grunt-contrib-htmlmin": "~0.1",
     "grunt-contrib-imagemin": "~0.4",
     "grunt-contrib-jshint": "~0.9",
-    "grunt-contrib-less": "~0.8",
     "grunt-contrib-sass": "^0.8.1",
     "grunt-contrib-uglify": "~0.2",
     "grunt-contrib-watch": "~0.6",
@@ -32,7 +31,6 @@
     "karma-htmlfile-reporter": "^0.1.2",
     "karma-jasmine": "~0.1.5",
     "karma-mocha-reporter": "~0.2.5",
-    "karma-ng-html2js-preprocessor": "^0.1.2",
     "karma-phantomjs-launcher": "~0.1.4",
     "load-grunt-tasks": "~0.2"
   }

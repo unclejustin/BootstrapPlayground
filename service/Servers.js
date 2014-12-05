@@ -1,7 +1,7 @@
-angular.module('orca').factory('Servers',function($resource, authtoken) {
+angular.module('orca').factory('Servers',function($resource) {
 
 	var serverResource = $resource('http://localhost:8888/index.php/servers/:op/:id.json', {}, {
-		getConfig:{ method:'POST', params:{ op:'getConfig', authtoken:authtoken } }
+		getConfig:{ method:'POST', params:{ op:'getConfig' } }
 	});
 
 	var Servers = {};
